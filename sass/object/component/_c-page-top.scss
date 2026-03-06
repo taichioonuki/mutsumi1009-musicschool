@@ -1,0 +1,38 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+
+/* ===============================================
+TOPへ戻るボタン
+=============================================== */
+.page-top-btn {
+	z-index: 9999;
+	width: 6.8rem;
+	height: 6.8rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	@include sp {
+		
+	}
+
+	img {
+		position: static;
+		transform: none;
+	}
+
+	&:hover {
+		@include pc {
+			opacity: 0.7;
+			transform: translateY(-3px);
+		}
+	}
+}
+
+
+

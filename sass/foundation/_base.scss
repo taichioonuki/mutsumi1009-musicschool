@@ -1,0 +1,52 @@
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+
+
+
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+
+  @include pc {
+    font-size: calc(10 / 920 * 100vw);
+  }
+
+  @media (min-width: 920px) {
+    font-size: 10px;
+  }
+
+  // @media(max-width:375px) {
+  //   font-size: calc(10 /375 * 100vw);
+  // }
+  @include sp {
+    font-size: calc(10 / 375 * 100vw);
+  }
+}
+
+body {
+  font-family: $font-sans;
+  font-size: $base-font-size;
+  line-height: 1.833;
+  margin: 0;
+  padding-top: 0;
+  height: 100%;
+  letter-spacing: 0;
+  position: relative;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+
+  @include sp {
+    scroll-margin-top: 5rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,280 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as
+
+.p-result-details__content {
+  padding-block: 6.5rem 15.7rem;
+
+  @include sp {
+    align-items: center;
+    padding-block: 5rem 20rem;
+  }
+}
+
+.p-result_details .c-hero--result-detail .c-result-card__img {
+  width: 100%;
+  aspect-ratio: 880 / 400;
+  overflow: hidden;
+
+  @include sp {
+    aspect-ratio: 335 / 236;
+  }
+}
+
+.p-article-title {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+
+  @include sp {
+    margin-top: 3rem;
+    font-size: 2rem;
+    align-items: center;
+  }
+}
+
+.p-result_details .c-result-card__date {
+  text-align: left;
+  margin-top: 1.5rem;
+
+  @include sp {
+    margin-top: 0;
+    font-size: 1.7rem;
+    padding-top: 0.2rem;
+  }
+}
+
+
+.p-result-list .c-result-card__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.p-result-details__wrap {
+  display: flex;
+  gap: 4rem;
+  margin-top: 6rem;
+
+  @include sp {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+}
+
+.p-result_details__table {
+  width: auto;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    @include tab {
+      width: 100%;
+    }
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  th,
+  td {
+    border: 0.5px solid #707070;
+    height: 3.8rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    @include sp {
+      padding-left: 1rem;
+      border: 1px solid #707070;
+    }
+  }
+
+  th {
+    font-weight: 700;
+    background: #e5e5e5;
+    width: 14rem;
+    padding-top: 1rem;
+  }
+
+  td {
+    width: 26rem;
+  }
+}
+
+.p-result_details .c-article-nav {
+  margin-top: 6rem;
+}
+
+.p-article-nav__link .c-article-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.p-article-nav__content,
+.c-article-nav__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+
+  @include sp {
+    display: block;
+    flex-direction: column;
+  }
+}
+
+.p-result_details .c-article-nav__img {
+  max-width: 9.8rem;
+
+  @include sp {
+    display: none !important;
+  }
+}
+
+.p-result_details__text,
+.c-article-nav__text {
+  flex: 1;
+  font-size: 1.6rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: clip;
+
+  @include sp {
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.p-result-details__description {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  @include sp {
+    max-width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// 卒業実績詳細ページ用：記事ナビ
+.p-result_details .c-article-nav {
+  gap: 19.9rem;
+
+
+  @include sp {
+    gap: 2.2rem;
+    margin-top: 3.9rem;
+  }
+}
+
+
+.p-result_details .c-article-related__title {
+  font-size: 1.8rem;
+  margin-top: 10rem;
+  padding-left: 2.9rem;
+
+  @include sp {
+    margin-top: 5.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.6rem;
+  }
+}
+
+.p-result_details .c-result-card__link {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 3rem;
+
+  @include sp {
+    gap: 2rem;
+  }
+}
+
+.is-detail-page {
+  .c-hero::before {
+    background-color: transparent;
+    mix-blend-mode: normal;
+  }
+}
+
+.p-result_details .c-article-related .c-result-card__img {
+  max-width: 26rem;
+  aspect-ratio: 260 / 183;
+  object-fit: cover;
+
+  @include sp {
+    width: 16rem;
+    aspect-ratio: 160 / 113;
+    flex-shrink: 0
+  }
+}
+
+.p-result_details .c-result-card__img img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.p-article-related .c-result-card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+
+  @include sp {}
+}
+
+.p-article-related .c-result-card {
+  display: flex;
+  gap: 1.6rem;
+
+  @include sp {}
+}
+
+.p-result_details .c-result-card__text {
+  @include sp {
+    font-size: 1.7rem;
+    font-weight: 700;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: clip;
+    line-height: 1.647;
+  }
+}
+
+.p-result_details .c-breadcrumb__list {
+  @include sp {
+    row-gap: 0;
+  }
+}
+
+//  ヒーロー画像の暗い背景（オーバーレイ）を消す
+.is-result-detail .c-hero::before {
+  background-color: transparent !important;
+  mix-blend-mode: normal !important;
+}
+
+.p-result_details .c-article-related .c-tag--lg {
+  @include sp {
+    width: 8rem;
+  }
+}

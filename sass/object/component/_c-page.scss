@@ -1,0 +1,37 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+// --- ページメッセージコンポーネント ---
+.c-page-message {
+  text-align: center;
+  font-size: 1.8rem;
+  white-space: normal;
+  width: fit-content;
+  margin-inline: auto;
+  line-height: 1.666;
+
+  @include sp {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 0rem;
+    line-height: 1.87;
+  }
+}
+
+
+/* ===============================================
+# ページタイトル（共通）
+=============================================== */
+.c-page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: $text-color;
+  font-weight: 700;
+  white-space: nowrap;
+
+  @include sp {
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,85 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as
+
+.p-result-list__content {
+  padding-block: 7rem 21.2rem;
+
+  @include sp {
+    align-items: center;
+    padding-block: 5rem 20.3rem;
+  }
+}
+
+
+.p-result-list {
+  width: 100%;
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7.1rem 10.6rem;
+  margin-top: 3rem;
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.p-search .c-hero {
+
+  @include sp {
+    aspect-ratio: 375 / 300;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: normal;
+    z-index: 1;
+  }
+  
+  .c-hero__text {
+    z-index: 2;
+  }
+}
+
+.p-search .c-hero picture {
+
+  @include sp {
+    height: 100%;
+  }
+}
+
+.p-search .c-hero img {
+
+  @include sp {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.p-result-list .c-result-card__img {
+  width: 100%;
+  max-width: 38.7rem; 
+  aspect-ratio: 387 / 273;
+  flex-shrink: 0; 
+
+  @include sp {
+     aspect-ratio: 335 / 200; 
+  }
+}
+
+.p-result-list .c-result-card__link {
+  display:block
+}
+
+.p-result-list .c-result-card__text {
+  margin-top: 2rem;
+  
+}
+

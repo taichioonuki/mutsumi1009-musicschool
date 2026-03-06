@@ -1,0 +1,17 @@
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+@use "../global/function" as *;
+@use "../foundation/base" as *;
+
+
+.l-inner {
+  width: 100%;
+  max-width: 920px;
+  padding-inline: 20px;
+  margin: 0 auto;
+ 
+  @include sp {
+		max-width: 100%;
+	}
+}
+

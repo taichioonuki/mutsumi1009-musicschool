@@ -1,0 +1,124 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+.c-article-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.c-article-nav__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     gap: 1.6rem;
+}
+
+.c-article-nav__label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    width: auto;
+    height: 3.7rem;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+// 前の記事
+.c-article-nav__label--prev {
+    justify-content: flex-start;
+    padding-left: 2.1rem;
+    font-size: 1.7rem;
+
+    @include sp {
+        font-size: 1.5rem;
+        padding-left: 2.2rem;
+    }
+
+    &::before {
+        content: "◀";
+        margin-right: 0.8rem;
+        font-size: 1.5rem;
+
+        @include sp {
+            font-size: 1.5rem;
+            margin-right: 0.4rem;
+        }
+    }
+}
+
+
+// 次の記事
+.c-article-nav__label--next {
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: 1.9rem;
+
+    &::after {
+        content: "▶";
+        margin-left: 0.8rem;
+        font-size: 1.5rem;
+    }
+
+    @include sp {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+}
+
+.c-article-nav__img {
+
+    @include sp {
+        margin-top: 0rem;
+    }
+}
+
+.c-article-nav__img img {
+    width: auto;
+
+    @include sp {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.c-article-nav__text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+/* ===============================================
+# component：article-related（関連記事）
+=============================================== */
+
+.c-article-related {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.8rem;
+
+    @include sp {
+        order: 3;
+        gap: 2rem;
+    }
+}
+
+.c-article-related__title {
+    display: inline-flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 5rem;
+    padding: 0.8rem 1.6rem;
+}
+
+
+  

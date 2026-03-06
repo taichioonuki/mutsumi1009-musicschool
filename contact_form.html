@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ｜きたむらミュージックスクール</title>
+    <meta name="description" content="沖縄県宜野湾市にある大人のための音楽教室「きたむらミュージックスクール」へのお問い合わせページです。">
+    <meta name="keywords" content="お問い合わせ,音楽, Music,music">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="l-wrapper">
+        <header class="l-header">
+            <div class="p-header">
+                <div class="p-header__inner l-inner">
+                    <div class="p-header__logo">
+                        <div class="p-header__site-title">
+                            <a href="index.html" class="logo">
+                                <span class="logo__img">
+                                    <img src="images/common/icon-pc.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
+                                </span>
+                                <span class="p-header__logo-text">
+                                    <span class="logo__main">きたむら</span>
+                                    <span class="logo__sub">ミュージックスクール</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- PCナビ-->
+                    <nav class="p-header__nav" id="global-nav">
+                        <ul class="p-header__nav-list">
+                            <li><a href="plan.html">料金</a></li>
+                            <li><a href="blog_list.html">ブログ</a></li>
+                            <li><a href="result_list.html">卒業実績</a></li>
+                            <li class="p-header__nav-item--contact">
+                                <a href="contact_form.html" class="c-button c-button--head">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- ハンバーガー（SP用） -->
+                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
+                    <span class="c-hamburger__line">
+                    </span>
+                    <span class="c-hamburger__line">
+                    </span>
+                    <span class="c-hamburger__line">
+                    </span>
+                </button>
+
+                <!-- SPナビ -->
+                <nav class="p-header__nav-sp" id="sp-nav">
+                    <ul class="p-header__nav-sp-list">
+                        <li><a href="plan.html">料金</a></li>
+                        <li><a href="blog_list.html">ブログ</a></li>
+                        <li><a href="result_list.html">卒業実績</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="l-main p-contact-form">
+
+            <div class="c-hero c-hero--with-border">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="images/contact/contact-pc.jpg">
+                    <img class="c-hero__img" src="images/contact/contact-sp.jpg" alt="お問い合わせ" width="375" height="300">
+                </picture>
+                <h1 class="c-hero__text">お問い合わせ</h1>
+            </div>
+
+            <!-- パンくずリスト -->
+            <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                <div class="l-inner">
+                    <ol class="c-breadcrumb__list">
+                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+                        <li class="c-breadcrumb__item" aria-current="page">お問い合わせ</li>
+                    </ol>
+                </div>
+            </nav>
+
+            <div class="p-contact-form__content">
+                <div class="l-inner">
+                    <p class="c-page-message">
+                        当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。
+                        <br>通常３営業日以内にメールにてご連絡させていただきます。
+                    </p>
+
+
+                    <!--会社名-->
+                    <form class="contact__form" action="contact_send.html" method="get">
+                        <div class="p-contact__items">
+                            <div class="p-contact__item p-contact__item--company">
+                                <div class="p-contact__title">
+                                    <label for="company" class="contact__label">会社名</label>
+                                </div>
+                                <div class="p-contact__content">
+                                    <input id="company" name="company" class="contact__input" required
+                                        placeholder="きたむらミュージックスクール">
+                                </div>
+                            </div>
+                            <!--お名前-->
+                            <div class="p-contact__item p-contact__item--name">
+                                <div class="p-contact__title">
+                                    <label for="name" class="contact__label">お名前</label>
+                                </div>
+                                <div class="p-contact__content">
+                                    <input type="text" id="name" name="name" class="contact__input" required
+                                        placeholder="北村　翔平">
+                                </div>
+                            </div>
+
+                            <!--メールアドレス-->
+                            <div class="p-contact__item p-contact__item--email">
+                                <div class="p-contact__title">
+
+                                    <label for="email" class="contact__label">メールアドレス</label>
+                                </div>
+                                <div class="p-contact__content">
+                                    <input type="email" id="email" name="email" class="contact__input" required
+                                        placeholder="info@kitamura.musicschool.jp">
+                                </div>
+                            </div>
+                            <!--電話番号-->
+                            <div class="p-contact__item p-contact__item--tel">
+                                <div class="p-contact__title">
+
+                                    <label for="tel" class="contact__label">電話番号</label>
+                                </div>
+                                <div class="p-contact__content">
+                                    <input type="tel" id="tel" name="tel" class="contact__input" required
+                                        placeholder="090-1234-5678">
+                                </div>
+                            </div>
+                            <!--目的-->
+                            <div class="p-contact__item p-contact__item--inquiry">
+                                <div class="p-contact__title">
+                                    <span class="contact__label">
+                                        目　的<span class="contact__label-sub">(複数選択可)</span>
+                                    </span>
+                                </div>
+
+                                <div class="p-contact__content">
+                                    <div class="contact__checkbox-group">
+                                        <label>
+                                            <input type="checkbox" name="inquiry[]" value="plan">
+                                            <span class="custom-checkbox-square"></span>
+                                            <span class="checkbox-text">プランについてのお問い合わせ</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="inquiry[]" value="hearing">
+                                            <span class="custom-checkbox-square"></span>
+                                            <span class="checkbox-text">ヒアリングのご予約</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="inquiry[]" value="document">
+                                            <span class="custom-checkbox-square"></span>
+                                            <span class="checkbox-text">資料請求</span>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" name="inquiry[]" value="other">
+                                            <span class="custom-checkbox-square"></span>
+                                            <span class="checkbox-text">その他</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--内容（textarea）-->
+                            <div class="p-contact__item p-contact__item--message">
+                                <div class="p-contact__title">
+                                    <label for="message" class="contact__label">内　容</label>
+                                </div>
+                                <div class="p-contact__content">
+                                    <textarea id="message" name="message" class="contact__textarea" required
+                                        placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--送信ボタン-->
+                        <div class="contact__submit">
+                            <button type="submit" class="c-button">送 信</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- TOPへ戻る-->
+        <div class="p-fixed-buttons js-fixed-buttons">
+            <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
+                <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
+            </a>
+        </div>
+
+        <!--footerー-->
+        <footer class="l-footer p-footer">
+            <div class="p-footer__inner">
+                <nav class="p-footer__nav">
+                    <ul class="p-footer__nav-list">
+                        <li class="p-footer__nav-item"><a href="index.html">ホーム</a></li>
+                        <li class="p-footer__nav-item"><a href="plan.html">料金</a></li>
+                        <li class="p-footer__nav-item"><a href="blog_list.html">ブログ</a></li>
+                        <li class="p-footer__nav-item"><a href="result_list.html">卒業実績</a></li>
+                    </ul>
+                </nav>
+                <div class="p-footer__content">
+                    <div class="p-footer__logo">
+                        <a href="index.html" class="p-footer-logo__link">
+                            <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
+                        </a>
+                    </div>
+                    <div class="p-footer__copyright">
+                        <p>Copyright © 0000 KITAMURA music school Inc.
+                            <span class="u-center-block"> All Rights</span>
+                        </p>
+                    </div>
+                    <div class="p-footer__sns">
+                        <a href="#"><img src="images/common/icon-twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="images/common/icon-facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/common/icon-youtube.svg" alt="YouTube"></a>
+                        <a href="#"><img src="images/common/icon-instagram.svg" alt="Instagram"></a>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
+    <!-- コンテンツ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 共通JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+
+</html>

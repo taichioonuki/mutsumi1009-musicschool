@@ -1,0 +1,76 @@
+/* ===============================================
+# Mixin 
+=============================================== */
+
+// PCサイズ以上 (768px 〜)
+@mixin pc {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// SPサイズ以下 (〜 767px)
+@mixin sp {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+// 中間幅専用（480px 〜 767px）
+@mixin md {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// タブレットサイズ (768px 〜 1023px)
+@mixin tab {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// PC時のみ適用 
+@mixin pc-only {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+
+// HTMLで使用されている `.pc-only` クラスのスタイル
+.pc-only {
+    display: none; // SPでは非表示
+
+    @include pc-only {
+        display: block; // PCでは表示
+    }
+}
+
+
+.sp-only {
+    display: none; // PCでは非表示
+    @include sp {
+        display: inline; 
+    }
+}
+
+// HTMLで使用されている.pcクラスのスタイル
+.pc {
+    display: block; // PCでは表示 (デフォルト)
+
+    @include sp {
+        display: none; // SPでは非表示
+    }
+}
+
+// HTMLで使用されている.spクラスのスタイル
+.sp {
+    display: none; // PCでは非表示 (デフォルト)
+
+    @include sp {
+        display: block; // SPでは表示
+    }
+}
+
+
+  

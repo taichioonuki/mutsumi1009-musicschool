@@ -1,0 +1,25 @@
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+@use "../global/function" as *;
+@use "../foundation/base" as *;
+
+
+.l-main {
+    flex: 1;
+    padding-top: 8rem; 
+    overflow: hidden;
+  
+    @include sp {
+        padding-top: 5rem; // SPヘッダーの高さ
+    }
+}
+
+
+.l-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  

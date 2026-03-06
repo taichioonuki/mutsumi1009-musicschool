@@ -1,0 +1,24 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as *;
+
+
+.p-404 .p-page-btn {
+margin-top: 4rem;
+text-align: center;
+
+  @include sp {
+    margin-top: 0.5rem;
+  }
+}
+
+.p-404__content {
+  padding-block: 6.8rem 9rem;
+
+  @include sp {
+    padding-block: 4.7rem 5rem;
+  }
+}
+

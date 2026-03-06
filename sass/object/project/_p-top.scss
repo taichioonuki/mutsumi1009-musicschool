@@ -1,0 +1,919 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+@use "../utility/utility";
+// @use "../../foundation/base" as *;
+
+.p-top-hero__catch {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $font-color;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    z-index: 2;
+    white-space: nowrap;
+
+    @include sp {
+        display: block;
+        top: 51%;
+        left: 50%;
+        font-size: 3rem;
+        line-height: 1.666;
+        width: 30rem;
+    }
+}
+
+.p-top__content {
+    padding-block: 5.9rem 7.7rem;
+
+    @include sp {
+        align-items: center;
+        padding-block: 4.6rem 5.5rem;
+    }
+}
+
+.p-top-concept__title {
+    color: $main-color;
+    font-size: 3.55rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+        line-height: 1.6;
+    }
+}
+
+.p-top-message__lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+
+    @include sp {
+        font-size: 1.8rem;
+        line-height: 1.666;
+        max-width: 33.5rem;
+        margin-inline: auto;
+        text-align: left;
+    }
+}
+
+.p-top-message__semicircle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.8rem;
+
+    @include sp {
+        margin-top: 1.5rem;
+    }
+}
+
+.p-top-message__flow {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 4.6rem;
+
+    @include sp {
+        margin-top: 6rem;
+    }
+}
+
+.p-top-message__arrow {
+    position: absolute;
+    top: -5.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.p-top-message__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding: 0;
+    list-style: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -5.2rem;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        background-color: $main-color;
+    }
+}
+
+.p-top-message__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+}
+
+/* 赤丸（線の真上に配置） */
+.p-top-message__item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: $main-color;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* ⚪️2個目 */
+.p-top-message__item:nth-child(2)::before {
+    transform: translate(-50%, -60%);
+}
+
+/* ⚪️3個目 */
+.p-top-message__item:nth-child(3)::before {
+    transform: translate(-50%, -64%);
+}
+
+/* 左側の英語*/
+.p-top-message__en {
+    font-size: 2.5rem;
+    position: absolute;
+    right: calc(50% + 4rem); // 線の中央から左に25px離す
+    color: $main-color;
+    font-weight: 700;
+    white-space: nowrap;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+}
+
+/* 右側の日本語 */
+.p-top-message__jp {
+    font-size: 2.3rem;
+    position: absolute;
+    left: calc(50% + 4rem);
+    white-space: nowrap;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: 2.5;
+    }
+}
+
+// 共通タイトル
+.p-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include sp {
+        font-size: 2.5rem;
+    }
+}
+
+.p-top-promo {
+    background-color: $main-color;
+    padding-block: 6.2rem 5.7rem;
+    text-align: center;
+
+    @include sp {
+        padding-block: 4.9rem 3.5rem;
+    }
+}
+
+.p-top-promo__label {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $c-accent;
+
+    @include sp {
+        font-size: 2.5rem
+    }
+}
+
+.p-top-promo__title {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $c-accent;
+
+    @include sp {
+        line-height: 1.6;
+        font-size: 2.5rem;
+    }
+}
+
+.p-top-promo__text {
+    font-size: 1.8rem;
+    background-color: $main-color;
+    color: $c-accent;
+    padding-top: 2.3rem;
+
+    @include sp {
+        padding-top: 1.4rem;
+        line-height: 1.666;
+
+    }
+}
+
+/* ===============================================
+# ご利用の流れ
+=============================================== */
+
+.p-flow--down {
+    padding-block: 3.4rem 5.4rem;
+
+    @include sp {
+        padding-block: 4rem 3rem;
+    }
+}
+
+.p-flow__list {
+    padding-top: 5rem;
+
+    @include sp {
+        padding-top: 4rem;
+    }
+}
+
+.p-flow__item {
+    display: flex;
+    padding-left: 6rem;
+    position: relative;
+
+    @include sp {
+        position: relative;
+        padding-left: 0;
+        left: -0.2rem;
+    }
+
+    &+& {
+        margin-top: 5.8rem;
+
+        @include sp {
+            margin-top: 3.2rem;
+        }
+    }
+}
+
+/* 縦線（最後以外） */
+.p-flow__item::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 5.8rem;
+    top: 0.8rem;
+    bottom: -13.4rem;
+    width: 0.3rem;
+    // height: 18.5rem;
+    background-color: $main-color;
+
+    @include sp {
+        top: 1.3rem;
+        left: 1.8rem;
+    }
+}
+
+.p-flow__item--last {
+    &::before {
+        height: auto;
+        top: 1.5rem;
+        bottom: 0;
+
+        @include sp {
+        bottom: 1.8rem;
+        }
+    }
+}
+
+/* 先端矢印 */
+.p-flow__arrow {
+    display: block;
+    position: absolute;
+    left: 6rem;
+    bottom: -1.8rem;
+    transform: translateX(-50%);
+
+    @include sp {
+        left: 2rem;
+        bottom: 1.6rem;
+    }
+}
+
+// 赤丸
+.p-flow__item::after {
+    content: "";
+    position: absolute;
+    left: 6rem;
+    top: 1.5rem;
+    transform: translate(-50%, -50%);
+    width: 2rem;
+    height: 2rem;
+    background-color: $main-color;
+    border-radius: 50%;
+    z-index: 2;
+
+    @include sp {
+        left: 2rem;
+        top: 1rem;
+    }
+}
+
+.p-flow__content {
+    display: flex;
+    gap: 10rem;
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+
+    @include sp {
+        display: block;
+        gap: 0;
+    }
+}
+
+.p-flow__title {
+    position: relative;
+    top: -1rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $main-color;
+    width: 15.4rem;
+    padding-left: 6.2rem;
+    padding-top: 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    @include sp {
+        top: -1.3rem;
+        left: -1.1rem;
+    }
+}
+
+.p-flow__text {
+    font-size: 1.8rem;
+    line-height: 1.666;
+    flex: 1;
+
+    @include sp {
+        font-size: 1.6rem;
+        padding-left: 5.1rem;
+        line-height: 1.875;
+        position: relative;
+        top: -1rem;
+    }
+}
+
+/* ===============================================
+# 選ばれる理由
+=============================================== */
+.p-top-reason {
+    padding-block: 6.4rem 9rem;
+
+    @include sp {
+        padding-block: 4.9rem 3.5rem;
+    }
+}
+
+.p-section-title.p-section-title--white {
+    color: $font-color;
+}
+
+.p-top-reason__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-top: 2rem;
+
+    @include sp {
+        gap: 0;
+        padding-top: 2.4rem;
+    }
+}
+
+.p-top-reason__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+
+    @include sp {
+        flex-direction: column;
+        gap: 0;
+
+        &+& {
+            margin-top: 4.0rem;
+        }
+    }
+}
+
+.p-top-reason__item:nth-child(n+2) .p-top-reason__item-title {
+    margin-top: 0;
+
+    @include sp {
+        margin-top: 3rem;
+    }
+}
+
+.p-top-reason__img img {
+    width: 35rem;
+    height: auto;
+    aspect-ratio: 350 / 247;
+    object-fit: cover;
+    flex-shrink: 0;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
+        width: auto;
+        height: 100%;
+    }
+}
+
+.p-top-reason__content {
+    position: relative;
+    flex: 1;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include sp {
+        gap: 2rem;
+    }
+}
+
+.p-top-reason__item-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    display: block;
+    border-bottom: 2px solid $main-color;
+    margin-top: 1rem;
+    margin-left: -5rem;
+    padding-left: 5rem;
+    padding-bottom: 0.5rem;
+
+    @include sp {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-top: 3rem;
+        position: relative;
+        left: -0rem;
+        margin-left: 0;
+        padding-left: 0;
+        max-width: 53.2rem;
+    }
+}
+
+.p-top-reason__text {
+    font-size: 1.8rem;
+    padding-top: 0.7rem;
+
+    @include sp {
+        font-size: 1.6rem;
+        padding-top: 0.3rem;
+    }
+}
+
+.p-top-voice {
+    background-color: $main-color;
+    padding-block: 4.6rem 7.9rem;
+
+    @include sp {
+        padding-block: 4.7rem 5.2rem;
+    }
+
+    .l-inner {
+        max-width: 960px;
+        padding-inline: 40px;
+
+        @include sp {
+            padding-inline: 20px;
+        }
+    }
+}
+
+/* =========================
+   Splide 矢印カスタマイズ
+   ========================= */
+
+/* デフォルトの < >（svg）を消す */
+.splide__arrow svg {
+    display: none !important;
+}
+
+/* Splideが勝手につける丸を消す */
+.splide__arrow {
+    position: absolute !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: block;
+    transform: none !important;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+/* 自作SVG画像サイズ */
+.splide__arrow img {
+    width: 30px;
+}
+
+.splide__arrow--prev {
+    top: 41% !important;
+    left: -4rem !important;
+
+    @include sp {
+        top: 40% !important;
+        left: 0 !important;
+    }
+
+    // @include md {
+    //     left: -1% !important;
+    // }
+}
+
+.splide__arrow--next {
+    top: 41% !important;
+    right: -4rem !important;
+
+    @include sp {
+        top: 40% !important;
+        right: 0 !important;
+    }
+}
+
+
+.splide__pagination {
+    @include sp {
+        display: none;
+    }
+}
+
+
+.p-top-voice__slider {
+    position: relative;
+}
+
+.p-top-voice__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.4s;
+
+    @include pc {
+        &:hover {
+            .p-top-voice__img img {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+
+            .p-top-voice__meta,
+            .p-top-voice__text {
+                opacity: 0.7;
+                transition: opacity 0.4s;
+            }
+        }
+    }
+}
+
+.p-top-voice__img {
+    position: relative;
+    width: 27rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 2.8rem;
+
+    @include sp {
+        display: block;
+        margin-inline: auto;
+        width: 33.5rem;
+    }
+}
+
+
+.p-top-voice__img img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 270 / 190;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+
+    @include sp {
+        width: auto;
+        max-width: 33.5rem;
+        height: 100%;
+        aspect-ratio: 335 / 200;
+    }
+}
+
+.p-top-voice__meta {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $font-color;
+    margin-top: 1.6rem;
+    opacity: 1;
+    text-align: center;
+
+    @include sp {
+        margin-top: 2.5rem;
+    }
+}
+
+.p-top-voice__text {
+    width: 27rem;
+    font-size: 1.8rem;
+    color: $font-color;
+    line-height: 1.666;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    opacity: 1;
+    line-height: 1.8;
+
+    @include sp {
+        width: 100%;
+        margin-top: 1rem;
+        line-height: 1.66;
+    }
+}
+
+/* ===============================================
+# よくあるご質問
+=============================================== */
+.p-faq {
+    padding-block: 5.3rem 3.5rem;
+
+    @include sp {
+        padding-block: 2rem 1.5rem;
+    }
+}
+
+.p-faq__list {
+    border-top: 0.5px solid $text-color;
+    margin-top: 3.3rem;
+
+    @include sp {}
+}
+
+.p-faq__item {
+    height: auto;
+    border-bottom: 0.5px solid $text-color;
+    transition: background-color 0.3s;
+
+    &.is-open {
+        background-color: rgba(203, 0, 0, 0.098);
+    }
+}
+
+.p-faq__question {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-block: 1.5rem 1.4rem;
+    padding-inline: 2rem 1.9rem;
+    width: 100%;
+    gap: 1rem;
+    line-height: 1.764;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    @include sp {
+        padding-block: 1.6rem 1.2rem;
+        padding-inline: 1rem 1.6rem;
+        font-size: 1.6rem;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 29px;
+        top: 46%;
+        transform: translateY(-50%) rotate(0);
+        width: 1.4rem;
+        height: 1rem;
+        background: url("../images/top/icon-faq-arrow.svg") no-repeat center/contain;
+        transition: transform 0.3s ease-out;
+
+        @include sp {
+            right: 15px;
+            top: 55%;
+        }
+    }
+
+    /* 開いている時は180度回転させる */
+    &.is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+/* Qのマーク */
+.p-faq__q {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $text-color;
+    color: $c-accent;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1;
+
+    @include sp {
+        font-size: 1.6rem;
+        position: relative;
+         top: -0.1rem;
+        left: -1rem;
+
+
+        .p-faq__item:nth-child(4) & {
+            top: -0.6rem;
+        }
+    }
+}
+
+.p-faq__answer {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: $main-color;
+    font-size: 1.7rem;
+    line-height: 1.764;
+    background-color: rgba(203, 0, 0, 0.098);
+    padding-block: 1.5rem 1.1rem;
+    padding-inline: 2rem;
+    cursor: pointer;
+    gap: 1rem;
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: 1.875;
+        padding-inline: 0rem 1.5rem;
+        padding-block: 1.7rem 0.9rem;
+        gap: 2rem;
+    }
+}
+
+/* Aのマーク */
+.p-faq__a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $main-color;
+    color: $c-accent;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+   
+
+    @include sp {
+        font-size: 1.6rem;
+        position: relative;
+        top: -0.4rem;
+    }
+}
+
+.p-faq__question-text,
+.p-faq__answer-text {
+    flex: 1;
+}
+
+/* ===============================================
+# ブログ一覧
+=============================================== */
+
+.p-top-page .p-top-blog__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+
+    @include sp {
+        display: block;
+    }
+}
+
+.p-top-page .c-blog-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+
+    @include sp {
+        gap: 3rem;
+    }
+}
+
+.p-top-page .c-blog-card__date {
+    text-align: right;
+    padding-top: 1rem;
+
+    @include sp {
+        padding-top: 1.5rem;
+    }
+}
+
+.p-top-page .c-blog-card__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* TOPページ専用の上書き */
+.p-top-page .c-blog-card {
+    margin-top: 3.5rem;
+
+    @include sp {
+        margin-top: 3.6rem;
+    }
+
+    &+.c-blog-card {
+        margin-top: 3.5rem !important;
+
+        @include sp {
+            margin-top: 4rem !important;
+        }
+    }
+}
+
+.p-top-page .p-blog-list .c-blog-card__img {
+    width: 26rem;
+    height: 20rem;
+    display: block;
+    overflow: hidden;
+
+    img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+    }
+
+    @include sp {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 335 / 200;
+    }
+}
+
+.p-top-blog__more {
+    text-align: right;
+    margin-top: 3.7rem;
+
+    @include sp {
+        text-align: center;
+        margin-top: 3.4rem;
+    }
+}
+
+.p-top-blog__more-link {
+
+    border-bottom: 1px solid currentColor;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.p-top-page .p-blog-list {
+    margin-top: 0;
+    padding-block: 3.3rem 20.2rem;
+
+    @include sp {
+        padding-block: 2.5rem 18.9rem;
+    }
+}

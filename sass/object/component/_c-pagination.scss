@@ -1,0 +1,64 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+
+// ページネーション（共通）
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 7rem;
+
+
+  @include sp {
+    gap: 0.5rem;
+    margin-top: 5.9rem;
+  }
+}
+
+.c-pagination__num {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border: 1px solid $text-color;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  color: $text-color;
+  text-decoration: none;
+  transition: background-color 0.4s, color 0.4s;
+
+  &:hover {
+    background-color: $text-color;
+    color: $font-color;
+  }
+
+  @include sp {
+    font-size: 1.6rem;
+    width: 4.4rem;
+    height: 4.4rem;
+   
+    line-height: 1.75;
+  }
+}
+
+.c-pagination__num.is-active {
+  background-color: $text-color;
+  color: #fff;
+  cursor: default;     
+  pointer-events: none
+}
+
+.c-pagination__dots {
+  font-size: 1.6rem;
+  padding: .8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include sp {
+    width: 2.8rem;
+  }
+}

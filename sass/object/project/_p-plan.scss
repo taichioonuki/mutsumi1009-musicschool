@@ -1,0 +1,397 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as *;
+
+.p-plan__content {
+  padding-block: 6.8rem 22rem;
+
+  @include sp {
+    align-items: center;
+    padding-block: 4.6rem 18.3rem;
+  }
+}
+
+.p-plan-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+
+  @include sp {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3.9rem;
+
+  }
+}
+
+.p-plan-price__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-color;
+  color: $section-bg-color;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 21rem;
+  height: 6rem;
+}
+
+.p-plan-price__plus {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+.p-plan-price__plus::before,
+.p-plan-price__plus::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+}
+
+/* 横線 */
+.p-plan-price__plus::before {
+  width: 100%;
+  height: 0.3rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* 縦線 */
+.p-plan-price__plus::after {
+  height: 100%;
+  width: 0.3rem;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+
+.p-plan__message {
+  margin-top: 4.8rem;
+  display: block;
+
+  .c-page-message {
+    text-align: left !important;
+    margin-inline: 0 !important;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.666;
+  }
+
+  @include sp {
+    margin-top: 4.7rem;
+
+    .c-page-message {
+      text-align: left !important;
+      margin-inline: 0 !important;
+      font-size: 1.6rem;
+      line-height: 1.875;
+      width: 100%;
+    }
+  }
+}
+
+.p-plan-table .c-page-title {
+  margin-top: 5.7rem;
+
+  @include sp {
+    margin-top: 3.7rem;
+  }
+}
+
+
+/* --- プラン表 共通全体 --- */
+.p-plan-table__table {
+  margin-top: 4rem;
+  width: 88rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  @include sp {
+    margin-top: 1.8rem;
+    width: 67rem;
+  }
+
+  th,
+  td {
+    vertical-align: middle;
+    text-align: center;
+    width: 5rem;
+
+    @include sp {
+      padding-block: 1.0rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* --- ヘッダー(thead) 突き出し --- */
+.p-plan-table__table thead {
+  th {
+    background-color: transparent;
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+    font-size: 2rem;
+    vertical-align: middle;
+
+    @include sp {
+      padding-block: 0.8rem;
+      
+    }
+  }
+}
+
+/* ベーシック・プレミアム（黒） */
+.p-plan-table__head-black {
+  background-color: #000 !important;
+  color: #fff !important;
+  height: 5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 0rem;
+  vertical-align: middle;
+
+  @include sp {
+    height: 6.6rem;
+    white-space: normal;
+    line-height: 1.25;
+    vertical-align: bottom;
+  }
+}
+
+.p-plan-table__head-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+
+  @include sp {
+    font-size: 2rem;
+
+  }
+}
+
+/* スタンダード（赤・おすすめ） */
+th.is-recommend {
+  background-color: $main-color !important;
+  color: $c-accent !important;
+  // height: 8rem; 
+  padding-bottom: 0.5rem;
+  padding-top: 1.1rem;
+  vertical-align: bottom;
+
+  @include sp {
+    padding-block: 0.8rem !important; 
+    vertical-align: middle;
+  }
+}
+
+
+.p-plan-table__badge {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-top: 1.1rem;
+
+  @include sp {
+    padding-top: 0.8rem; 
+    line-height: 1;
+  }
+}
+
+.p-plan-table__title {
+   display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+  @include sp {
+    line-height: 1.2;
+    white-space: normal;
+  }
+}
+
+th.is-recommend .p-plan-table__title {
+  @include sp {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* --- ボディ(tbody) --- */
+.p-plan-table__table tbody {
+  th {
+    text-align: left;
+    border-right: 1px solid #ccc;
+    padding-left: 2rem;
+    padding-top: 0.7rem;
+    font-size: 1.7rem;
+
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: 1.5625;
+      white-space: nowrap;
+      max-width: 6rem;
+      height: auto;
+      padding-inline: 1.05rem 3rem;
+      padding-block: 2.7rem;
+    }
+  }
+
+  td {
+    border-right: 1px solid #ccc;
+    height: 8.5rem;
+
+    @include sp {
+      padding-inline: .5rem;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:last-child {
+
+    th,
+    td {
+      @include sp {
+        padding-top: 1.9rem !important;
+        padding-bottom: 1.6rem !important;
+        line-height: 1.5625;
+      }
+    }
+  }
+
+  /*月額料金の行（1行目）を太字にする */
+  tr:first-child {
+    border-top: 1px solid #ccc;
+
+    th,
+    td {
+      font-weight: 700;
+    }
+
+    td:nth-child(3) {
+      color: $main-color;
+    }
+  }
+
+  .p-plan-table__num {
+    font-size: 2.2rem;
+    display: inline-block;
+
+    @include sp {
+      padding-top: 0.3rem;
+    }
+  }
+
+  td:nth-child(2) {
+    color: $text-color;
+  }
+}
+
+/* ストライプ背景 */
+tr:nth-child(even) {
+  background-color: rgba(80, 80, 80, 0.1);
+}
+
+/* 最終行の下線 */
+tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+/* --- アイコン・装飾 --- */
+.p-plan-table__dot {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 auto;
+
+  &--red {
+    background-color: $main-color;
+  }
+}
+
+.p-plan-table__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+
+.p-plan-table__dash {
+  position: relative;
+  height: 8.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 0.1rem;
+    background-color: #707070;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.p-page-note {
+  margin-top: 2.4rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.01em;
+
+  @include sp {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    line-height: 1.875;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* --- SimpleBar  --- */
+.p-plan-table__scroll {
+
+  @include sp {
+    position: relative;
+    overflow-y: hidden;
+    padding-bottom: 5rem;
+  }
+}
+
+.simplebar-track.simplebar-horizontal {
+  display: none;
+
+  @include sp {
+    display: block !important;
+    background-color: rgba(80, 80, 80, 0.149);
+    height: 2.5rem;
+    border-radius: 0;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.simplebar-scrollbar::before {
+  @include sp {
+    content: "";
+    display: block;
+    height: 2.3rem;
+    background-color: rgba(80, 80, 80, 0.251);
+    border-radius: 0;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,85 @@
+ @use "../../global/variable" as *;
+ @use "../../global/function" as *;
+ @use "../../global/mixin" as *;
+
+ // / ハンバーガーメニュー
+ // PCでは非表示
+ .c-hamburger {
+ 	display: none;
+
+ 	@include sp {
+ 		position: fixed;
+ 		top: 0;
+ 		right: 0;
+ 		width: 7.1rem;
+ 		height: 5rem;
+ 		background: $main-color;
+ 		z-index: 1001;
+ 		display: flex;
+ 		justify-content: center;
+ 		align-items: center;
+ 		flex-direction: column;
+ 		cursor: pointer;
+ 		transition: background-color 0.3s ease-in-out,
+ 			transform 0.3s ease-in-out;
+ 	}
+ }
+
+ // ★ 三本線のスタイル
+ .c-hamburger__line,
+ .c-hamburger__line::before,
+ .c-hamburger__line::after {
+ 	position: absolute;
+ 	width: 3.3rem;
+ 	height: 0.4rem;
+ 	left: 2rem;
+ 	background: $font-color;
+ 	border-radius: 0.2rem;
+ 	transition:
+ 		transform .45s cubic-bezier(.22, .61, .36, 1),
+ 		opacity .35s ease,
+ 		background-color .35s ease;
+ }
+
+ // 中の線
+ .c-hamburger__line {
+ 	top: 49%;
+ 	transform: translateY(-50%);
+ }
+
+ // 疑似要素の共通スタイル
+ .c-hamburger__line::before,
+ .c-hamburger__line::after {
+ 	content: "";
+ 	left: 0;
+ }
+
+
+ // 上の線
+ .c-hamburger__line::before {
+ 	top: 49%;
+ 	transform: translateY(calc(-50% - 1.2rem));
+ }
+
+ // 下の線
+ .c-hamburger__line::after {
+ 	top: 49%;
+ 	transform: translateY(calc(-50% + 1.2rem));
+ }
+
+ // メニューが開いた時のアニメーション
+ .c-hamburger.is-open {
+ 	.c-hamburger__line {
+ 		background: transparent;
+ 	}
+
+ 	.c-hamburger__line::before {
+ 		top: 50%;
+ 		transform: translateY(-50%) rotate(45deg);
+ 	}
+
+ 	.c-hamburger__line::after {
+ 		top: 50%;
+ 		transform: translateY(-50%) rotate(-45deg);
+ 	}
+ }

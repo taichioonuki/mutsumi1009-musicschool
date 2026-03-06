@@ -1,0 +1,268 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as *;
+
+
+/* ===============================================
+# contact-form
+=============================================== */
+
+.p-contact-form__content {
+  padding-block: 6.8rem 10rem;
+
+  @include sp {
+    align-items: center;
+    padding-block: 4.7rem 10.8rem;
+  }
+}
+
+// フォーム全体
+.contact__form {
+
+  @include sp {
+    width: auto;
+  }
+}
+
+// フォーム項目のリスト
+.p-contact__items {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 6.5rem;
+
+  @include sp {
+    gap: 0.8rem;
+    margin-top: 3.3rem;
+  }
+}
+
+// フォーム項目
+.p-contact__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.9rem;
+
+  @include sp {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+
+.p-contact__item--message {
+  @include sp {
+    gap: 0; 
+  }
+}
+
+// タイトル部分
+.p-contact__title {
+  width: 14rem;
+
+  @include sp {
+    width: auto;
+  }
+}
+
+// ラベル
+.contact__label {
+  display: inline-block;
+  font-size: 2rem;
+  color: $text-color;
+
+  @include sp {
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+
+    @include sp {
+      // --- SPの設定 ---
+      display: inline;
+      margin-left: 1.4rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.p-contact__item--inquiry {
+  @include sp {
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+  .contact__label {
+    line-height: 1.5;
+
+    @include sp {
+      line-height: 2.06;
+    }
+  }
+}
+
+.p-contact__item--inquiry .contact__label br {
+  @include sp {
+    display: none;
+  }
+}
+
+
+// コンテンツ部分
+.p-contact__content {
+  flex: 1;
+  width: auto;
+
+  @include sp {
+    width: 100%;
+
+  }
+}
+
+// 入力フィールド
+.contact__input {
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  border: 0.5px solid #000;
+  background-color: #fff;
+  color: $text-color;
+  font-family: $font-sans;
+  transition: border-color 0.3s;
+  line-height: 1;
+
+  @include sp {
+    width: 100%;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #B2B2B2;
+  }
+}
+
+.contact__textarea {
+  width: 100%;
+  min-height: 30rem;
+  padding: 0.9rem 2rem;
+  font-size: 1.5rem;
+  border: 0.5px solid #000;
+  background-color: #fff;
+  color: $text-color;
+  line-height: 1.7;
+  word-break: break-all;
+  resize: none;
+  display: block;
+
+  @include sp {
+    margin: 0 auto;
+    flex: unset;
+    min-height: 19rem;
+  }
+
+  &::placeholder {
+    color: #B2B2B2;
+  }
+}
+
+// チェックボックスグループ
+.contact__checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  @include sp {
+    gap: 1rem;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: $text-color;
+
+    @include sp {
+      font-size: 1.4rem;
+      gap: 1rem;
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked+.custom-checkbox-square {
+      border-color: $text-color;
+
+      &::after {
+        border-color: $text-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// カスタムチェックボックス
+.custom-checkbox-square {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border: 0.5px solid #000;
+  background-color: #fff;
+  flex-shrink: 0;
+  transition: background-color 0.3s, border-color 0.3s;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 0.5rem;
+    height: 1rem;
+    border: solid #fff;
+    border-width: 0 0.2rem 0.2rem 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+// チェックボックスの
+.checkbox-text {
+  flex: 1;
+  font-size: 1.8rem;
+
+  @include sp {
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+}
+
+// 送信ボタン
+.contact__submit {
+  margin-top: 4rem;
+  text-align: center;
+  line-height: 1.32;
+
+  @include sp {
+    margin-top: 4.8rem;
+  }
+}
+
+.contact__button:hover {
+  background-color: $c-base;
+  color: $main-color;
+}

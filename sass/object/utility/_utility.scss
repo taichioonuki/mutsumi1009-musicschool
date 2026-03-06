@@ -1,0 +1,20 @@
+
+@use "../../global/mixin" as *;
+
+.sp-br {
+  display: none;
+
+  @include sp {
+    display: inline;
+  }
+}
+
+
+.sp-br {
+    display: none;
+  
+    @include sp {
+      display: inline;
+    }
+  }
+  

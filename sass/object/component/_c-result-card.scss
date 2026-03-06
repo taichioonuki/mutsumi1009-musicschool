@@ -1,0 +1,64 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+.c-result-card {
+  display: block;
+
+}
+
+.c-result-card__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+
+  @include sp {
+    display: block;
+  }
+}
+
+
+.c-result-card__img {
+  position: relative;
+  overflow: hidden;
+
+  @include sp {
+    display: block;
+
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+  }
+}
+
+.c-result-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-result-card__text {
+  font-size: 2rem;
+  line-height: 1.25;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.c-result-card__date {
+  font-size: 1.8rem;
+  line-height: 1.777;
+  text-align: right;
+
+}
