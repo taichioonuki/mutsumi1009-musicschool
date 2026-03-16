@@ -6,9 +6,13 @@
 
 
 .p-blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
     margin-top: 3rem;
 
     @include sp {
+        gap: 4rem;
         margin-top: 3.7rem;
     }
 
@@ -24,13 +28,13 @@
         }
     }
 
-    .c-blog-card+.c-blog-card {
-        margin-top: 7rem;
+    // .c-blog-card+.c-blog-card {
+    //     margin-top: 7rem;
 
-        @include sp {
-            margin-top: 4rem;
-        }
-    }
+    //     @include sp {
+    //         margin-top: 4rem;
+    //     }
+    // }
 }
 
 

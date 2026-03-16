@@ -17,7 +17,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  width: 30rem;
+  // width: auto;
 
   @include sp {
     right: 1.7rem;
@@ -35,8 +35,8 @@
 // コンタクトフォーム topへ戻るボタン
 .p-contact-form~.p-fixed-buttons {
   position: fixed !important;
-  bottom: 30.4rem !important;
-  right: -1.5rem !important;
+  bottom: 31rem !important;
+  right: 10rem !important;
 
   @include sp {
      bottom: 32.1rem !important;

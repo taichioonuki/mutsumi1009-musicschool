@@ -193,7 +193,7 @@ html {
 }
 
 body {
-  font-family: "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", system-ui, sans-serif;
+  font-family: "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", system-ui, sans-serif;
   font-size: 1.8rem;
   line-height: 1.833;
   margin: 0;
@@ -242,12 +242,12 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding-top: 8rem;
+  margin-top: 8rem;
   overflow: hidden;
 }
 @media (max-width: 767px) {
   .l-main {
-    padding-top: 5rem;
+    margin-top: 5rem;
   }
 }
 
@@ -576,6 +576,7 @@ img {
   font-size: 2.5rem;
   color: #fff;
   z-index: 2;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .c-hero__text, .p-contact-send__keyvisual-text {
@@ -604,13 +605,14 @@ img {
   position: absolute;
   font-size: 1.5rem;
   background-color: #CB0000;
-  color: #E8E8E8;
+  color: #fff;
   top: 0;
   left: 0;
   padding-inline: 0.2rem;
   width: 8rem;
   height: 3rem;
   text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .c-tag {
@@ -873,9 +875,12 @@ TOPへ戻るボタン
   cursor: pointer;
 }
 .page-top-btn img {
+  width: 100%;
+  height: auto;
   position: static;
   -webkit-transform: none;
           transform: none;
+  pointer-events: none;
 }
 @media (min-width: 768px) {
   .page-top-btn:hover {
@@ -941,6 +946,7 @@ TOPへ戻るボタン
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-weight: 700;
 }
 
 .c-result-card__date {
@@ -987,7 +993,6 @@ TOPへ戻るボタン
   height: 3.7rem;
   color: #fff;
   font-size: 1.6rem;
-  font-weight: 700;
 }
 
 .c-article-nav__label--prev {
@@ -1145,12 +1150,6 @@ TOPへ戻るボタン
 .logo:hover {
   opacity: 0.7;
 }
-@media (max-width: 767px) {
-  .logo {
-    height: auto;
-  }
-}
-
 .logo__img img {
   display: block;
   width: 3.2rem;
@@ -1660,7 +1659,7 @@ TOPへ戻るボタン
 .p-top-promo__label {
   font-size: 3rem;
   font-weight: 700;
-  color: #E8E8E8;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .p-top-promo__label {
@@ -1672,7 +1671,7 @@ TOPへ戻るボタン
   position: relative;
   font-size: 3rem;
   font-weight: 700;
-  color: #E8E8E8;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .p-top-promo__title {
@@ -1684,7 +1683,7 @@ TOPへ戻るボタン
 .p-top-promo__text {
   font-size: 1.8rem;
   background-color: #CB0000;
-  color: #E8E8E8;
+  color: #fff;
   padding-top: 2.3rem;
 }
 @media (max-width: 767px) {
@@ -2084,6 +2083,15 @@ TOPへ戻るボタン
   display: block;
   text-decoration: none;
   color: inherit;
+}
+.p-top-voice__link .p-top-voice__img img {
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s, -webkit-transform 0.4s;
+}
+.p-top-voice__link .p-top-voice__meta,
+.p-top-voice__link .p-top-voice__text {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
@@ -2096,8 +2104,6 @@ TOPへ戻るボタン
   .p-top-voice__link:hover .p-top-voice__meta,
   .p-top-voice__link:hover .p-top-voice__text {
     opacity: 0.7;
-    -webkit-transition: opacity 0.4s;
-    transition: opacity 0.4s;
   }
 }
 
@@ -2129,10 +2135,10 @@ TOPへ戻るボタン
      object-fit: cover;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 @media (max-width: 767px) {
   .p-top-voice__img img {
@@ -2269,7 +2275,7 @@ TOPへ戻るボタン
   width: 3.5rem;
   height: 3.5rem;
   background-color: #000;
-  color: #E8E8E8;
+  color: #fff;
   border-radius: 50%;
   font-size: 1.7rem;
   font-weight: 700;
@@ -2330,7 +2336,7 @@ TOPへ戻るボタン
   width: 3.5rem;
   height: 3.5rem;
   background-color: #CB0000;
-  color: #E8E8E8;
+  color: #fff;
   border-radius: 50%;
   font-size: 1.7rem;
   font-weight: 700;
@@ -2359,6 +2365,7 @@ TOPへ戻るボタン
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
+  margin-top: 3.5rem;
 }
 @media (max-width: 767px) {
   .p-top-page .p-top-blog__items {
@@ -2402,24 +2409,6 @@ TOPへ戻るボタン
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-}
-
-/* TOPページ専用の上書き */
-.p-top-page .c-blog-card {
-  margin-top: 3.5rem;
-}
-@media (max-width: 767px) {
-  .p-top-page .c-blog-card {
-    margin-top: 3.6rem;
-  }
-}
-.p-top-page .c-blog-card + .c-blog-card {
-  margin-top: 3.5rem !important;
-}
-@media (max-width: 767px) {
-  .p-top-page .c-blog-card + .c-blog-card {
-    margin-top: 4rem !important;
-  }
 }
 
 .p-top-page .p-blog-list .c-blog-card__img {
@@ -2493,7 +2482,6 @@ TOPへ戻るボタン
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  width: 30rem;
 }
 @media (max-width: 767px) {
   .p-fixed-buttons {
@@ -2512,8 +2500,8 @@ TOPへ戻るボタン
 
 .p-contact-form ~ .p-fixed-buttons {
   position: fixed !important;
-  bottom: 30.4rem !important;
-  right: -1.5rem !important;
+  bottom: 31rem !important;
+  right: 10rem !important;
 }
 @media (max-width: 767px) {
   .p-contact-form ~ .p-fixed-buttons {
@@ -2761,7 +2749,7 @@ TOPへ戻るボタン
   border: 0.5px solid #000;
   background-color: #fff;
   color: #000;
-  font-family: "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", system-ui, sans-serif;
+  font-family: "Yu Gothic Medium", "Yu Gothic", "YuGothic", "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", system-ui, sans-serif;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
   line-height: 1;
@@ -2934,7 +2922,7 @@ TOPへ戻るボタン
 
 .p-footer {
   background: #CB0000;
-  color: #E8E8E8;
+  color: #fff;
   padding-block: 4.4rem 4.9rem;
   text-align: center;
   width: 100%;
@@ -2971,7 +2959,7 @@ TOPへ戻るボタン
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.941;
-  color: #E8E8E8;
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2995,16 +2983,14 @@ TOPへ戻るボタン
             column-gap: 3.1rem;
     row-gap: 1rem;
     padding: 0;
-    list-style: none;
   }
 }
-
 .p-footer__nav-list a {
-  color: #E8E8E8;
+  color: inherit;
+  text-decoration: none;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
-
 .p-footer__nav-list a:hover {
   opacity: 0.7;
   cursor: pointer;
@@ -3030,6 +3016,7 @@ TOPへ戻るボタン
 }
 
 .p-footer__logo-link {
+  display: inline-block;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
@@ -3127,10 +3114,19 @@ TOPへ戻るボタン
 }
 
 .p-blog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7rem;
   margin-top: 3rem;
 }
 @media (max-width: 767px) {
   .p-blog-list {
+    gap: 4rem;
     margin-top: 3.7rem;
   }
 }
@@ -3145,14 +3141,6 @@ TOPへ戻るボタン
     width: 100%;
     height: auto;
     aspect-ratio: 335/200;
-  }
-}
-.p-blog-list .c-blog-card + .c-blog-card {
-  margin-top: 7rem;
-}
-@media (max-width: 767px) {
-  .p-blog-list .c-blog-card + .c-blog-card {
-    margin-top: 4rem;
   }
 }
 
@@ -3466,6 +3454,7 @@ TOPへ戻るボタン
 }
 .p-result_details__table td {
   width: 26rem;
+  background-color: #fff;
 }
 
 .p-result_details .c-article-nav {
@@ -3941,6 +3930,8 @@ TOPへ戻るボタン
   line-height: 1;
   margin-top: 3.5rem;
   text-decoration: none;
+  -webkit-transition: opacity 0.4s, color 0.4s;
+  transition: opacity 0.4s, color 0.4s;
 }
 .p-blog-detail__textlink::after {
   content: "";
@@ -3950,6 +3941,9 @@ TOPへ戻るボタン
   width: 100%;
   height: 1px;
   background-color: #CB0000;
+}
+.p-blog-detail__textlink:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .p-blog-detail__textlink {
@@ -4057,7 +4051,7 @@ TOPへ戻るボタン
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
   width: 22rem;
   height: 17rem;
   -webkit-box-pack: center;
@@ -4157,7 +4151,7 @@ TOPへ戻るボタン
 }
 
 .p-sidebar-search__inner {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4264,7 +4258,7 @@ TOPへ戻るボタン
 .p-sidebar-recommend__img {
   width: 9.5rem;
   height: 7.5rem;
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -4556,15 +4550,15 @@ TOPへ戻るボタン
   gap: 0 !important;
 }
 
-.p-plan__content {
-  padding-block: 6.8rem 22rem;
+.p-plan-system {
+  padding-block: 6.7rem 2.85rem;
 }
 @media (max-width: 767px) {
-  .p-plan__content {
+  .p-plan-system {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-block: 4.6rem 18.3rem;
+    padding-block: 4.6rem 1.9rem;
   }
 }
 
@@ -4603,7 +4597,7 @@ TOPへ戻るボタン
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #CB0000;
-  color: #F5F5F5;
+  color: #fff;
   font-size: 2rem;
   font-weight: 700;
   width: 21rem;
@@ -4670,12 +4664,18 @@ TOPへ戻るボタン
   }
 }
 
-.p-plan-table .c-page-title {
-  margin-top: 5.7rem;
-}
 @media (max-width: 767px) {
   .p-plan-table .c-page-title {
     margin-top: 3.7rem;
+  }
+}
+
+.p-plan-table {
+  padding-block: 2.85rem 22.3rem;
+}
+@media (max-width: 767px) {
+  .p-plan-table {
+    padding-block: 1.9rem 12.6rem;
   }
 }
 
@@ -4692,15 +4692,28 @@ TOPへ戻るボタン
     width: 67rem;
   }
 }
-.p-plan-table__table th,
-.p-plan-table__table td {
+
+.p-plan-table__head-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+th,
+td {
   vertical-align: middle;
   text-align: center;
-  width: 5rem;
 }
 @media (max-width: 767px) {
-  .p-plan-table__table th,
-  .p-plan-table__table td {
+  th,
+  td {
     padding-block: 1rem;
     vertical-align: middle;
   }
@@ -4709,14 +4722,12 @@ TOPへ戻るボタン
 /* --- ヘッダー(thead) 突き出し --- */
 .p-plan-table__table thead th {
   background-color: transparent;
-  padding-top: 0.1rem;
-  padding-bottom: 0.2rem;
   font-size: 2rem;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 @media (max-width: 767px) {
   .p-plan-table__table thead th {
-    padding-block: 0.8rem;
+    vertical-align: middle;
   }
 }
 
@@ -4725,7 +4736,7 @@ TOPへ戻るボタン
   background-color: #000 !important;
   color: #fff !important;
   height: 5rem;
-  padding-top: 2.2rem;
+  padding-top: 1.2rem;
   padding-bottom: 0rem;
   vertical-align: middle;
 }
@@ -4752,15 +4763,14 @@ TOPへ戻るボタン
 /* スタンダード（赤・おすすめ） */
 th.is-recommend {
   background-color: #CB0000 !important;
-  color: #E8E8E8 !important;
+  color: #fff !important;
+  height: 8rem;
   padding-bottom: 0.5rem;
-  padding-top: 1.1rem;
-  vertical-align: bottom;
 }
 @media (max-width: 767px) {
   th.is-recommend {
-    padding-block: 0.8rem !important;
     vertical-align: middle;
+    height: auto;
   }
 }
 
@@ -4777,7 +4787,7 @@ th.is-recommend {
   }
 }
 
-.p-plan-table__title {
+.p-plan-table__head-title {
   display: block;
   font-size: 2rem;
   font-weight: 700;
@@ -4785,8 +4795,8 @@ th.is-recommend {
   white-space: nowrap;
 }
 @media (max-width: 767px) {
-  .p-plan-table__title {
-    line-height: 1.2;
+  .p-plan-table__head-title {
+    line-height: 1.3;
     white-space: normal;
   }
 }

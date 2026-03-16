@@ -6,11 +6,11 @@
 
 .l-main {
     flex: 1;
-    padding-top: 8rem; 
+    margin-top: 8rem; 
     overflow: hidden;
   
     @include sp {
-        padding-top: 5rem; // SPヘッダーの高さ
+        margin-top: 5rem; // SPヘッダーの高さ
     }
 }
 

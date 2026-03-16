@@ -2,7 +2,7 @@
 # カラー変数設定
 =============================================== */
 $main-color: #CB0000;
-$section-bg-color: #F5F5F5; 
+$section-bg-color: #F5F5F5;
 $text-color: #000;
 $c-base: #F5F5F5;
 // $c-main: #CB0000;
@@ -17,12 +17,8 @@ $font-color: #fff;
 =============================================== */
 
 $font-sans: "Yu Gothic Medium", "Yu Gothic", "YuGothic",
-            "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-            "Meiryo", system-ui, sans-serif;
-$font-weight: 500;      
-$base-font-size: 1.8rem; 
-
-
-
-
-
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Meiryo", system-ui, sans-serif;
+$font-weight: 500;
+$base-font-size: 1.8rem;
