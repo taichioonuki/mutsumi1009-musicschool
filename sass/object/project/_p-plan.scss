@@ -82,8 +82,8 @@
     text-align: left !important;
     margin-inline: 0 !important;
     width: 100%;
-    font-size: 1.8rem;
-    line-height: 1.666;
+    // font-size: 1.8rem;
+    // line-height: 1.666;
   }
 
   @include sp {
@@ -243,17 +243,14 @@ th.is-recommend .p-plan-table__title {
   }
 }
 
-
-
 /* --- ボディ(tbody) --- */
 .p-plan-table__table tbody {
   th {
     text-align: left;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #000;
     padding-left: 2rem;
     padding-top: 0.7rem;
     font-size: 1.7rem;
-
 
     @include sp {
       font-size: 1.6rem;
@@ -267,7 +264,7 @@ th.is-recommend .p-plan-table__title {
   }
 
   td {
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #000;
     height: 8.5rem;
 
     @include sp {
@@ -291,7 +288,7 @@ th.is-recommend .p-plan-table__title {
     }
   }
 
-  /*月額料金の行（1行目）を太字にする */
+  /*月額料金の行（1行目）を太字 */
   tr:first-child {
     border-top: 1px solid #ccc;
 
@@ -326,7 +323,7 @@ tr:nth-child(even) {
 
 /* 最終行の下線 */
 tr:last-child {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
 }
 
 /* --- アイコン・装飾 --- */

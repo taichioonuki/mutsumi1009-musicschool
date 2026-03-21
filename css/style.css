@@ -229,12 +229,12 @@ img {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 10000;
   background-color: #fff;
 }
 @media (max-width: 767px) {
   .l-header {
-    z-index: 1000;
+    z-index: 10000;
   }
 }
 
@@ -476,7 +476,7 @@ img {
 .c-hamburger__line::before,
 .c-hamburger__line::after {
   position: absolute;
-  width: 3.3rem;
+  width: 3.2rem;
   height: 0.4rem;
   left: 2rem;
   background: #fff;
@@ -488,7 +488,7 @@ img {
 }
 
 .c-hamburger__line {
-  top: 49%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -500,13 +500,13 @@ img {
 }
 
 .c-hamburger__line::before {
-  top: 49%;
+  top: 50%;
   -webkit-transform: translateY(calc(-50% - 1.2rem));
           transform: translateY(calc(-50% - 1.2rem));
 }
 
 .c-hamburger__line::after {
-  top: 49%;
+  top: 50%;
   -webkit-transform: translateY(calc(-50% + 1.2rem));
           transform: translateY(calc(-50% + 1.2rem));
 }
@@ -547,23 +547,6 @@ img {
   background-color: rgba(80, 80, 80, 0.4863);
   mix-blend-mode: multiply;
   z-index: 1;
-}
-.c-hero picture, .p-contact-send__keyvisual picture {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.c-hero img, .p-contact-send__keyvisual img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-}
-@media (max-width: 767px) {
-  .c-hero img, .p-contact-send__keyvisual img {
-    height: 100%;
-  }
 }
 
 .c-hero__text, .p-contact-send__keyvisual-text {
@@ -714,20 +697,14 @@ img {
 }
 @media (max-width: 767px) {
   .c-blog-card__img {
-    width: 100%;
-    height: auto;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
 }
 
-.c-blog-card__img img {
-  width: 100%;
-}
 @media (max-width: 767px) {
   .c-blog-card__img img {
     width: auto;
-    height: auto;
   }
 }
 
@@ -739,7 +716,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -759,18 +735,15 @@ img {
 .c-blog-card__date {
   font-size: 1.7rem;
   line-height: 1.764;
-  padding-top: 0.3rem;
 }
 @media (max-width: 767px) {
   .c-blog-card__date {
     text-align: right;
-    padding-top: 1.1rem;
   }
 }
 
 .c-blog-card__text {
   font-size: 1.8rem;
-  width: auto;
   height: 9rem;
   line-height: 1.666;
   padding-top: 0.9rem;
@@ -918,17 +891,6 @@ TOPへ戻るボタン
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 767px) {
-  .c-result-card__img {
-    display: block;
-  }
-}
-.c-result-card__img img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
 .c-result-card__body {
   display: -webkit-box;
@@ -989,7 +951,6 @@ TOPへ戻るボタン
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #000;
-  width: auto;
   height: 3.7rem;
   color: #fff;
   font-size: 1.6rem;
@@ -1045,13 +1006,9 @@ TOPへ戻るボタン
   }
 }
 
-.c-article-nav__img img {
-  width: auto;
-}
 @media (max-width: 767px) {
   .c-article-nav__img img {
     width: 100%;
-    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -1191,7 +1148,7 @@ TOPへ戻るボタン
 .logo__main {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.15;
   text-align: left;
 }
 @media (max-width: 767px) {
@@ -1202,10 +1159,10 @@ TOPへ戻るボタン
 }
 
 .logo__sub {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-top: 0.4rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.533;
 }
 @media (max-width: 767px) {
   .logo__sub {
@@ -1402,15 +1359,6 @@ TOPへ戻るボタン
   }
 }
 
-.sp-br {
-  display: none;
-}
-@media (max-width: 767px) {
-  .sp-br {
-    display: inline;
-  }
-}
-
 .p-top-hero__catch {
   position: absolute;
   top: 52%;
@@ -1534,6 +1482,7 @@ TOPへ戻るボタン
 
 .p-top-message__arrow {
   position: absolute;
+  width: 4rem;
   top: -5.6rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1561,7 +1510,7 @@ TOPへ戻るボタン
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 2px;
+  width: 0.3rem;
   background-color: #CB0000;
 }
 
@@ -1642,6 +1591,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-section-title {
     font-size: 2.5rem;
+    line-height: 1.6;
   }
 }
 
@@ -1652,7 +1602,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-promo {
-    padding-block: 4.9rem 3.5rem;
+    padding-block: 4.9rem 4rem;
   }
 }
 
@@ -1684,11 +1634,11 @@ TOPへ戻るボタン
   font-size: 1.8rem;
   background-color: #CB0000;
   color: #fff;
-  padding-top: 2.3rem;
+  margin-top: 2.3rem;
 }
 @media (max-width: 767px) {
   .p-top-promo__text {
-    padding-top: 1.4rem;
+    margin-top: 1.4rem;
     line-height: 1.666;
   }
 }
@@ -1706,11 +1656,11 @@ TOPへ戻るボタン
 }
 
 .p-flow__list {
-  padding-top: 5rem;
+  margin-top: 5rem;
 }
 @media (max-width: 767px) {
   .p-flow__list {
-    padding-top: 4rem;
+    margin-top: 4rem;
   }
 }
 
@@ -1774,6 +1724,7 @@ TOPへ戻るボタン
   bottom: -1.8rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 3.2rem;
 }
 @media (max-width: 767px) {
   .p-flow__arrow {
@@ -1882,12 +1833,12 @@ TOPへ戻るボタン
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5rem;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 @media (max-width: 767px) {
   .p-top-reason__list {
     gap: 0;
-    padding-top: 2.4rem;
+    margin-top: 3.6rem;
   }
 }
 
@@ -1909,7 +1860,7 @@ TOPへ戻るボタン
     gap: 0;
   }
   .p-top-reason__item + .p-top-reason__item {
-    margin-top: 4rem;
+    margin-top: 3.9rem;
   }
 }
 
@@ -1922,20 +1873,25 @@ TOPへ戻るボタン
   }
 }
 
-.p-top-reason__img img {
+.p-top-reason__img {
   width: 35rem;
-  height: auto;
-  aspect-ratio: 350/247;
-  -o-object-fit: cover;
-     object-fit: cover;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 @media (max-width: 767px) {
+  .p-top-reason__img {
+    width: 100%;
+  }
+}
+
+.p-top-reason__img img {
+  aspect-ratio: 350/247;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
   .p-top-reason__img img {
     aspect-ratio: 335/200;
-    width: auto;
-    height: 100%;
   }
 }
 
@@ -1986,12 +1942,12 @@ TOPへ戻るボタン
 
 .p-top-reason__text {
   font-size: 1.8rem;
-  padding-top: 0.7rem;
+  margin-top: 0.7rem;
 }
 @media (max-width: 767px) {
   .p-top-reason__text {
     font-size: 1.6rem;
-    padding-top: 0.3rem;
+    margin-top: 0.3rem;
   }
 }
 
@@ -2110,31 +2066,21 @@ TOPへ戻るボタン
 .p-top-voice__img {
   position: relative;
   width: 27rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow: hidden;
   margin-top: 2.8rem;
 }
 @media (max-width: 767px) {
   .p-top-voice__img {
-    display: block;
     margin-inline: auto;
     width: 33.5rem;
+    margin-top: 3.9rem;
   }
 }
 
 .p-top-voice__img img {
-  width: 100%;
-  height: auto;
   aspect-ratio: 270/190;
   -o-object-fit: cover;
      object-fit: cover;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   -webkit-transition: -webkit-transform 0.4s ease;
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
@@ -2142,9 +2088,6 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-voice__img img {
-    width: auto;
-    max-width: 33.5rem;
-    height: 100%;
     aspect-ratio: 335/200;
   }
 }
@@ -2199,6 +2142,12 @@ TOPへ戻るボタン
   border-top: 0.5px solid #000;
   margin-top: 3.3rem;
 }
+@media (max-width: 767px) {
+  .p-faq__list {
+    margin-top: 3.9rem;
+  }
+}
+
 .p-faq__item {
   height: auto;
   border-bottom: 0.5px solid #000;
@@ -2223,7 +2172,7 @@ TOPへ戻るボタン
   gap: 1rem;
   line-height: 1.764;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 @media (max-width: 767px) {
   .p-faq__question {
@@ -2289,9 +2238,6 @@ TOPへ戻るボタン
     position: relative;
     top: -0.1rem;
     left: -1rem;
-  }
-  .p-faq__item:nth-child(4) .p-faq__q {
-    top: -0.6rem;
   }
 }
 
@@ -2392,11 +2338,11 @@ TOPへ戻るボタン
 
 .p-top-page .c-blog-card__date {
   text-align: right;
-  padding-top: 1rem;
+  margin-top: 1rem;
 }
 @media (max-width: 767px) {
   .p-top-page .c-blog-card__date {
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -2411,6 +2357,7 @@ TOPへ戻るボタン
   height: 100%;
 }
 
+/* TOPページ専用の上書き */
 .p-top-page .p-blog-list .c-blog-card__img {
   width: 26rem;
   height: 20rem;
@@ -2499,14 +2446,13 @@ TOPへ戻るボタン
 }
 
 .p-contact-form ~ .p-fixed-buttons {
-  position: fixed !important;
   bottom: 31rem !important;
   right: 10rem !important;
 }
 @media (max-width: 767px) {
   .p-contact-form ~ .p-fixed-buttons {
     bottom: 32.1rem !important;
-    right: 2.8rem !important;
+    right: 3rem !important;
   }
 }
 
@@ -2618,12 +2564,6 @@ TOPへ戻るボタン
         -ms-flex-align: center;
             align-items: center;
     padding-block: 4.7rem 10.8rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .contact__form {
-    width: auto;
   }
 }
 
@@ -2833,9 +2773,9 @@ TOPへ戻るボタン
   }
 }
 .contact__checkbox-group label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2843,6 +2783,9 @@ TOPへ戻るボタン
   cursor: pointer;
   font-size: 1.6rem;
   color: #000;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (max-width: 767px) {
   .contact__checkbox-group label {
@@ -2892,9 +2835,6 @@ TOPへ戻るボタン
 }
 
 .checkbox-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   font-size: 1.8rem;
 }
 @media (max-width: 767px) {
@@ -2993,7 +2933,6 @@ TOPへ戻るボタン
 }
 .p-footer__nav-list a:hover {
   opacity: 0.7;
-  cursor: pointer;
 }
 
 .p-footer__logo {
@@ -3017,6 +2956,7 @@ TOPへ戻るボタン
 
 .p-footer__logo-link {
   display: inline-block;
+  width: 3.2rem;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
@@ -3043,28 +2983,13 @@ TOPへ戻るボタン
     gap: 0.983rem;
   }
 }
-
 .p-footer__sns a {
+  display: inline-block;
+  width: 2.3rem;
   -webkit-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease;
 }
-
 .p-footer__sns a:hover {
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-.p-footer__sns a img {
-  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-  transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.p-footer__sns a:hover img {
   opacity: 0.7;
 }
 
@@ -3209,12 +3134,6 @@ TOPへ戻るボタン
     aspect-ratio: 335/200;
   }
 }
-.p-search .c-blog-card__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
 .p-search .c-blog-card {
   margin-top: 4.2rem;
@@ -3265,7 +3184,7 @@ TOPへ戻るボタン
   }
 }
 
-.p-result-list {
+.p-result-list__grid {
   width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: none;
@@ -3276,37 +3195,33 @@ TOPへ戻るボタン
   margin-top: 3rem;
 }
 @media (max-width: 767px) {
-  .p-result-list {
+  .p-result-list__grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
 }
 
 @media (max-width: 767px) {
-  .p-search .c-hero {
+  .p-result-list .c-hero {
     aspect-ratio: 375/300;
   }
 }
-.p-search .c-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+.p-result-list .c-hero::before {
   background-color: rgba(0, 0, 0, 0.3);
-  mix-blend-mode: normal;
-  z-index: 1;
+  mix-blend-mode: multiply;
 }
-.p-search .c-hero .c-hero__text {
+.p-result-list .c-hero .c-hero__text {
   z-index: 2;
 }
 
 @media (max-width: 767px) {
-  .p-search .c-hero picture {
+  .p-result-list .c-hero picture {
     height: 100%;
   }
 }
 
 @media (max-width: 767px) {
-  .p-search .c-hero img {
+  .p-result-list .c-hero img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -3314,7 +3229,6 @@ TOPへ戻るボタン
 }
 
 .p-result-list .c-result-card__img {
-  width: 100%;
   max-width: 38.7rem;
   aspect-ratio: 387/273;
   -ms-flex-negative: 0;
@@ -3346,13 +3260,13 @@ TOPへ戻るボタン
   }
 }
 
-.p-result_details .c-hero--result-detail .c-result-card__img {
+.p-result_details .c-result-card__img {
   width: 100%;
   aspect-ratio: 880/400;
   overflow: hidden;
 }
 @media (max-width: 767px) {
-  .p-result_details .c-hero--result-detail .c-result-card__img {
+  .p-result_details .c-result-card__img {
     aspect-ratio: 335/236;
   }
 }
@@ -3414,9 +3328,6 @@ TOPへ戻るボタン
   }
 }
 
-.p-result_details__table {
-  width: auto;
-}
 .p-result_details__table table {
   width: 100%;
   border-collapse: collapse;
@@ -3438,6 +3349,7 @@ TOPへ戻るボタン
   padding-left: 2rem;
   font-size: 1.8rem;
   line-height: 1.5;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .p-result_details__table th,
@@ -3450,7 +3362,6 @@ TOPへ戻るボタン
   font-weight: 700;
   background: #e5e5e5;
   width: 14rem;
-  padding-top: 1rem;
 }
 .p-result_details__table td {
   width: 26rem;
@@ -3649,11 +3560,6 @@ TOPへ戻るボタン
   }
 }
 
-.is-result-detail .c-hero::before {
-  background-color: transparent !important;
-  mix-blend-mode: normal !important;
-}
-
 @media (max-width: 767px) {
   .p-result_details .c-article-related .c-tag--lg {
     width: 8rem;
@@ -3815,8 +3721,6 @@ TOPへ戻るボタン
   font-size: 2rem;
   font-weight: 700;
   margin-top: 3.5rem;
-  width: 100%;
-  height: auto;
 }
 @media (max-width: 767px) {
   .p-blog-detail__heading {
@@ -4648,8 +4552,6 @@ TOPへ戻るボタン
   text-align: left !important;
   margin-inline: 0 !important;
   width: 100%;
-  font-size: 1.8rem;
-  line-height: 1.666;
 }
 @media (max-width: 767px) {
   .p-plan__message {
@@ -4810,7 +4712,7 @@ th.is-recommend {
 /* --- ボディ(tbody) --- */
 .p-plan-table__table tbody th {
   text-align: left;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #000;
   padding-left: 2rem;
   padding-top: 0.7rem;
   font-size: 1.7rem;
@@ -4827,7 +4729,7 @@ th.is-recommend {
   }
 }
 .p-plan-table__table tbody td {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #000;
   height: 8.5rem;
 }
 @media (max-width: 767px) {
@@ -4847,7 +4749,7 @@ th.is-recommend {
   }
 }
 .p-plan-table__table tbody {
-  /*月額料金の行（1行目）を太字にする */
+  /*月額料金の行（1行目）を太字 */
 }
 .p-plan-table__table tbody tr:first-child {
   border-top: 1px solid #ccc;
@@ -4879,7 +4781,7 @@ tr:nth-child(even) {
 
 /* 最終行の下線 */
 tr:last-child {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #000;
 }
 
 /* --- アイコン・装飾 --- */

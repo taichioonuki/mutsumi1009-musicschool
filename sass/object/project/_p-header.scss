@@ -69,7 +69,7 @@
 .logo__main {
 	font-size: 2rem;
 	font-weight: 700;
-	line-height: 1.0;
+	line-height: 1.15;
 	text-align: left;
 
 	@include sp {
@@ -79,10 +79,10 @@
 }
 
 .logo__sub {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	margin-top: 0.4rem;
 	font-weight: 700;
-	line-height: 1.0;
+	line-height: 1.533;
 
 	@include sp {
 		font-size: 1.3rem;

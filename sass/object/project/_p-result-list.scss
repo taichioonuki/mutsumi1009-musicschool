@@ -14,7 +14,7 @@
 }
 
 
-.p-result-list {
+.p-result-list__grid {
   width: 100%;
   flex: none;
   display: grid;
@@ -28,19 +28,15 @@
   }
 }
 
-.p-search .c-hero {
+.p-result-list .c-hero {
 
   @include sp {
     aspect-ratio: 375 / 300;
   }
 
   &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    mix-blend-mode: normal;
-    z-index: 1;
+    mix-blend-mode: multiply;
   }
   
   .c-hero__text {
@@ -48,14 +44,14 @@
   }
 }
 
-.p-search .c-hero picture {
+.p-result-list .c-hero picture {
 
   @include sp {
     height: 100%;
   }
 }
 
-.p-search .c-hero img {
+.p-result-list .c-hero img {
 
   @include sp {
     height: 100%;
@@ -64,7 +60,6 @@
 }
 
 .p-result-list .c-result-card__img {
-  width: 100%;
   max-width: 38.7rem; 
   aspect-ratio: 387 / 273;
   flex-shrink: 0; 

@@ -30,7 +30,7 @@
  .c-hamburger__line::before,
  .c-hamburger__line::after {
  	position: absolute;
- 	width: 3.3rem;
+ 	width: 3.2rem;
  	height: 0.4rem;
  	left: 2rem;
  	background: $font-color;
@@ -43,7 +43,7 @@
 
  // 中の線
  .c-hamburger__line {
- 	top: 49%;
+ 	top: 50%;
  	transform: translateY(-50%);
  }
 
@@ -57,13 +57,13 @@
 
  // 上の線
  .c-hamburger__line::before {
- 	top: 49%;
+ 	top: 50%;
  	transform: translateY(calc(-50% - 1.2rem));
  }
 
  // 下の線
  .c-hamburger__line::after {
- 	top: 49%;
+ 	top: 50%;
  	transform: translateY(calc(-50% + 1.2rem));
  }
 

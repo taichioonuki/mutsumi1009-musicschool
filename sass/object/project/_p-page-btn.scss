@@ -34,13 +34,13 @@
 
 // コンタクトフォーム topへ戻るボタン
 .p-contact-form~.p-fixed-buttons {
-  position: fixed !important;
-  bottom: 31rem !important;
-  right: 10rem !important;
+  // position: fixed !important;
+   bottom: 31rem !important;
+   right: 10rem !important;
 
   @include sp {
      bottom: 32.1rem !important;
-    right: 2.8rem !important;
+     right: 3rem !important;
   }
 }
 

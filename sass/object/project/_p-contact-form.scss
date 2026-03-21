@@ -18,13 +18,13 @@
   }
 }
 
-// フォーム全体
-.contact__form {
+// // フォーム全体
+// .contact__form {
 
-  @include sp {
-    width: auto;
-  }
-}
+//   @include sp {
+//     width: auto;
+//   }
+// }
 
 // フォーム項目のリスト
 .p-contact__items {
@@ -54,7 +54,7 @@
 
 .p-contact__item--message {
   @include sp {
-    gap: 0; 
+    gap: 0;
   }
 }
 
@@ -96,6 +96,7 @@
     align-items: flex-start;
     gap: 0.1rem;
   }
+
   .contact__label {
     line-height: 1.5;
 
@@ -185,12 +186,13 @@
   }
 
   label {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 2rem;
     cursor: pointer;
     font-size: 1.6rem;
     color: $text-color;
+    width: fit-content;
 
     @include sp {
       font-size: 1.4rem;
@@ -240,9 +242,9 @@
   }
 }
 
-// チェックボックスの
+// チェックボックス
 .checkbox-text {
-  flex: 1;
+  // flex: 1;
   font-size: 1.8rem;
 
   @include sp {

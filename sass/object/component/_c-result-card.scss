@@ -30,17 +30,9 @@
   position: relative;
   overflow: hidden;
 
-  @include sp {
-    display: block;
-
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-
-  }
+  // @include sp {
+  //   display: block;
+  // }
 }
 
 .c-result-card__body {

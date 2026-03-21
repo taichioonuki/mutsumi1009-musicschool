@@ -13,7 +13,7 @@
   }
 }
 
-.p-result_details .c-hero--result-detail .c-result-card__img {
+.p-result_details .c-result-card__img {
   width: 100%;
   aspect-ratio: 880 / 400;
   overflow: hidden;
@@ -67,7 +67,6 @@
 }
 
 .p-result_details__table {
-  width: auto;
 
   table {
     width: 100%;
@@ -89,6 +88,7 @@
     padding-left: 2rem;
     font-size: 1.8rem;
     line-height: 1.5;
+    text-align: left;
 
     @include sp {
       padding-left: 1rem;
@@ -100,7 +100,6 @@
     font-weight: 700;
     background: #e5e5e5;
     width: 14rem;
-    padding-top: 1rem;
   }
 
   td {
@@ -268,11 +267,11 @@
   }
 }
 
-//  ヒーロー画像の暗い背景（オーバーレイ）を消す
-.is-result-detail .c-hero::before {
-  background-color: transparent !important;
-  mix-blend-mode: normal !important;
-}
+// //  ヒーロー画像の暗い背景（オーバーレイ）を消す
+// .is-result-detail .c-hero::before {
+//   background-color: transparent !important;
+//   mix-blend-mode: normal !important;
+// }
 
 .p-result_details .c-article-related .c-tag--lg {
   @include sp {
