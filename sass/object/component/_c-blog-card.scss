@@ -39,7 +39,7 @@
 .c-blog-card__img {
     display: flex;
     position: relative;
-   
+
     @include sp {
         // width: 100%;
         // height: auto;
@@ -89,7 +89,7 @@
     // width: auto;
     height: 9rem;
     line-height: 1.666;
-     padding-top: 0.9rem;
+    margin-top: 1rem;
 
     @include sp {
         font-size: 1.6rem;

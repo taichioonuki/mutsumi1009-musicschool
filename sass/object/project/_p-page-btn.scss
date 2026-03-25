@@ -16,6 +16,7 @@
   gap: 3.1rem;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   // width: auto;
 
@@ -64,4 +65,10 @@
       transform: translateY(-3px);
     }
   }
+}
+
+.p-fixed-buttons a,
+.p-fixed-buttons .page-top-btn,
+.p-fixed-buttons img {
+  pointer-events: auto;
 }

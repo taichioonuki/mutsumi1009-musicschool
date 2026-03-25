@@ -48,6 +48,7 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
             </div>
         </header>
 
@@ -57,10 +58,18 @@
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item"><a href="blog_list.html">ブログ</a></li>
-                        <li class="c-breadcrumb__item"><a href="blog_list.html">ギター</a></li>
-                        <li class="c-breadcrumb__item" aria-current="page">アルペジオが劇的に向上する３つの習慣</li>
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item">
+                            <a href="blog_list.html" class="c-breadcrumb__link">ブログ</a>
+                        </li>
+                        <li class="c-breadcrumb__item">
+                            <a href="blog_list.html" class="c-breadcrumb__link">ギター</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">アルペジオが劇的に向上する３つの習慣</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
@@ -187,7 +196,8 @@
 
                                         <div class="c-article-nav__content">
                                             <div class="c-article-nav__img">
-                                                <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真" width="98" height="68">
+                                                <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真"
+                                                    width="98" height="68">
                                             </div>
 
                                             <p class="c-article-nav__text">
@@ -203,7 +213,8 @@
 
                                         <div class="c-article-nav__content">
                                             <div class="c-article-nav__img">
-                                                <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真" width="98" height="68">
+                                                <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真"
+                                                    width="98" height="68">
                                             </div>
 
                                             <p class="c-article-nav__text">
@@ -217,13 +228,13 @@
                                 <h2 class="c-article-related__title">関連記事</h2>
 
                                 <article class="c-result-card">
-                                    <a href="#" class="c-result-card__link">
+                                    <a href="blog_list.html" class="c-result-card__link">
                                         <div class="c-result-card__img">
                                             <picture>
                                                 <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真"
                                                     width="160" height="110">
                                             </picture>
-                                            <span class="c-tag c-tag--lg">ギター</span>
+                                            <span class="c-tag c-tag">ギター</span>
                                         </div>
 
                                         <div class="c-result-card__body">
@@ -236,13 +247,13 @@
                                 </article>
 
                                 <article class="c-result-card">
-                                    <a href="#" class="c-result-card__link">
+                                    <a href="blog_list.html" class="c-result-card__link">
                                         <div class="c-result-card__img">
                                             <picture>
                                                 <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真"
                                                     width="160" height="110">
                                             </picture>
-                                            <span class="c-tag c-tag--lg">ギター</span>
+                                            <span class="c-tag c-tag">ギター</span>
                                         </div>
 
                                         <div class="c-result-card__body">
@@ -255,13 +266,13 @@
                                 </article>
 
                                 <article class="c-result-card">
-                                    <a href="#" class="c-result-card__link">
+                                    <a href="blog_list.html" class="c-result-card__link">
                                         <div class="c-result-card__img">
                                             <picture>
                                                 <img src="images/result/result-details-pc.jpg" alt="マイクの前で歌う女性の写真"
                                                     width="160" height="110">
                                             </picture>
-                                            <span class="c-tag c-tag--lg">ギター</span>
+                                            <span class="c-tag c-tag">ギター</span>
                                         </div>
 
                                         <div class="c-result-card__body">
@@ -280,21 +291,19 @@
                             <aside class="p-blog_details__sidebar">
 
                                 <!-- 無料メールマガジン -->
-                                <section class="p-sidebar-box">
-                                    <h3 class="p-sidebar-title">無料メールマガジン</h3>
+                                <div class="p-sidebar-box">
+                                    <div class="p-sidebar-title">無料メールマガジン</div>
                                     <div class="p-sidebar-banner">
                                         <a href="#" class="p-sidebar-banner__link">
                                             <div class="p-sidebar-banner__inner">バナー広告</div>
                                         </a>
                                     </div>
-                                </section>
+                                </div>
 
                                 <!-- ブログ内検索 -->
-                                <section class="p-sidebar-box">
-                                    <h3 class="p-sidebar-title">ブログ内を検索</h3>
-
+                                <div class="p-sidebar-box">
+                                    <div class="p-sidebar-title">ブログ内を検索</div>
                                     <form action="search.html" method="get" class="p-sidebar-search">
-
                                         <div class="p-sidebar-search__inner">
                                             <input type="text" name="s" class="p-sidebar-search__input"
                                                 placeholder="検索ワード">
@@ -305,31 +314,31 @@
                                         </button>
 
                                     </form>
-                                </section>
+                                </div>
 
                                 <!-- おすすめの記事 -->
-                                <section class="p-sidebar-box">
-                                    <h3 class="p-sidebar-title">おすすめの記事</h3>
-                                </section>
+                                <div class="p-sidebar-box">
+                                    <div class="p-sidebar-title">おすすめの記事</div>
+                                </div>
 
                                 <div class="p-sidebar-list">
                                     <ul class="p-sidebar-recommend">
                                         <li class="p-sidebar-recommend__item">
-                                            <a href="#" class="p-sidebar-recommend__link">
+                                            <a href="blog_details.html" class="p-sidebar-recommend__link">
                                                 <div class="p-sidebar-recommend__img"></div>
                                                 <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                             </a>
                                         </li>
 
                                         <li class="p-sidebar-recommend__item">
-                                            <a href="#" class="p-sidebar-recommend__link">
+                                            <a href="blog_details.html" class="p-sidebar-recommend__link">
                                                 <div class="p-sidebar-recommend__img"></div>
                                                 <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                             </a>
                                         </li>
 
                                         <li class="p-sidebar-recommend__item">
-                                            <a href="#" class="p-sidebar-recommend__link">
+                                            <a href="blog_details.html" class="p-sidebar-recommend__link">
                                                 <div class="p-sidebar-recommend__img"></div>
                                                 <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                             </a>
@@ -339,15 +348,15 @@
 
                                 <!-- カテゴリー -->
                                 <div class="p-sidebar-group p-sidebar-group--tight">
-                                    <section class="p-sidebar-box">
-                                        <h3 class="p-sidebar-title">カテゴリー</h3>
-                                    </section>
+                                    <div class="p-sidebar-box">
+                                        <div class="p-sidebar-title">カテゴリー</div>
+                                    </div>
                                     <ul class="p-sidebar-category">
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
-                                        <li><a href="#">カテゴリー</a></li>
+                                        <li><a href="blog_list.html">カテゴリー</a></li>
+                                        <li><a href="blog_list.html">カテゴリー</a></li>
+                                        <li><a href="blog_list.html">カテゴリー</a></li>
+                                        <li><a href="blog_list.html">カテゴリー</a></li>
+                                        <li><a href="blog_list.html">カテゴリー</a></li>
                                     </ul>
                                 </div>
                             </aside>
