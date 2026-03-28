@@ -82,8 +82,6 @@
     text-align: left !important;
     margin-inline: 0 !important;
     width: 100%;
-    // font-size: 1.8rem;
-    // line-height: 1.666;
   }
 
   @include sp {
@@ -99,20 +97,11 @@
   }
 }
 
-.p-plan-table .c-page-title {
-  // margin-top: 5.7rem;
-
-  @include sp {
-    // margin-top: 3.7rem;
-  }
-}
-
-
 .p-plan-table {
   padding-block: 2.85rem 22.3rem;
 
   @include sp {
-    padding-block: 1.9rem 12.6rem;
+    padding-block: 1.9rem 18rem;
   }
 }
 
@@ -129,41 +118,31 @@
   }
 }
 
-  .p-plan-table__head-inner {
-    // height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
+.p-plan-table__head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-  th,
-  td {
+th,
+td {
+  vertical-align: middle;
+  text-align: center;
+
+  @include sp {
+    padding-top: 0.1rem;
     vertical-align: middle;
-    text-align: center;
-    // width: 5rem;
-
-    @include sp {
-       padding-too: 0.1rem;
-      vertical-align: middle;
-    }
   }
-  
-  
+}
+
+
 /* --- ヘッダー(thead) 突き出し --- */
 .p-plan-table__table thead {
   th {
     background-color: transparent;
-    // padding-top: 0.1rem;
-    // padding-bottom: 0.2rem;
     font-size: 2rem;
     vertical-align: baseline;
-
-    @include sp {
-      // vertical-align: middle;
-      // padding-block: 0.8rem;
-
-    }
   }
 }
 
@@ -175,7 +154,7 @@
   padding-top: 1.1rem;
   padding-bottom: 0rem;
   vertical-align: middle;
- 
+
   @include sp {
     height: 6.6rem;
     white-space: normal;
@@ -200,15 +179,24 @@ th.is-recommend {
   background-color: $main-color !important;
   color: $font-color !important;
   height: 8rem;
-  padding-bottom: 0.5rem;
-  // padding-top: 1.1rem;
-  // vertical-align: bottom;
+  padding: 0;
+  position: relative;
+  top: 0.2rem;
+  vertical-align: middle;
+
 
   @include sp {
-    // padding-block: 0.8rem !important; 
     vertical-align: middle;
     height: auto;
   }
+}
+
+.p-plan-table__head-inner--red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  transform: translateY(-0.2rem);
 }
 
 

@@ -78,11 +78,9 @@
 }
 
 .c-article-nav__img img {
-    // width: auto;
 
     @include sp {
         width: 100%;
-        // height: auto;
         object-fit: cover;
     }
 }

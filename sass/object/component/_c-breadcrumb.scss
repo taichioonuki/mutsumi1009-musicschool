@@ -7,7 +7,7 @@
    color: $text-color;
    margin-top: 0;
    width: 100%;
-   background-color: #E8E8E8;
+   background-color: $c-accent;
    padding: 0;
    z-index: 2;
 
@@ -52,7 +52,6 @@
  .c-breadcrumb__current {
    display: flex;
    align-items: center;
-  //  min-height: 5rem;
    padding-top: 1.7rem;
    padding-bottom: 1.7rem;
    box-sizing: border-box;

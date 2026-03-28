@@ -616,26 +616,23 @@
 
 .p-top-voice__img {
     position: relative;
-    width: 27rem;
+    aspect-ratio: 270 / 190;
     overflow: hidden;
     margin-top: 2.8rem;
 
     @include sp {
         margin-inline: auto;
-        width: 33.5rem;
+        aspect-ratio: 335 / 200;
         margin-top: 3.9rem;
     }
 }
 
 
 .p-top-voice__img img {
-    aspect-ratio: 270 / 190;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
-
-    @include sp {
-        aspect-ratio: 335 / 200;
-    }
 }
 
 .p-top-voice__meta {
@@ -677,7 +674,7 @@
     padding-block: 5.3rem 3.5rem;
 
     @include sp {
-        padding-block: 2rem 1.5rem;
+        padding-block: 2rem 2.5rem;
     }
 }
 
@@ -761,11 +758,6 @@
         position: relative;
         top: -0.1rem;
         left: -1rem;
-
-
-        // .p-faq__item:nth-child(4) & {
-        //     top: -0.6rem;
-        // }
     }
 }
 
@@ -822,11 +814,19 @@
 # ブログ一覧
 =============================================== */
 
+.p-top-blog {
+    padding-block: 3.5rem 20.5rem;
+
+    @include sp {
+        padding-block: 2.3rem 19.2rem;
+    }
+}
+
 .p-top-page .p-top-blog__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
-    margin-top: 3.5rem;
+    margin-top: 3.2rem;
 
     @include sp {
         display: block;
@@ -840,6 +840,7 @@
     gap: 2rem;
 
     @include sp {
+        align-items: stretch;
         gap: 3rem;
     }
 }
@@ -859,30 +860,33 @@
     height: 100%;
 }
 
-/* TOPページ専用の上書き */
-// .p-top-page .c-blog-card {
-//      margin-top: 3.5rem;
+.p-top-page .p-top-blog .c-blog-card__link {
+    @include sp {
+      align-items: stretch;
+    }
+  }
 
-//     @include sp {        
-//         margin-top: 3.6rem;
-//     }
+.p-top-blog__items .c-blog-card+.c-blog-card {
+    @include sp {
+        margin-top: 4.1rem;
+    }
+}
 
-//      &+.c-blog-card {
-//         margin-top: 3.5rem !important;
-
-//        @include sp {
-//             margin-top: 4rem !important;
-//         }
-//     }
-// }
-
-.p-top-page .p-blog-list .c-blog-card__img {
+.p-top-page .p-top-blog .c-blog-card__img {
     aspect-ratio: 260 / 200;
 
     @include sp {
         aspect-ratio: 335 / 200;
     }
 }
+
+.p-top-page .p-top-blog .c-blog-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .p-top-blog__more {
     text-align: right;

@@ -70,24 +70,34 @@ $(function () {
 // --- フッター手前でストップさせる処理 ---
 $(window).on("scroll resize load", function () {
   const $fixedButtons = $(".js-fixed-buttons");
+  const $footer = $(".l-footer");
+
+  if (!$fixedButtons.length || !$footer.length) return;
+
   const scrollHeight = $(document).height();
   const scrollPosition = $(window).height() + $(window).scrollTop();
+  const footHeight = $footer.innerHeight();
 
+  let baseBottom = 20;
+  let stopExtra = 0;
 
-  const $footer = $(".l-footer");
-  const footHeight = $footer.length ? $footer.innerHeight() : 0;
+  // お問い合わせページだけ少し浮かせる
+  if ($fixedButtons.hasClass("is-contact-page")) {
+    baseBottom = window.innerWidth <= 767 ? 20 : 31;
+    stopExtra = window.innerWidth <= 767 ? 20 : 31;
+  }
 
   if (scrollHeight - scrollPosition <= footHeight) {
-    // フッター手前に来たら position を absolute に変更
     $fixedButtons.css({
       position: "absolute",
-      bottom: footHeight,
+      bottom: footHeight + stopExtra + "px",
+      top: "auto",
     });
   } else {
-    // それ以外は元の fixed に戻す
     $fixedButtons.css({
       position: "fixed",
-      bottom: "0",
+      bottom: baseBottom + "px",
+      top: "auto",
     });
   }
 });

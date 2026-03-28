@@ -43,7 +43,7 @@
   @include sp {
     margin-top: 0;
     font-size: 1.7rem;
-    padding-top: 0.2rem;
+    margin-top: 0.2rem;
   }
 }
 
@@ -239,15 +239,11 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 0.8rem;
-
-  @include sp {}
 }
 
 .p-article-related .c-result-card {
   display: flex;
   gap: 1.6rem;
-
-  @include sp {}
 }
 
 .p-result_details .c-result-card__text {
@@ -266,12 +262,6 @@
     row-gap: 0;
   }
 }
-
-// //  ヒーロー画像の暗い背景（オーバーレイ）を消す
-// .is-result-detail .c-hero::before {
-//   background-color: transparent !important;
-//   mix-blend-mode: normal !important;
-// }
 
 .p-result_details .c-article-related .c-tag--lg {
   @include sp {
