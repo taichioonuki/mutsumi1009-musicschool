@@ -337,19 +337,11 @@ tr:last-child {
 }
 
 .p-plan-table__dash {
-  position: relative;
-  height: 8.5rem;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3rem;
-    height: 0.1rem;
-    background-color: #707070;
-    transform: translate(-50%, -50%);
-  }
+  display: block;
+  width: 3rem;
+  height: 0.1rem;
+  margin: 0 auto;
+  background-color: #707070;
 }
 
 .p-page-note {
