@@ -14,7 +14,6 @@
 
     @include sp {
         padding-block: 4.4rem 5rem;
-        min-height: auto;
     }
 }
 
@@ -28,13 +27,13 @@
     }
 }
 
-.p-footer__nav {
-    margin-top: 0;
+// .p-footer__nav {
+//     margin-top: 0;
 
-    @include sp {
-        margin-top: 0;
-    }
-}
+//     @include sp {
+//         margin-top: 0;
+//     }
+// }
 
 .p-footer__nav-list {
     font-size: 1.7rem;
@@ -124,7 +123,6 @@
     @include sp {
         font-size: 1.5rem;
         display: block;
-        // margin-top: 2.4rem;
         white-space: nowrap;
     }
 }

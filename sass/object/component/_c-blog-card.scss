@@ -10,7 +10,7 @@
     display: block;
 
     @include sp {
-        width: 100%;
+        // width: 100%;
         margin-inline: auto;
     }
 }
@@ -45,12 +45,12 @@
     }
 }
 
-.c-blog-card__img img {
+// .c-blog-card__img img {
 
-    @include sp {
-        width: auto;
-    }
-}
+//     @include sp {
+//         width: auto;
+//     }
+// }
 
 .c-blog-card__body {
     display: flex;
@@ -85,7 +85,7 @@
 
     @include sp {
         font-size: 1.6rem;
-        width: 100%;
+        // width: 100%;
         height: auto;
         overflow: visible;
         text-align: left;

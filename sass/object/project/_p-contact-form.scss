@@ -13,18 +13,10 @@
   padding-block: 6.8rem 10rem;
 
   @include sp {
-    align-items: center;
+    // align-items: center;
     padding-block: 4.7rem 10.8rem;
   }
 }
-
-// // フォーム全体
-// .contact__form {
-
-//   @include sp {
-//     width: auto;
-//   }
-// }
 
 // フォーム項目のリスト
 .p-contact__items {
@@ -138,7 +130,6 @@
   line-height: 1;
 
   @include sp {
-    width: 100%;
     margin: 0;
   }
 

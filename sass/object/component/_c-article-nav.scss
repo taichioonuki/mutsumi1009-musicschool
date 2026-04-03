@@ -21,7 +21,6 @@
     align-items: center;
     justify-content: space-between;
     background: #000;
-    // width: auto;
     height: 3.7rem;
     color: #fff;
     font-size: 1.6rem;
@@ -77,13 +76,13 @@
     }
 }
 
-.c-article-nav__img img {
+// .c-article-nav__img img {
 
-    @include sp {
-        width: 100%;
-        object-fit: cover;
-    }
-}
+//     @include sp {
+//         width: 100%;
+//         object-fit: cover;
+//     }
+// }
 
 .c-article-nav__text {
     font-size: 1.6rem;

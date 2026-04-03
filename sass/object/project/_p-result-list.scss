@@ -33,11 +33,6 @@
   @include sp {
     aspect-ratio: 375 / 300;
   }
-
-  &::before {
-    background-color: rgba(0, 0, 0, 0.3);
-    mix-blend-mode: multiply;
-  }
   
   .c-hero__text {
     z-index: 2;
