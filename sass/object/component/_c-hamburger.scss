@@ -1,79 +1,77 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
 
- @use "../../global/variable" as *;
- @use "../../global/function" as *;
- @use "../../global/mixin" as *;
+// ハンバーガーメニュー
+.c-hamburger {
+	display: none;
+	border: none;
+	padding: 0;
+	background: transparent;
 
- // ハンバーガーメニュー
- .c-hamburger {
- 	display: none;
- 	border: none;
- 	padding: 0;
- 	background: transparent;
-
- 	@include sp {
- 		position: fixed;
- 		top: 0;
- 		right: 0;
- 		width: 7.1rem;
- 		height: 5rem;
- 		background: $main-color;
- 		z-index: 1001;
- 		display: flex;
- 		justify-content: center;
- 		align-items: center;
- 		cursor: pointer;
- 		transition: background-color 0.3s ease-in-out,
- 			transform 0.3s ease-in-out;
-
- 	}
- }
-
- .c-hamburger span {
- 	display: none;
-
- 	@include sp {
- 		position: absolute;
- 		display: block;
- 		top: 50%;
- 		left: 50%;
- 		width: 3.2rem;
- 		height: 0.4rem;
- 		background: $font-color;
- 		border-radius: 0.2rem;
- 		transform: translate(-50%, -50%);
- 		transition: transform 0.4s ease, opacity 0.4s ease;
+	@include sp {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 7.1rem;
+		height: 5rem;
+		background: $main-color;
+		z-index: 1001;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		cursor: pointer;
- 	}
- }
+		transition: background-color 0.3s ease-in-out,
+			transform 0.3s ease-in-out;
 
- .c-hamburger span:nth-of-type(1) {
- 	@include sp {
- 		top: 28%;
- 	}
- }
+	}
+}
 
- .c-hamburger span:nth-of-type(3) {
- 	@include sp {
- 		top: 73%;
- 	}
- }
+.c-hamburger span {
+	display: none;
 
- .c-hamburger.is-open span:nth-of-type(1) {
- 	@include sp {
- 		top: 50%;
- 		transform: translate(-50%, -50%) rotate(45deg);
- 	}
- }
+	@include sp {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		width: 3.2rem;
+		height: 0.4rem;
+		background: $font-color;
+		border-radius: 0.2rem;
+		transform: translate(-50%, -50%);
+		transition: top 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+	}
+}
 
- .c-hamburger.is-open span:nth-of-type(2) {
- 	@include sp {
- 		opacity: 0;
- 	}
- }
+.c-hamburger span:nth-of-type(1) {
+	@include sp {
+		top: 28%;
+	}
+}
 
- .c-hamburger.is-open span:nth-of-type(3) {
- 	@include sp {
- 		top: 50%;
- 		transform: translate(-50%, -50%) rotate(-45deg);
- 	}
- }
+.c-hamburger span:nth-of-type(3) {
+	@include sp {
+		top: 73%;
+	}
+}
+
+.c-hamburger.is-open span:nth-of-type(1) {
+	@include sp {
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+}
+
+.c-hamburger.is-open span:nth-of-type(2) {
+	@include sp {
+		opacity: 0;
+	}
+}
+
+.c-hamburger.is-open span:nth-of-type(3) {
+	@include sp {
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}

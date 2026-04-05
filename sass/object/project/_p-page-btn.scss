@@ -45,14 +45,12 @@
 .page-top-btn {
   margin-inline: auto;
   transition: opacity 0.4s, transform 0.4s;
+  border-radius: 100vmax;
+  overflow: hidden;
+
 
   @include sp {
     margin-inline: 0.2rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
   }
 
   &:hover {

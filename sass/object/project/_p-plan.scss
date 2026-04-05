@@ -106,13 +106,13 @@
 
 /* --- プラン表 共通全体 --- */
 .p-plan-table__table {
-  margin-top: 4rem;
+  // margin-top: 4rem;
   width: 88rem;
   border-collapse: collapse;
   table-layout: fixed;
 
   @include sp {
-    margin-top: 1rem;
+    // margin-top: 1rem;
     width: 67rem;
   }
 }
@@ -356,16 +356,19 @@ tr:last-child {
   }
 }
 
-/* --- SimpleBar  --- */
+
 .p-plan-table__scroll {
+  margin-top: 4rem;
 
   @include sp {
+    margin-top: 1rem;
     position: relative;
     overflow-y: hidden;
     padding-bottom: 5rem;
   }
 }
 
+/* --- SimpleBar  --- */
 .simplebar-track.simplebar-horizontal {
   display: none;
 
@@ -377,7 +380,7 @@ tr:last-child {
     position: absolute;
     bottom: 0.5rem;
     left: 0;
-    width: 100%;
+    // width: 100%;
   }
 }
 

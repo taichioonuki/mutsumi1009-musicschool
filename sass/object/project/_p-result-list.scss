@@ -15,8 +15,6 @@
 
 
 .p-result-list__grid {
-  width: 100%;
-  flex: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 7.1rem 10.6rem;
@@ -59,11 +57,19 @@
 }
 
 .p-result-list .c-result-card__link {
-  display:block
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.p-result-list .c-result-card__text {
-  margin-top: 2rem;
-  
+.p-result-list .c-result-card__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
 }
 
+
+
+.p-result-list .c-hero::before {
+  content: none;
+}

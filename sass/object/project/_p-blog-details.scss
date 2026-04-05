@@ -63,15 +63,25 @@
   }
 }
 
-.p-blog_details .p-article-title {
+.p-blog-detail__head-area .c-result-card__body {
   margin-top: 4.6rem;
+  //  gap: 1.2rem;
+
+  @include sp {
+    margin-top: 3rem;
+  }
+}
+
+
+.p-blog_details .p-article-title {
+  // margin-top: 4.6rem;
   font-size: 2.5rem;
   line-height: 1.6;
   font-weight: 700;
   letter-spacing: 0.02em;
 
   @include sp {
-    margin-top: 3rem;
+    // margin-top: 3rem;
     font-size: 2rem;
     align-items: center;
   }
@@ -218,15 +228,9 @@
 .quote-icon {
   flex-shrink: 0;
   line-height: 1.666;
+  width: 2.7rem;
 }
 
-.quote-icon img {
-  @include sp {
-
-    width: 100%;
-    height: auto;
-  }
-}
 
 .p-blog-detail__textlink {
   position: relative;
@@ -358,7 +362,6 @@
 .p-sidebar-search {
   background-color: $font-color;
   border: 0.5px solid #000;
-  height: 17rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,10 +444,6 @@
   display: block;
   padding-top: 1rem;
   pointer-events: none;
-
-  @include sp {
-    height: 100%;
-  }
 }
 
 .p-sidebar-list {
@@ -525,15 +524,13 @@
 
 .p-sidebar-group {
   margin-top: 3rem;
-
-  @include sp {}
 }
 
 .p-sidebar-category {
   font-size: 1.7rem;
 
   @include sp {
-    padding-block: 0rem;
+    padding-block: 0;
   }
 
   li {
@@ -563,6 +560,7 @@
 /* ===============================================
 # blog詳細ページ用：記事ナビ
 =============================================== */
+
 
 .p-blog_details .c-article-nav {
   display: flex;
@@ -650,16 +648,23 @@
 # blog詳細ページ用：関連記事
 =============================================== */
 
+.p-blog_details .c-article-related {
+  margin-top: 9rem;
+
+  @include sp {
+    margin-top: 6.4rem;
+  }
+}
+
 .p-blog_details .c-article-related__title {
   width: 100%;
-  margin-top: 9rem;
+  margin: 0;
   font-size: 1.8rem;
   padding-left: 3.2rem;
 
   @include sp {
     text-align: center;
     justify-content: center;
-    margin-top: 6.4rem;
     padding-left: 1.5rem;
   }
 }
@@ -711,17 +716,18 @@
 /* ブログ詳細ページ：関連記事カードの画像サイズ */
 .p-blog_details .c-article-related .c-result-card__img {
   width: 20rem;
-  height: 14rem;
+  // height: 14rem;
+  aspect-ratio: 200 / 140;
 
   @include sp {
     width: 16rem;
-    height: 11rem;
+    // height: 11rem;
+    aspect-ratio: 160 / 110;
     flex-shrink: 0;
   }
 }
 
 .p-blog_details .c-article-related .c-result-card__img img {
-  // width: 100%;
   height: 100%;
   object-fit: cover;
 }

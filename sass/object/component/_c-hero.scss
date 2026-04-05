@@ -11,10 +11,6 @@
   position: relative;
   overflow: hidden;
 
-  @include sp {
-    height: auto;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -26,8 +22,6 @@
     mix-blend-mode: multiply;
     z-index: 1;
   }
-
-  
 }
 
 .c-hero__text {
@@ -47,7 +41,7 @@
   }
 }
 
-// --- ページメッセージコンポーネント（再利用） ---
+// --- ページメッセージコンポーネント---
 .c-page-message {
   text-align: center;
   font-size: 1.8rem;
@@ -56,6 +50,6 @@
   @include sp {
     font-size: 1.6rem;
     text-align: left;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }

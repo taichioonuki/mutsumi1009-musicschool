@@ -78,7 +78,7 @@ $(window).on("scroll resize load", function () {
   const scrollPosition = $(window).height() + $(window).scrollTop();
   const footHeight = $footer.innerHeight();
 
-  let baseBottom = 20;
+  let baseBottom = 0;
   let stopExtra = 0;
 
   // お問い合わせページだけ少し浮かせる
