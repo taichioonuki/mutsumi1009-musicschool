@@ -113,7 +113,7 @@
 
   @include sp {
     // margin-top: 1rem;
-    width: 67rem;
+    width: 66.8rem;
   }
 }
 
@@ -136,117 +136,114 @@ td {
 }
 
 
-/* --- ヘッダー(thead) 突き出し --- */
 .p-plan-table__table thead {
   th {
-    background-color: transparent;
-    font-size: 2rem;
-    vertical-align: baseline;
-  }
-}
-
-/* ベーシック・プレミアム（黒） */
-.p-plan-table__head-black {
-  background-color: #000 !important;
-  color: #fff !important;
-  height: 5rem;
-  padding-top: 1.1rem;
-  padding-bottom: 0rem;
-  vertical-align: middle;
-
-  @include sp {
-    height: 6.6rem;
-    white-space: normal;
-    line-height: 1.25;
+    padding: 0;
     vertical-align: bottom;
+    background: transparent;
+    border: none;
   }
-}
-
-.p-plan-table__head-text {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-
-  @include sp {
-    font-size: 2rem;
-
-  }
-}
-
-/* スタンダード（赤・おすすめ） */
-th.is-recommend {
-  background-color: $main-color !important;
-  color: $font-color !important;
-  height: 8rem;
-  padding: 0;
-  position: relative;
-  top: 0.2rem;
-  vertical-align: middle;
-
 
   @include sp {
     vertical-align: middle;
-    height: auto;
+  }
+}
+
+.p-plan-table__head-inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include sp {
+    height: 6.6rem;
+  }
+}
+
+.p-plan-table__head-inner--black {
+  height: 5rem;
+  align-items: center;
+
+  @include sp {
+    height: 6.6rem;
   }
 }
 
 .p-plan-table__head-inner--red {
-  display: flex;
+  height: 8rem;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  transform: translateY(-0.2rem);
-}
-
-
-.p-plan-table__badge {
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 700;
-  padding-top: 1.1rem;
 
   @include sp {
-    padding-top: 1rem;
-    line-height: 1.25;
+    height: 8.5rem;
   }
 }
 
 .p-plan-table__head-title {
-  display: block;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  vertical-align: bottom;
-  white-space: nowrap;
+}
+
+.p-plan-table__head-inner--black .p-plan-table__head-title {
+  height: 5rem;
+  background: #000;
+  color: #fff;
 
   @include sp {
-    line-height: 1.3;
-    white-space: normal;
+    height: 6.6rem;
+    line-height: 1.25;
   }
 }
 
-th.is-recommend .p-plan-table__title {
+.p-plan-table__head-inner--red .p-plan-table__head-title {
+  height: 8rem;
+  background: $main-color;
+  color: $font-color;
+  flex-direction: column;
+
   @include sp {
-    font-size: 1.8rem;
+    height: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    line-height: 1.2;
+    text-align: center;
   }
 }
 
-/* --- ボディ(tbody) --- */
+.p-plan-table__badge {
+  display: block;
+  font-size: 1.7rem;
+
+  @include sp {
+    
+  }
+}
+
 .p-plan-table__table tbody {
   th {
     text-align: left;
     border-right: 1px solid #000;
-    padding-left: 2rem;
-    padding-top: 0.7rem;
+    padding-inline: 2rem;
+    padding-top: 0;
     font-size: 1.7rem;
+    vertical-align: middle;
 
     @include sp {
       font-size: 1.6rem;
       line-height: 1.5625;
       white-space: nowrap;
       max-width: 6rem;
-      height: auto;
-      padding-inline: 1.05rem 3rem;
-      padding-block: 2.7rem;
+      // padding-inline: 1.05rem 3rem;
+      // padding-block: 3.4rem 2.5rem;
     }
   }
 
@@ -264,7 +261,6 @@ th.is-recommend .p-plan-table__title {
   }
 
   tr:last-child {
-
     th,
     td {
       @include sp {
@@ -275,7 +271,7 @@ th.is-recommend .p-plan-table__title {
     }
   }
 
-  /*月額料金の行（1行目）を太字 */
+  /* 月額料金の行（1行目）を太字 */
   tr:first-child {
     border-top: 1px solid #ccc;
 

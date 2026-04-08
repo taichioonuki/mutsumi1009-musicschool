@@ -28,19 +28,17 @@
 .p-search .c-blog-card__img {
     width: 26rem;
     aspect-ratio: 260 / 184;
-  
+
     @include sp {
-         width: 100%;     
+        width: 100%;
         aspect-ratio: 335 / 200;
     }
 }
 
 .p-search .c-blog-card__img img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
 
 .p-search {
     .c-blog-card {
@@ -50,7 +48,7 @@
             margin-top: 7rem;
 
             @include sp {
-                 margin-top: 4.2rem;
+                margin-top: 4.2rem;
             }
         }
     }
@@ -65,4 +63,4 @@
     @include sp {
         margin-top: 1rem;
     }
-  }
+}

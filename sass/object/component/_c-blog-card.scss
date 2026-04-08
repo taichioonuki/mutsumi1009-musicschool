@@ -11,7 +11,7 @@
 
     @include sp {
         // width: 100%;
-        margin-inline: auto;
+        // margin-inline: auto;
     }
 }
 
@@ -72,14 +72,11 @@
 
 .c-blog-card__text {
     font-size: 1.8rem;
-    // height: 9rem;
     line-height: 1.666;
     margin-top: 1rem;
 
     @include sp {
         font-size: 1.6rem;
-        // width: 100%;
-        // height: auto;
         overflow: visible;
         text-align: left;
         line-height: 1.875;

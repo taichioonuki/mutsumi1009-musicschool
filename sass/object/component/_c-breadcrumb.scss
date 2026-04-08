@@ -46,6 +46,10 @@
    margin-inline: 1.8rem 2rem;
    color: $text-color;
    line-height: 1;
+
+   @include sp {
+    transform: translateY(0.1em);
+   }
  }
 
  .c-breadcrumb__link,

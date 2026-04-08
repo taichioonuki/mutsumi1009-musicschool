@@ -2,7 +2,6 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as
 
 .p-result-details__content {
   padding-block: 6.5rem 15.7rem;
@@ -30,19 +29,15 @@
 }
 
 .p-article-title {
-  // margin-top: 5rem;
   font-size: 2.5rem;
   line-height: 1.6;
   font-weight: 700;
 
   @include sp {
-    // margin-top: 3rem;
     font-size: 2rem;
     align-items: center;
   }
 }
-
-
 
 .p-result_details .c-result-card__date {
   text-align: left;
@@ -218,7 +213,7 @@
 .p-result_details .c-article-related .c-result-card__img {
   max-width: 26rem;
   aspect-ratio: 260 / 183;
-  object-fit: cover;
+  
 
   @include sp {
     width: 16rem;
@@ -229,20 +224,16 @@
 
 .p-result_details .c-result-card__img img {
   height: 100%;
+  object-fit: cover;
 }
 
 
-.p-article-related .c-result-card__body {
+.p-result_details .c-article-related .c-result-card__body {
+  margin-top: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem;
 }
-
-// .p-article-related .c-result-card {
-//   display: flex;
-//   gap: 1.6rem;
-// }
 
 .p-result_details .c-result-card__text {
   @include sp {
@@ -254,12 +245,6 @@
     line-height: 1.647;
   }
 }
-
-// .p-result_details .c-breadcrumb__list {
-//   @include sp {
-//     row-gap: 0;
-//   }
-// }
 
 .p-result_details .c-article-related .c-tag--lg {
   @include sp {
