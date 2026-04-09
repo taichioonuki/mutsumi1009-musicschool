@@ -35,7 +35,6 @@
 
   @include sp {
     font-size: 2rem;
-    align-items: center;
   }
 }
 
@@ -99,11 +98,11 @@
   margin-top: 6rem;
 }
 
-.p-article-nav__link .c-article-nav__link {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+// .p-article-nav__link .c-article-nav__link {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0;
+// }
 
 .p-article-nav__content,
 .c-article-nav__content {
@@ -117,7 +116,8 @@
 }
 
 .p-result_details .c-article-nav__img {
-  max-width: 9.8rem;
+  width: 9.8rem;
+  flex-shrink: 0;
 
   @include sp {
     display: none;
