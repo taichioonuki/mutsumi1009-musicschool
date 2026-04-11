@@ -2,7 +2,6 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as *;
 
 .p-search__header {
     display: flex;
@@ -10,6 +9,17 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.p-search__list {
+    margin-top: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+  
+    @include sp {
+      gap: 4rem;
+    }
+  }
 
 .p-search__title {
     font-size: 1.8rem;
@@ -38,20 +48,6 @@
 .p-search .c-blog-card__img img {
     height: 100%;
     object-fit: cover;
-}
-
-.p-search {
-    .c-blog-card {
-        margin-top: 4.2rem;
-
-        &+.c-blog-card {
-            margin-top: 7rem;
-
-            @include sp {
-                margin-top: 4.2rem;
-            }
-        }
-    }
 }
 
 .p-search__keyword {

@@ -11,7 +11,7 @@
   }
 }
 
-.p-result_details .c-result-card__img {
+.p-result-details .c-result-card__img {
   aspect-ratio: 880 / 400;
   overflow: hidden;
 
@@ -20,11 +20,13 @@
   }
 }
 
-.p-result_details .c-result-card__body {
-  margin-top: 5rem;
+.p-result-detail__head {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 
   @include sp {
-    margin-top: 3rem;
+    gap: 3rem;
   }
 }
 
@@ -38,7 +40,7 @@
   }
 }
 
-.p-result_details .c-result-card__date {
+.p-result-details .c-result-card__date {
   text-align: left;
   margin-top: 1.5rem;
 
@@ -60,7 +62,7 @@
   }
 }
 
-.p-result_details__table {
+.p-result-details__table {
 
   table {
     width: 100%;
@@ -94,15 +96,9 @@
   }
 }
 
-.p-result_details .c-article-nav {
+.p-result-details .c-article-nav {
   margin-top: 6rem;
 }
-
-// .p-article-nav__link .c-article-nav__link {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 0;
-// }
 
 .p-article-nav__content,
 .c-article-nav__content {
@@ -115,7 +111,7 @@
   }
 }
 
-.p-result_details .c-article-nav__img {
+.p-result-details .c-article-nav__img {
   width: 9.8rem;
   flex-shrink: 0;
 
@@ -124,7 +120,7 @@
   }
 }
 
-.p-result_details__text,
+.p-result-details__text,
 .c-article-nav__text {
   flex: 1;
   font-size: 1.6rem;
@@ -160,7 +156,7 @@
 }
 
 // 卒業実績詳細ページ用：記事ナビ
-.p-result_details .c-article-nav {
+.p-result-details .c-article-nav {
   gap: 19.9rem;
 
 
@@ -170,7 +166,7 @@
   }
 }
 
-.p-result_details .c-article-related {
+.p-result-details .c-article-related {
   margin-top: 10rem;
 
   @include sp {
@@ -178,9 +174,7 @@
   }
 }
 
-
-
-.p-result_details .c-article-related__title {
+.p-result-details .c-article-related__title {
   font-size: 1.8rem;
   margin: 0;
   padding-left: 2.9rem;
@@ -193,7 +187,7 @@
   }
 }
 
-.p-result_details .c-result-card__link {
+.p-result-details .c-result-card__link {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
@@ -203,14 +197,7 @@
   }
 }
 
-.is-detail-page {
-  .c-hero::before {
-    background-color: transparent;
-    mix-blend-mode: normal;
-  }
-}
-
-.p-result_details .c-article-related .c-result-card__img {
+.p-result-details .c-article-related .c-result-card__img {
   max-width: 26rem;
   aspect-ratio: 260 / 183;
   
@@ -222,20 +209,20 @@
   }
 }
 
-.p-result_details .c-result-card__img img {
+.p-result-details .c-result-card__img img {
   height: 100%;
   object-fit: cover;
 }
 
 
-.p-result_details .c-article-related .c-result-card__body {
+.p-result-details .c-article-related .c-result-card__body {
   margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.p-result_details .c-result-card__text {
+.p-result-details .c-result-card__text {
   @include sp {
     font-size: 1.7rem;
     font-weight: 700;
@@ -246,7 +233,7 @@
   }
 }
 
-.p-result_details .c-article-related .c-tag--lg {
+.p-result-details .c-article-related .c-tag--lg {
   @include sp {
     width: 8rem;
   }

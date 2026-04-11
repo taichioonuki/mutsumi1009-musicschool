@@ -3,7 +3,6 @@
 @use "../../global/function" as *;
 @use "../component/c-hero";
 @use "../utility/utility";
-// @use "../../foundation/base" as *;
 
 .p-top-hero__catch {
     position: absolute;
@@ -350,7 +349,6 @@
 .p-flow__content {
     display: flex;
     gap: 10rem;
-    // width: 100%;
     align-items: flex-start;
     position: relative;
 
@@ -456,13 +454,12 @@
 .p-top-reason__content {
     position: relative;
     flex: 1;
-    margin-left: 0;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
 
     @include sp {
-        gap: 2rem;
+        gap: 2.3rem;
     }
 }
 
@@ -490,11 +487,11 @@
 
 .p-top-reason__text {
     font-size: 1.8rem;
-    margin-top: 0.7rem;
+    // margin-top: 0.7rem;
 
     @include sp {
         font-size: 1.6rem;
-        margin-top: 0.3rem;
+        // margin-top: 0.3rem;
     }
 }
 
@@ -844,10 +841,10 @@
 
 .p-top-page .c-blog-card__date {
     text-align: right;
-    margin-top: 1rem;
+    // margin-top: 1rem;
 
     @include sp {
-        margin-top: 1.5rem;
+        // margin-top: 1.5rem;
     }
 }
 
@@ -855,6 +852,11 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1rem;
+
+    @include sp {
+      gap: 1.5rem;
+    }
 }
 
 .p-top-page .p-top-blog .c-blog-card__link {

@@ -2,7 +2,6 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as *;
 
 
 .p-contact-send {
@@ -31,10 +30,7 @@
   padding-block: 6.7rem 9rem;
  
   @include sp {
-    display: flex;
-    align-items: center;
     padding-block: 5rem;
-
   }
 }
 

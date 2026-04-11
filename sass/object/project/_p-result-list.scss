@@ -2,7 +2,6 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as
 
 .p-result-list__content {
   padding-block: 7rem 21.2rem;
@@ -36,7 +35,6 @@
     z-index: 2;
   }
 }
-
 
 .p-result-list .c-hero img {
 

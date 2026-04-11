@@ -13,7 +13,6 @@
   padding-block: 6.8rem 10rem;
 
   @include sp {
-    // align-items: center;
     padding-block: 4.7rem 10.8rem;
   }
 }
@@ -104,7 +103,6 @@
   }
 }
 
-
 // コンテンツ部分
 .p-contact__content {
   flex: 1;
@@ -129,10 +127,6 @@
   transition: border-color 0.3s;
   line-height: 1;
 
-  @include sp {
-    margin: 0;
-  }
-
   &:focus {
     outline: none;
   }
@@ -156,8 +150,6 @@
   display: block;
 
   @include sp {
-    margin: 0 auto;
-    flex: unset;
     min-height: 19rem;
   }
 
