@@ -4759,16 +4759,24 @@ td {
   border-right: none;
 }
 
-/* 月額料金の行（1行目）を太字 */
-tr:first-child {
+.p-plan-table__table tr:first-child {
   border-top: 1px solid #ccc;
 }
-tr:first-child th,
-tr:first-child td {
+.p-plan-table__table tr:first-child th,
+.p-plan-table__table tr:first-child td {
   font-weight: 700;
 }
-tr:first-child td:nth-child(3) {
+.p-plan-table__table tr:first-child td:nth-child(3) {
   color: #CB0000;
+}
+.p-plan-table__table td:nth-child(2) {
+  color: #000;
+}
+.p-plan-table__table tr:nth-child(even) {
+  background-color: rgba(80, 80, 80, 0.1);
+}
+.p-plan-table__table tr:last-child {
+  border-bottom: 1px solid #000;
 }
 
 .p-plan-table__num {
@@ -4779,20 +4787,6 @@ tr:first-child td:nth-child(3) {
   .p-plan-table__num {
     padding-top: 0.3rem;
   }
-}
-
-td:nth-child(2) {
-  color: #000;
-}
-
-/* ストライプ背景 */
-tr:nth-child(even) {
-  background-color: rgba(80, 80, 80, 0.1);
-}
-
-/* 最終行の下線 */
-tr:last-child {
-  border-bottom: 1px solid #000;
 }
 
 /* --- アイコン・装飾 --- */
