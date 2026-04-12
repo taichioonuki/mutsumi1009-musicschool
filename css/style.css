@@ -724,7 +724,6 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  gap: 0.5rem;
 }
 
 .c-blog-card__title {
@@ -3061,6 +3060,10 @@ TOPへ戻るボタン
      object-fit: cover;
 }
 
+.p-blog-list .c-blog-card__body {
+  gap: 0.5rem;
+}
+
 @media (max-width: 767px) {
   .p-blog-list .c-blog-card__date {
     margin-top: 1.2rem;
@@ -3093,7 +3096,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-search__list {
-    gap: 4rem;
+    gap: 3.9rem;
   }
 }
 
@@ -3133,9 +3136,12 @@ TOPへ戻るボタン
   font-weight: 700;
 }
 
+.p-search .c-blog-card__body {
+  gap: 0.3rem;
+}
 @media (max-width: 767px) {
-  .p-search .c-blog-card__date {
-    margin-top: 1rem;
+  .p-search .c-blog-card__body {
+    gap: 1.1rem;
   }
 }
 
@@ -4440,6 +4446,13 @@ TOPへ戻るボタン
   gap: 0 !important;
 }
 
+/* ===============================================
+# blog詳細ページ：hero画像調整
+=============================================== */
+.p-blog_details .c-hero--result-detail::before {
+  content: none;
+}
+
 .p-plan-system {
   padding-block: 6.7rem 2.85rem;
 }
@@ -4552,7 +4565,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-plan-table {
-    padding-block: 1.9rem 18rem;
+    padding-block: 1.9rem 19rem;
   }
 }
 
@@ -4727,8 +4740,9 @@ td {
 @media (max-width: 767px) {
   .p-plan-table__table tbody th {
     font-size: 1.6rem;
-    line-height: 1.5625;
+    line-height: 1.875;
     white-space: nowrap;
+    padding-inline: 1rem;
     max-width: 6rem;
   }
 }
@@ -4744,37 +4758,30 @@ td {
 .p-plan-table__table tbody td:last-child {
   border-right: none;
 }
-@media (max-width: 767px) {
-  .p-plan-table__table tbody tr:last-child th,
-  .p-plan-table__table tbody tr:last-child td {
-    padding-top: 1.9rem !important;
-    padding-bottom: 1.6rem !important;
-    line-height: 1.5625;
-  }
-}
-.p-plan-table__table tbody {
-  /* 月額料金の行（1行目）を太字 */
-}
-.p-plan-table__table tbody tr:first-child {
+
+/* 月額料金の行（1行目）を太字 */
+tr:first-child {
   border-top: 1px solid #ccc;
 }
-.p-plan-table__table tbody tr:first-child th,
-.p-plan-table__table tbody tr:first-child td {
+tr:first-child th,
+tr:first-child td {
   font-weight: 700;
 }
-.p-plan-table__table tbody tr:first-child td:nth-child(3) {
+tr:first-child td:nth-child(3) {
   color: #CB0000;
 }
-.p-plan-table__table tbody .p-plan-table__num {
+
+.p-plan-table__num {
   font-size: 2.2rem;
   display: inline-block;
 }
 @media (max-width: 767px) {
-  .p-plan-table__table tbody .p-plan-table__num {
+  .p-plan-table__num {
     padding-top: 0.3rem;
   }
 }
-.p-plan-table__table tbody td:nth-child(2) {
+
+td:nth-child(2) {
   color: #000;
 }
 

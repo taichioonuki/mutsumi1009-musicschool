@@ -96,7 +96,7 @@
   padding-block: 2.85rem 22.3rem;
 
   @include sp {
-    padding-block: 1.9rem 18rem;
+    padding-block: 1.9rem 19rem;
   }
 }
 
@@ -230,8 +230,9 @@ td {
 
     @include sp {
       font-size: 1.6rem;
-      line-height: 1.5625;
+      line-height: 1.875;
       white-space: nowrap;
+      padding-inline: 1rem;
       max-width: 6rem;
     }
   }
@@ -248,45 +249,36 @@ td {
       border-right: none;
     }
   }
+}
 
-  tr:last-child {
-    th,
-    td {
-      @include sp {
-        padding-top: 1.9rem !important;
-        padding-bottom: 1.6rem !important;
-        line-height: 1.5625;
-      }
-    }
+
+/* 月額料金の行（1行目）を太字 */
+tr:first-child {
+  border-top: 1px solid #ccc;
+
+  th,
+  td {
+    font-weight: 700;
   }
 
-  /* 月額料金の行（1行目）を太字 */
-  tr:first-child {
-    border-top: 1px solid #ccc;
-
-    th,
-    td {
-      font-weight: 700;
-    }
-
-    td:nth-child(3) {
-      color: $main-color;
-    }
-  }
-
-  .p-plan-table__num {
-    font-size: 2.2rem;
-    display: inline-block;
-
-    @include sp {
-      padding-top: 0.3rem;
-    }
-  }
-
-  td:nth-child(2) {
-    color: $text-color;
+  td:nth-child(3) {
+    color: $main-color;
   }
 }
+
+.p-plan-table__num {
+  font-size: 2.2rem;
+  display: inline-block;
+
+  @include sp {
+    padding-top: 0.3rem;
+  }
+}
+
+td:nth-child(2) {
+  color: $text-color;
+}
+
 
 /* ストライプ背景 */
 tr:nth-child(even) {

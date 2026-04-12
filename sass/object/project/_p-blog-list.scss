@@ -45,6 +45,10 @@
     object-fit: cover;
 }
 
+.p-blog-list .c-blog-card__body {
+    gap: 0.5rem;
+  }
+
 .p-blog-list .c-blog-card__date {
     @include sp {
         margin-top: 1.2rem;
