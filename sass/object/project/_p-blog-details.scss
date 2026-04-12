@@ -680,11 +680,10 @@
   }
 }
 
-.p-blog_details .c-result-card__text {
+.p-blog_details .c-result-card__title {
   width: 35.9rem;
   font-weight: 700;
   margin-top: 0;
-
 
   @include sp {
     width: 100%;
@@ -718,42 +717,33 @@
   object-fit: cover;
 }
 
-// ===============================================
-// ページ専用：パンくずの高さ調整（
-// ===============================================
-
-.is-detail-page .c-breadcrumb {
-
-  @include sp {
-    padding-block: 0.6rem;
-  }
-}
-
+// 詳細ページのパンくず用調整（SP）
 .is-detail-page .c-breadcrumb__item {
   font-size: 1.6rem;
   white-space: normal;
   gap: 0;
-
-  @include sp {}
 }
 
 .is-detail-page .c-breadcrumb__item,
 .is-detail-page .c-breadcrumb a {
   @include sp {
-    line-height: 1.5;
+    line-height: 1.25;
   }
 }
-
 
 
 /* 最後のパンくず以外に > を付ける */
 .is-detail-page .c-breadcrumb__item:not(:last-child)::after {
   content: ">";
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   margin-left: 1.3rem;
 
   @include sp {
     margin-left: 1.2rem;
+    position: relative;
+    transform: translateY(0.1em);
   }
 }
 
@@ -776,11 +766,6 @@
   @include sp {
     row-gap: 0;
   }
-}
-
-.is-detail-page .c-breadcrumb__item.is-detail-page-item {
-  display: flex !important;
-  gap: 0 !important;
 }
 
 /* ===============================================

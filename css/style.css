@@ -372,16 +372,6 @@ img {
 }
 
 /* ===============================================
-# SP 共通：詳細ページのパンくずだけ折り返しレイアウト
-=============================================== */
-.is-detail-page .c-breadcrumb__item.is-detail-page-item {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  gap: 0 !important;
-}
-
-/* ===============================================
 # 問い合わせbutton
 =============================================== */
 .c-button {
@@ -505,12 +495,14 @@ img {
 @media (max-width: 767px) {
   .c-hamburger span:nth-of-type(1) {
     top: 28%;
+    opacity: 1;
   }
 }
 
 @media (max-width: 767px) {
   .c-hamburger span:nth-of-type(3) {
     top: 73%;
+    opacity: 1;
   }
 }
 
@@ -910,7 +902,7 @@ TOPへ戻るボタン
           flex-direction: column;
 }
 
-.c-result-card__text {
+.c-result-card__title {
   font-size: 2rem;
   line-height: 1.25;
   overflow: hidden;
@@ -1180,8 +1172,8 @@ TOPへ戻るボタン
     max-width: 30rem;
     height: auto;
     background-color: #CB0000;
-    -webkit-transition: right 0.6s ease;
-    transition: right 0.6s ease;
+    -webkit-transition: right 0.4s ease;
+    transition: right 0.4s ease;
     z-index: 1000;
   }
 }
@@ -4344,13 +4336,13 @@ TOPへ戻るボタン
   }
 }
 
-.p-blog_details .c-result-card__text {
+.p-blog_details .c-result-card__title {
   width: 35.9rem;
   font-weight: 700;
   margin-top: 0;
 }
 @media (max-width: 767px) {
-  .p-blog_details .c-result-card__text {
+  .p-blog_details .c-result-card__title {
     width: 100%;
     font-size: 1.7rem;
     line-height: 1.674;
@@ -4385,33 +4377,37 @@ TOPへ戻るボタン
      object-fit: cover;
 }
 
-@media (max-width: 767px) {
-  .is-detail-page .c-breadcrumb {
-    padding-block: 0.6rem;
-  }
-}
-
 .is-detail-page .c-breadcrumb__item {
   font-size: 1.6rem;
   white-space: normal;
   gap: 0;
 }
+
 @media (max-width: 767px) {
   .is-detail-page .c-breadcrumb__item,
   .is-detail-page .c-breadcrumb a {
-    line-height: 1.5;
+    line-height: 1.25;
   }
 }
 
 /* 最後のパンくず以外に > を付ける */
 .is-detail-page .c-breadcrumb__item:not(:last-child)::after {
   content: ">";
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
   margin-left: 1.3rem;
 }
 @media (max-width: 767px) {
   .is-detail-page .c-breadcrumb__item:not(:last-child)::after {
     margin-left: 1.2rem;
+    position: relative;
+    -webkit-transform: translateY(0.1em);
+            transform: translateY(0.1em);
   }
 }
 
@@ -4437,13 +4433,6 @@ TOPへ戻るボタン
   .is-detail-page .c-breadcrumb__list {
     row-gap: 0;
   }
-}
-
-.is-detail-page .c-breadcrumb__item.is-detail-page-item {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  gap: 0 !important;
 }
 
 /* ===============================================
