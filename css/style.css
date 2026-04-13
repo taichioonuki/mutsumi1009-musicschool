@@ -4748,9 +4748,6 @@ td {
   border-right: none;
 }
 
-.p-plan-table__table tr:first-child {
-  border-top: 1px solid #ccc;
-}
 .p-plan-table__table tr:first-child th,
 .p-plan-table__table tr:first-child td {
   font-weight: 700;
