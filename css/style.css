@@ -3066,6 +3066,9 @@ TOPへ戻るボタン
      object-fit: cover;
 }
 
+.p-blog-list .c-blog-card__body {
+  gap: 1rem;
+}
 @media (max-width: 767px) {
   .p-blog-list .c-blog-card__body {
     display: -webkit-box;
@@ -3685,32 +3688,62 @@ TOPへ戻るボタン
   opacity: 0.7;
 }
 
-.p-blog-detail__text--lead {
+.p-blog-detail__lead-wrap {
   margin-top: 5rem;
-  font-size: 1.8rem;
-  line-height: 1.666;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .p-blog-detail__text--lead {
+  .p-blog-detail__lead-wrap {
     margin-top: 3rem;
   }
 }
 @media (max-width: 767px) {
+  .p-blog-detail__lead-wrap {
+    margin-top: 2rem;
+  }
+}
+
+.p-blog-detail__text--lead {
+  font-size: 1.8rem;
+  line-height: 1.666;
+}
+@media (max-width: 767px) {
   .p-blog-detail__text--lead {
     font-size: 1.6rem;
-    margin-top: 2rem;
     line-height: 1.8;
   }
 }
 
+.p-blog-detail__section {
+  margin-top: 3.5rem;
+}
+@media (max-width: 767px) {
+  .p-blog-detail__section {
+    margin-top: 3.7rem;
+  }
+}
+
+.p-blog-detail__section-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+@media (max-width: 767px) {
+  .p-blog-detail__section-head {
+    gap: 1.2rem;
+  }
+}
+
 .p-blog-detail__section-text {
-  margin-top: 1.5rem;
   line-height: 1.666;
 }
 @media (max-width: 767px) {
   .p-blog-detail__section-text {
     font-size: 1.6rem;
-    margin-top: 1.2rem;
     line-height: 1.8;
   }
 }
@@ -3718,23 +3751,32 @@ TOPへ戻るボタン
 .p-blog-detail__heading {
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 3.5rem;
+}
+
+.p-blog-detail__section-body {
+  margin-top: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.8rem;
 }
 @media (max-width: 767px) {
-  .p-blog-detail__heading {
-    margin-top: 3.7rem;
+  .p-blog-detail__section-body {
+    margin-top: 4.2rem;
   }
 }
 
 .p-blog-detail__image {
-  margin-top: 1.8rem;
   width: 100%;
   max-width: 33.5rem;
   aspect-ratio: 335/200;
 }
 @media (max-width: 767px) {
   .p-blog-detail__image {
-    margin-top: 4.2rem;
     max-width: none;
   }
 }
@@ -3746,7 +3788,6 @@ TOPへ戻るボタン
 }
 
 .p-blog-detail__list {
-  margin-top: 2.8rem;
   padding-bottom: 4rem;
   line-height: 1.666;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -4095,7 +4136,6 @@ TOPへ戻るボタン
   width: 3rem;
   -webkit-transform: translateY(0.6rem);
           transform: translateY(0.6rem);
-  pointer-events: none;
 }
 @media (max-width: 767px) {
   .p-sidebar-search__icon {
@@ -4363,6 +4403,9 @@ TOPへ戻るボタン
   }
 }
 
+.p-blog_details .c-article-related .c-result-card__body {
+  gap: 1.3rem;
+}
 @media (max-width: 767px) {
   .p-blog_details .c-article-related .c-result-card__body {
     -webkit-box-flex: 1;
@@ -4592,7 +4635,7 @@ TOPへ戻るボタン
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .p-plan-table__table {
     width: 66.8rem;
   }
