@@ -11,10 +11,6 @@
   position: relative;
   overflow: hidden;
 
-  @include sp {
-    height: auto;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -22,26 +18,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-     background-color: rgba(80, 80, 80, 0.4863);
+    background-color: rgba(80, 80, 80, 0.4863);
     mix-blend-mode: multiply;
     z-index: 1;
-  }
-
-  picture {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-
-    @include sp {
-      height: 100%;
-    }
   }
 }
 
@@ -54,6 +33,7 @@
   font-size: 2.5rem;
   color: $font-color;
   z-index: 2;
+  font-weight: 700;
 
   @include sp {
     font-size: 2.5rem;
@@ -61,7 +41,7 @@
   }
 }
 
-// --- ページメッセージコンポーネント（再利用） ---
+// --- ページメッセージコンポーネント---
 .c-page-message {
   text-align: center;
   font-size: 1.8rem;
@@ -70,7 +50,6 @@
   @include sp {
     font-size: 1.6rem;
     text-align: left;
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
-

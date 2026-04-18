@@ -8,6 +8,7 @@
     <meta name="description" content="きたむらミュージックスクールの卒業実績一覧ページです。">
     <meta name="keywords" content="卒業実績,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,8 +32,13 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,34 +49,16 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
-        <main class="l-main p-search">
+        <main class="l-main p-result-list">
 
             <div class="c-hero c-hero--with-border">
                 <picture>
                     <source media="(min-width: 768px)" srcset="images/result/result-list_pc.jpg">
-                    <img class="c-hero__img" src="images/result/result-list_pc.jpg" alt="ピアノ演奏" width="375" height="300">
+                    <img class="c-hero__img" src="images/result/result-list_pc.jpg" alt="ピアノ演奏" width="375"
+                        height="300">
                 </picture>
                 <h1 class="c-hero__text">卒業実績</h1>
             </div>
@@ -80,18 +68,21 @@
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li>  -->
-                        <li class="c-breadcrumb__item" aria-current="page">卒業実績</li>
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">卒業実績</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
 
-            <div class="p-result-list__content">
+            <section class="p-result-list__content">
                 <div class="l-inner">
                     <h2 class="c-page-title c-page-title--result">卒業実績一覧</h2>
 
-                    <div class="p-result-list">
+                    <div class="p-result-list__grid">
 
                         <!-- 1記事目 -->
                         <article class="c-result-card">
@@ -105,10 +96,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -125,10 +116,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -145,10 +136,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -165,10 +156,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -185,10 +176,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -205,10 +196,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -225,10 +216,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -245,10 +236,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -265,10 +256,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -285,10 +276,10 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -305,7 +296,7 @@
                         <a href="#" class="c-pagination__num">9</a>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
 
         <!-- TOPへ戻る・お問合せボタン -->
@@ -331,7 +322,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>

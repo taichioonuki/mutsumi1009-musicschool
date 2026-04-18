@@ -8,6 +8,7 @@
     <meta name="description" content="きたむらミュージックスクールのお問い合わせ送信完了ページです。お問い合わせありがとうございます。">
     <meta name="keywords" content="きたむらミュージックスクール,音楽教室,お問い合わせ">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,8 +32,13 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,25 +49,6 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
@@ -78,8 +65,12 @@
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item" aria-current="page">送信完了</li>
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">送信完了</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
@@ -112,7 +103,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>

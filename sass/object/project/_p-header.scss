@@ -1,4 +1,3 @@
-// @use "../../global" as *;
 @use "../../global/variable" as *;
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
@@ -20,6 +19,7 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	position: relative;
 }
 
 .p-header__logo,
@@ -36,20 +36,14 @@
 	&:hover {
 		opacity: 0.7;
 	}
-
-	@include sp {
-		height: auto;
-	}
 }
 
-.logo__img img {
-	display: block;
+.logo__img {
 	width: 3.2rem;
-	height: auto;
+	flex-shrink: 0;
 
 	@include sp {
 		width: 2.1rem;
-		height: 3.2rem;
 	}
 }
 
@@ -59,7 +53,6 @@
 	margin-left: 0.9rem;
 
 	@include sp {
-		display: flex;
 		flex-direction: row;
 		align-items: center;
 		margin-left: 0.5rem;
@@ -69,7 +62,7 @@
 .logo__main {
 	font-size: 2rem;
 	font-weight: 700;
-	line-height: 1.0;
+	line-height: 1.15;
 	text-align: left;
 
 	@include sp {
@@ -79,10 +72,10 @@
 }
 
 .logo__sub {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	margin-top: 0.4rem;
 	font-weight: 700;
-	line-height: 1.0;
+	line-height: 1.533;
 
 	@include sp {
 		font-size: 1.3rem;
@@ -92,6 +85,24 @@
 
 .p-header__nav {
 	height: 100%;
+
+	@include sp {
+		position: fixed;
+		top: 5rem;
+		right: -100%;
+		width: 80%;
+		max-width: 30rem;
+		height: auto;
+		background-color: $main-color;
+		transition: right 0.4s ease;
+		z-index: 1000;
+	}
+
+	&.is-open {
+		@include sp {
+			right: 0;
+		}
+	}
 }
 
 .p-header__nav-list {
@@ -100,16 +111,20 @@
 	height: 100%;
 	list-style: none;
 	margin: 0;
+	padding: 0;
 	align-items: center;
-
 
 	@include tab {
 		column-gap: 2.1rem;
 	}
 
 	@include sp {
-		margin-left: 0;
-		display: none;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 100%;
+		height: auto;
+		row-gap: 0;
 	}
 }
 
@@ -117,13 +132,21 @@
 	height: 100%;
 	display: flex;
 	align-items: center;
+
+	@include sp {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .p-header__nav-list li a {
-	height: 100%;
 	display: flex;
 	align-items: center;
 
+	@include sp {
+		width: 100%;
+		padding: 1.5rem 2rem;
+	}
 }
 
 .p-header__nav-list li a:not(.c-button) {
@@ -141,7 +164,17 @@
 	}
 
 	@include sp {
-		font-size: 1.6rem;
+		height: 5.8rem;
+		font-size: 1.8rem;
+		line-height: 1.5;
+		background-color: $main-color;
+		color: $font-color;
+		transition: background-color 0.4s ease, color 0.4s ease;
+
+		&:hover {
+			background-color: $text-color;
+			color: $font-color;
+		}
 	}
 
 	&::after {
@@ -152,82 +185,40 @@
 		width: 100%;
 		height: 0.2rem;
 		background-color: $text-color;
-
 		transform: scaleX(0);
 		transform-origin: center;
-		transition: transform 0.5s ease-out;
+		transition: transform 0.4s ease-out;
+
+		@include sp {
+			display: none;
+		}
 	}
 
-	&:hover {
-
-		&::after {
-			transform: scaleX(1);
-			transform-origin: center;
-		}
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: center;
+		background-color: $text-color;
 	}
 }
 
-
-// spナビゲゲーション
-.p-header__nav-sp {
-	display: none;
-
-	@include sp {
-		position: fixed;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		font-size: 1.8rem;
-		font-weight: 500;
-		top: 5rem;
-		right: -100%;
-		width: 80%;
-		max-width: 30rem;
-		transition: right 0.6s ease;
-		z-index: 1000;
-
-		&.is-open {
-			right: 0;
-		}
-	}
-}
-
-.p-header__nav-sp-list {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	flex-grow: 1;
-	justify-content: center;
-
-	a {
-		display: flex;
-		align-items: center;
-		font-size: 1.8rem;
-		font-weight: 700;
-		color: $font-color;
-		text-decoration: none;
-		padding: 1.5rem 20.8rem 1rem 2rem;
-		transition: background-color 0.4s ease;
-		background-color: $main-color;
-
-		&:hover {
-			background-color: $text-color;
-			color: $font-color;
-		}
-	}
-}
-
-// header内の問い合わせボタンデザイン調整
 .p-header__nav-item--contact {
+	display: flex;
+	align-items: center;
+	height: 100%;
+  
+	@include sp {
+	  display: none;
+	}
+
 	.c-button--head {
-		// height: 100%;
 		max-width: 15rem;
 		height: 4.5rem;
 		padding: 0.7rem 3rem 0.5rem 3rem;
 		font-size: 1.5rem;
+
+		@include sp {
+		
+			display: none;
+		}
 	}
 }

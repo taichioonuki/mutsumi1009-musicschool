@@ -8,6 +8,7 @@
     <meta name="description" content="きたむらミュージックスクールの料金・プラン案内ページです。">
     <meta name="keywords" content="plan,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -31,36 +32,20 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ -->
-                    <nav class="p-header__nav" id="global-nav">
-                        <ul class="p-header__nav-list">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
 
+                    <nav id="js-navigation" class="p-header__nav">
+                        <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
                             <li><a href="result_list.html">卒業実績</a></li>
                             <li class="p-header__nav-item--contact">
                                 <a href="contact_form.html" class="c-button c-button--head">お問い合わせ</a>
                             </li>
-                        </ul>
-                    </nav>
-
-
-                    <!-- ハンバーガー（SP用） -->
-                    <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                        <span class="c-hamburger__line">
-                        </span>
-                        <span class="c-hamburger__line">
-                        </span>
-                        <span class="c-hamburger__line">
-                        </span>
-                    </button>
-
-                    <!-- SPナビ -->
-                    <nav class="p-header__nav-sp" id="sp-nav">
-                        <ul class="p-header__nav-sp-list">
-                            <li><a href="plan.html">料金</a></li>
-                            <li><a href="blog_list.html">ブログ</a></li>
-                            <li><a href="result_list.html">卒業実績</a></li>
                         </ul>
                     </nav>
 
@@ -82,13 +67,17 @@
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item" aria-current="page">プラン・料金</li>
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">プラン・料金</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
 
-            <div class="p-plan__content">
+            <section class="p-plan-system">
                 <div class="l-inner">
                     <h2 class="c-page-title c-page-title--plan">料金体系</h2>
 
@@ -103,136 +92,140 @@
                             きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
                         </p>
                     </div>
-
-
-                    <section class="p-plan-table">
-                        <h2 class="c-page-title c-page-title--plan">プラン内容・月額料金</h2>
-
-
-                        <div class="p-plan-table__scroll" data-simplebar data-simplebar-auto-hide="false">
-                            <table class="p-plan-table__table">
-                                <thead>
-                                    <tr>
-                                        <th rowspan="2"></th>
-                                        <th></th>
-                                        <th class="p-plan-table__head is-recommend" rowspan="2">
-                                            <span class="p-plan-table__badge">おすすめ</span>
-                                            <span class="p-plan-table__title">スタンダード<br class="sp-br">プラン</span>
-                                          </th>
-                                        <th></th>
-                                    </tr>
-
-                                    <tr>
-                                        <th class="p-plan-table__head-black">
-                                            <span class="p-plan-table__head-text">ベーシック<br class="sp-only">プラン</span>
-                                        </th>
-
-                                        <th class="p-plan-table__head-black">
-                                            <span class="p-plan-table__head-text">プレミアム<br class="sp-only">プラン</span>
-                                        </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <th>月額料金</th>
-                                        <td><span class="p-plan-table__num">39,000円</span></td>
-                                        <td class="is-recommend">
-                                            <span class="p-plan-table__price is-red">
-                                                <span class="p-plan-table__num">59,000円</span>
-                                            </span>
-                                        </td>
-                                        <td><span class="p-plan-table__num">128,000円</span></td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>マンツーマン授業</th>
-                                        <td>
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot"></span>
-                                                <span class="p-plan-table__text">週1回</span>
-                                            </div>
-                                        </td>
-                                        <td class="is-recommend">
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot p-plan-table__dot--red"></span>
-                                                <span class="p-plan-table__text is-red">週2回</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot"></span>
-                                                <span class="p-plan-table__text">無制限</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>ビジネス基本講座</th>
-                                        <td><span class="p-plan-table__dot"></span></td>
-                                        <td class="is-recommend"><span
-                                                class="p-plan-table__dot p-plan-table__dot--red"></span></td>
-                                        <td><span class="p-plan-table__dot"></span></td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>練習ROOM利用</th>
-                                        <td>
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot"></span>
-                                                <span class="p-plan-table__text">月10時間</span>
-                                            </div>
-                                        </td>
-                                        <td class="is-recommend">
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot p-plan-table__dot--red"></span>
-                                                <span class="p-plan-table__text is-red">月20時間</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot"></span>
-                                                <span class="p-plan-table__text">無制限</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>ビジネスコンサル</th>
-                                        <td><span class="p-plan-table__dash"></span></td>
-                                        <td class="is-recommend">
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot p-plan-table__dot--red"></span>
-                                                <span class="p-plan-table__text is-red">月2回</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="p-plan-table__cell">
-                                                <span class="p-plan-table__dot"></span>
-                                                <span class="p-plan-table__text">月3回</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th>
-                                            <span class="p-plan-table__row-title">コミュニティ<br class="sp-only">参加資格</span>
-                                        </th>
-                                        <td><span class="p-plan-table__dash"></span></td>
-                                        <td class="is-recommend"><span class="p-plan-table__dash"></span></td>
-                                        <td><span class="p-plan-table__dot"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <p class="p-page-note">
-                            ※各サービスは1回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。
-                        </p>
-
-                    </section>
                 </div>
-            </div>
+            </section>
+
+            <section class="p-plan-table">
+                <div class="l-inner">
+                    <h2 class="c-page-title c-page-title--plan">プラン内容・月額料金</h2>
+
+                    <div class="p-plan-table__scroll" data-simplebar data-simplebar-auto-hide="false">
+                        <table class="p-plan-table__table">
+                            <thead>
+                                <tr>
+                                  <th></th>
+                                  <th class="p-plan-table__head-black">
+                                    <div class="p-plan-table__head-inner p-plan-table__head-inner--black">
+                                      <p class="p-plan-table__head-title">
+                                        ベーシック<br class="sp-only">プラン
+                                      </p>
+                                    </div>
+                                  </th>
+                                  <th class="p-plan-table__head is-recommend">
+                                    <div class="p-plan-table__head-inner p-plan-table__head-inner--red">
+                                      <p class="p-plan-table__head-title">
+                                        <span class="p-plan-table__badge">おすすめ</span>
+                                        スタンダード<br class="sp-br">プラン
+                                      </p>
+                                    </div>
+                                  </th>
+                                  <th class="p-plan-table__head-black">
+                                    <div class="p-plan-table__head-inner p-plan-table__head-inner--black">
+                                      <p class="p-plan-table__head-title">
+                                        プレミアム<br class="sp-only">プラン
+                                      </p>
+                                    </div>
+                                  </th>
+                                </tr>
+                              </thead>
+                            <tbody>
+                                <tr>
+                                    <th>月額料金</th>
+                                    <td><span class="p-plan-table__num">39,000円</span></td>
+                                    <td class="is-recommend">
+                                        <span class="p-plan-table__price is-red">
+                                            <span class="p-plan-table__num">59,000円</span>
+                                        </span>
+                                    </td>
+                                    <td><span class="p-plan-table__num">128,000円</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th>マンツーマン授業</th>
+                                    <td>
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot"></span>
+                                            <span class="p-plan-table__text">週1回</span>
+                                        </div>
+                                    </td>
+                                    <td class="is-recommend">
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot p-plan-table__dot--red"></span>
+                                            <span class="p-plan-table__text is-red">週2回</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot"></span>
+                                            <span class="p-plan-table__text">無制限</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>ビジネス基本講座</th>
+                                    <td><span class="p-plan-table__dot"></span></td>
+                                    <td class="is-recommend"><span
+                                            class="p-plan-table__dot p-plan-table__dot--red"></span></td>
+                                    <td><span class="p-plan-table__dot"></span></td>
+                                </tr>
+
+                                <tr>
+                                    <th>練習ROOM利用</th>
+                                    <td>
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot"></span>
+                                            <span class="p-plan-table__text">月10時間</span>
+                                        </div>
+                                    </td>
+                                    <td class="is-recommend">
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot p-plan-table__dot--red"></span>
+                                            <span class="p-plan-table__text is-red">月20時間</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot"></span>
+                                            <span class="p-plan-table__text">無制限</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>ビジネスコンサル</th>
+                                    <td><span class="p-plan-table__dash"></span></td>
+                                    <td class="is-recommend">
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot p-plan-table__dot--red"></span>
+                                            <span class="p-plan-table__text is-red">月2回</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="p-plan-table__cell">
+                                            <span class="p-plan-table__dot"></span>
+                                            <span class="p-plan-table__text">月3回</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <span class="p-plan-table__row-title">コミュニティ<br class="sp-only">参加資格</span>
+                                    </th>
+                                    <td><span class="p-plan-table__dash"></span></td>
+                                    <td class="is-recommend"><span class="p-plan-table__dash"></span></td>
+                                    <td><span class="p-plan-table__dot"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="p-page-note">
+                        ※各サービスは1回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
 
@@ -260,7 +253,7 @@
             </nav>
             <div class="p-footer__content">
                 <div class="p-footer__logo">
-                    <a href="index.html" class="p-footer-logo__link">
+                    <a href="index.html" class="p-footer__logo-link">
                         <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                     </a>
                 </div>

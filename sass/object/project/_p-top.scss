@@ -3,7 +3,6 @@
 @use "../../global/function" as *;
 @use "../component/c-hero";
 @use "../utility/utility";
-// @use "../../foundation/base" as *;
 
 .p-top-hero__catch {
     position: absolute;
@@ -53,13 +52,19 @@
     }
 }
 
-.p-top-message__lead {
+.p-top-message {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     margin-top: 1rem;
-    width: 100%;
+
+    @include sp {
+        margin-top: 0.5rem;
+    }
+}
+
+.p-top-message__lead {
+    text-align: center;
 
     @include sp {
         font-size: 1.8rem;
@@ -71,13 +76,14 @@
 }
 
 .p-top-message__semicircle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    width: 86rem;
     margin-top: 2.8rem;
+    margin-inline: auto;
 
     @include sp {
-        margin-top: 1.5rem;
+        width: 34rem;
+        margin-top: 2rem;
     }
 }
 
@@ -94,7 +100,8 @@
 
 .p-top-message__arrow {
     position: absolute;
-    top: -5.6rem;
+    width: 4rem;
+    top: -5.3rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -114,7 +121,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 2px;
+        width: 0.3rem;
         background-color: $main-color;
     }
 }
@@ -188,6 +195,7 @@
 
     @include sp {
         font-size: 2.5rem;
+        line-height: 1.6;
     }
 }
 
@@ -197,14 +205,14 @@
     text-align: center;
 
     @include sp {
-        padding-block: 4.9rem 3.5rem;
+        padding-block: 4.9rem 4rem;
     }
 }
 
 .p-top-promo__label {
     font-size: 3rem;
     font-weight: 700;
-    color: $c-accent;
+    color: $font-color;
 
     @include sp {
         font-size: 2.5rem
@@ -215,7 +223,7 @@
     position: relative;
     font-size: 3rem;
     font-weight: 700;
-    color: $c-accent;
+    color: $font-color;
 
     @include sp {
         line-height: 1.6;
@@ -226,11 +234,11 @@
 .p-top-promo__text {
     font-size: 1.8rem;
     background-color: $main-color;
-    color: $c-accent;
-    padding-top: 2.3rem;
+    color: $font-color;
+    margin-top: 2.3rem;
 
     @include sp {
-        padding-top: 1.4rem;
+        margin-top: 1.4rem;
         line-height: 1.666;
 
     }
@@ -249,10 +257,10 @@
 }
 
 .p-flow__list {
-    padding-top: 5rem;
+    margin-top: 5rem;
 
     @include sp {
-        padding-top: 4rem;
+        margin-top: 4rem;
     }
 }
 
@@ -285,7 +293,6 @@
     top: 0.8rem;
     bottom: -13.4rem;
     width: 0.3rem;
-    // height: 18.5rem;
     background-color: $main-color;
 
     @include sp {
@@ -296,12 +303,11 @@
 
 .p-flow__item--last {
     &::before {
-        height: auto;
         top: 1.5rem;
         bottom: 0;
 
         @include sp {
-        bottom: 1.8rem;
+            bottom: 1.8rem;
         }
     }
 }
@@ -313,6 +319,7 @@
     left: 6rem;
     bottom: -1.8rem;
     transform: translateX(-50%);
+    width: 3.2rem;
 
     @include sp {
         left: 2rem;
@@ -342,7 +349,6 @@
 .p-flow__content {
     display: flex;
     gap: 10rem;
-    width: 100%;
     align-items: flex-start;
     position: relative;
 
@@ -403,11 +409,11 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding-top: 2rem;
+    margin-top: 2rem;
 
     @include sp {
         gap: 0;
-        padding-top: 2.4rem;
+        margin-top: 3.6rem;
     }
 }
 
@@ -418,46 +424,42 @@
 
     @include sp {
         flex-direction: column;
-        gap: 0;
+        gap: 3rem;
 
         &+& {
-            margin-top: 4.0rem;
+            margin-top: 3.9rem;
         }
     }
 }
 
-.p-top-reason__item:nth-child(n+2) .p-top-reason__item-title {
-    margin-top: 0;
+.p-top-reason__img {
+    flex-shrink: 0;
+    aspect-ratio: 350 / 247;
+
+    @include pc {
+        width: 35rem;
+    }
 
     @include sp {
-        margin-top: 3rem;
+        aspect-ratio: 335 / 200;
+        width: 100%;
     }
 }
 
 .p-top-reason__img img {
-    width: 35rem;
-    height: auto;
-    aspect-ratio: 350 / 247;
+    height: 100%;
     object-fit: cover;
-    flex-shrink: 0;
-
-    @include sp {
-        aspect-ratio: 335 / 200;
-        width: auto;
-        height: 100%;
-    }
 }
 
 .p-top-reason__content {
     position: relative;
     flex: 1;
-    margin-left: 0;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 4rem;
 
     @include sp {
-        gap: 2rem;
+        gap: 2.3rem;
     }
 }
 
@@ -467,7 +469,6 @@
     position: relative;
     display: block;
     border-bottom: 2px solid $main-color;
-    margin-top: 1rem;
     margin-left: -5rem;
     padding-left: 5rem;
     padding-bottom: 0.5rem;
@@ -475,7 +476,6 @@
     @include sp {
         font-size: 2rem;
         line-height: 1.5;
-        margin-top: 3rem;
         position: relative;
         left: -0rem;
         margin-left: 0;
@@ -486,20 +486,23 @@
 
 .p-top-reason__text {
     font-size: 1.8rem;
-    padding-top: 0.7rem;
 
     @include sp {
         font-size: 1.6rem;
-        padding-top: 0.3rem;
+
     }
 }
 
+/* ===============================================
+# 生徒さんたちの声
+=============================================== */
+
 .p-top-voice {
     background-color: $main-color;
-    padding-block: 4.6rem 7.9rem;
+    padding-block: 4.6rem 8rem;
 
     @include sp {
-        padding-block: 4.7rem 5.2rem;
+        padding-block: 4.6rem 5rem;
     }
 
     .l-inner {
@@ -527,48 +530,46 @@
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    width: auto !important;
-    height: auto !important;
     padding: 0 !important;
     display: block;
     transform: none !important;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    width: 2.8rem !important;
+    height: 4rem !important;
 
     &:hover {
         opacity: 0.7;
     }
 }
 
-/* 自作SVG画像サイズ */
-.splide__arrow img {
-    width: 30px;
-}
-
 .splide__arrow--prev {
-    top: 41% !important;
+    top: 37% !important;
     left: -4rem !important;
 
-    @include sp {
-        top: 40% !important;
-        left: 0 !important;
+    @media (max-width: 1000px) {
+        left: -3.5rem !important;
     }
 
-    // @include md {
-    //     left: -1% !important;
-    // }
+    @include sp {
+        top: 35% !important;
+        left: 0.5rem !important;
+    }
 }
 
 .splide__arrow--next {
-    top: 41% !important;
+    top: 37% !important;
     right: -4rem !important;
 
+    @media (max-width: 1000px) {
+        right: -3.5rem !important;
+    }
+
     @include sp {
-        top: 40% !important;
-        right: 0 !important;
+        top: 35% !important;
+        right: 0.5rem !important;
     }
 }
-
 
 .splide__pagination {
     @include sp {
@@ -576,96 +577,89 @@
     }
 }
 
-
 .p-top-voice__slider {
     position: relative;
+    margin-top: 3rem;
+
+    @include sp {
+        margin-top: 3.9rem;
+    }
 }
 
 .p-top-voice__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.4s;
+    gap: 1.7rem;
 
-    @include pc {
-        &:hover {
-            .p-top-voice__img img {
-                transform: scale(1.1);
-                opacity: 0.7;
-            }
-
-            .p-top-voice__meta,
-            .p-top-voice__text {
-                opacity: 0.7;
-                transition: opacity 0.4s;
-            }
-        }
+    @include sp {
+        gap: 2.6rem;
     }
+}
+
+.p-top-voice__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 .p-top-voice__img {
     position: relative;
-    width: 27rem;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    margin-top: 2.8rem;
-
-    @include sp {
-        display: block;
-        margin-inline: auto;
-        width: 33.5rem;
-    }
-}
-
-
-.p-top-voice__img img {
-    width: 100%;
-    height: auto;
     aspect-ratio: 270 / 190;
-    object-fit: cover;
-    flex-shrink: 0;
-    transition: transform 0.5s ease;
+    overflow: hidden;
 
     @include sp {
-        width: auto;
-        max-width: 33.5rem;
-        height: 100%;
         aspect-ratio: 335 / 200;
     }
 }
 
-.p-top-voice__meta {
+.p-top-voice__img img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s, opacity 0.4s;
+  
+    @include pc {
+      .p-top-voice__link:hover & {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .p-top-voice__meta {
     font-size: 2.2rem;
     font-weight: 700;
     color: $font-color;
-    margin-top: 1.6rem;
     opacity: 1;
     text-align: center;
-
-    @include sp {
-        margin-top: 2.5rem;
-    }
-}
-
-.p-top-voice__text {
-    width: 27rem;
+    width: 100%;
+    transition: opacity 0.4s;
+  }
+  
+  .p-top-voice__text {
+    width: 100%;
     font-size: 1.8rem;
     color: $font-color;
-    line-height: 1.666;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     opacity: 1;
-    line-height: 1.8;
-
-    @include sp {
-        width: 100%;
-        margin-top: 1rem;
-        line-height: 1.66;
+    line-height: 1.66;
+    transition: opacity 0.4s;
+  }
+  
+  @include pc {
+    .p-top-voice__link:hover .p-top-voice__meta {
+      opacity: 0.7;
     }
-}
+  
+    .p-top-voice__link:hover .p-top-voice__text {
+      opacity: 0.7;
+    }
+  }
 
 /* ===============================================
 # よくあるご質問
@@ -674,7 +668,7 @@
     padding-block: 5.3rem 3.5rem;
 
     @include sp {
-        padding-block: 2rem 1.5rem;
+        padding-block: 2rem 2.5rem;
     }
 }
 
@@ -682,11 +676,12 @@
     border-top: 0.5px solid $text-color;
     margin-top: 3.3rem;
 
-    @include sp {}
+    @include sp {
+        margin-top: 3.9rem;
+    }
 }
 
 .p-faq__item {
-    height: auto;
     border-bottom: 0.5px solid $text-color;
     transition: background-color 0.3s;
 
@@ -701,11 +696,10 @@
     position: relative;
     padding-block: 1.5rem 1.4rem;
     padding-inline: 2rem 1.9rem;
-    width: 100%;
     gap: 1rem;
     line-height: 1.764;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 
     @include sp {
         padding-block: 1.6rem 1.2rem;
@@ -744,7 +738,7 @@
     width: 3.5rem;
     height: 3.5rem;
     background-color: $text-color;
-    color: $c-accent;
+    color: $font-color;
     border-radius: 50%;
     font-size: 1.7rem;
     font-weight: 700;
@@ -754,13 +748,8 @@
     @include sp {
         font-size: 1.6rem;
         position: relative;
-         top: -0.1rem;
+        top: -0.1rem;
         left: -1rem;
-
-
-        .p-faq__item:nth-child(4) & {
-            top: -0.6rem;
-        }
     }
 }
 
@@ -794,12 +783,12 @@
     width: 3.5rem;
     height: 3.5rem;
     background-color: $main-color;
-    color: $c-accent;
+    color: $font-color;
     border-radius: 50%;
     font-size: 1.7rem;
     font-weight: 700;
     flex-shrink: 0;
-   
+
 
     @include sp {
         font-size: 1.6rem;
@@ -817,10 +806,19 @@
 # ブログ一覧
 =============================================== */
 
+.p-top-blog {
+    padding-block: 3.5rem 20.5rem;
+
+    @include sp {
+        padding-block: 2.3rem 19.2rem;
+    }
+}
+
 .p-top-page .p-top-blog__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
+    margin-top: 3.2rem;
 
     @include sp {
         display: block;
@@ -834,60 +832,52 @@
     gap: 2rem;
 
     @include sp {
+        align-items: stretch;
         gap: 3rem;
     }
 }
 
 .p-top-page .c-blog-card__date {
     text-align: right;
-    padding-top: 1rem;
-
-    @include sp {
-        padding-top: 1.5rem;
-    }
 }
 
 .p-top-page .c-blog-card__body {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-/* TOPページ専用の上書き */
-.p-top-page .c-blog-card {
-    margin-top: 3.5rem;
+    gap: 1rem;
 
     @include sp {
-        margin-top: 3.6rem;
-    }
-
-    &+.c-blog-card {
-        margin-top: 3.5rem !important;
-
-        @include sp {
-            margin-top: 4rem !important;
-        }
+        gap: 1.5rem;
     }
 }
 
-.p-top-page .p-blog-list .c-blog-card__img {
-    width: 26rem;
-    height: 20rem;
-    display: block;
-    overflow: hidden;
-
-    img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;
+.p-top-page .p-top-blog .c-blog-card__link {
+    @include sp {
+        align-items: stretch;
     }
+}
+
+.p-top-blog__items .c-blog-card+.c-blog-card {
+    @include sp {
+        margin-top: 4.1rem;
+    }
+}
+
+.p-top-page .p-top-blog .c-blog-card__img {
+    aspect-ratio: 260 / 200;
 
     @include sp {
-        width: 100%;
-        height: auto;
         aspect-ratio: 335 / 200;
     }
 }
+
+.p-top-page .p-top-blog .c-blog-card__img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .p-top-blog__more {
     text-align: right;
