@@ -1961,8 +1961,6 @@ TOPへ戻るボタン
   background: transparent !important;
   border: none !important;
   border-radius: 0 !important;
-  width: auto !important;
-  height: auto !important;
   padding: 0 !important;
   display: block;
   -webkit-transform: none !important;
@@ -1970,19 +1968,15 @@ TOPへ戻るボタン
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  width: 2.8rem !important;
+  height: 4rem !important;
 }
 .splide__arrow:hover {
   opacity: 0.7;
 }
 
-/* 自作SVG画像サイズ */
-.splide__arrow img {
-  width: 2.8rem;
-  height: 4rem;
-}
-
 .splide__arrow--prev {
-  top: 38% !important;
+  top: 37% !important;
   left: -4rem !important;
 }
 @media (max-width: 1000px) {
@@ -1998,7 +1992,7 @@ TOPへ戻るボタン
 }
 
 .splide__arrow--next {
-  top: 38% !important;
+  top: 37% !important;
   right: -4rem !important;
 }
 @media (max-width: 1000px) {
@@ -3593,8 +3587,6 @@ TOPへ戻るボタン
 
 .p-blog-detail__head-area .c-result-card__img {
   aspect-ratio: 600/350;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (max-width: 767px) {
   .p-blog-detail__head-area .c-result-card__img {

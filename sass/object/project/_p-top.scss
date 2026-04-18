@@ -530,27 +530,21 @@
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    width: auto !important;
-    height: auto !important;
     padding: 0 !important;
     display: block;
     transform: none !important;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    width: 2.8rem !important;
+    height: 4rem !important;
 
     &:hover {
         opacity: 0.7;
     }
 }
 
-/* 自作SVG画像サイズ */
-.splide__arrow img {
-    width: 2.8rem;
-    height: 4rem;
-}
-
 .splide__arrow--prev {
-    top: 38% !important;
+    top: 37% !important;
     left: -4rem !important;
 
     @media (max-width: 1000px) {
@@ -564,7 +558,7 @@
 }
 
 .splide__arrow--next {
-    top: 38% !important;
+    top: 37% !important;
     right: -4rem !important;
 
     @media (max-width: 1000px) {
