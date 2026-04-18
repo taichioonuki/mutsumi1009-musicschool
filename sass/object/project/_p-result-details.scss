@@ -30,6 +30,14 @@
   }
 }
 
+.p-result-detail__head .c-result-card__body {
+  gap: 1.5rem;
+
+  @include sp {
+    gap: 0.2rem;
+  }
+}
+
 .p-article-title {
   font-size: 2.5rem;
   line-height: 1.6;
@@ -42,11 +50,9 @@
 
 .p-result-details .c-result-card__date {
   text-align: left;
-  margin-top: 1.5rem;
-
+ 
   @include sp {
     font-size: 1.7rem;
-    margin-top: 0.2rem;
   }
 }
 
@@ -201,11 +207,10 @@
   max-width: 26rem;
   aspect-ratio: 260 / 183;
   
-
   @include sp {
     width: 16rem;
     aspect-ratio: 160 / 113;
-    flex-shrink: 0
+    flex-shrink: 0;
   }
 }
 
@@ -216,20 +221,11 @@
 
 
 .p-result-details .c-article-related .c-result-card__body {
-  margin-top: 0;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-}
+  gap: 1.3rem;
 
-.p-result-details .c-result-card__text {
   @include sp {
-    font-size: 1.7rem;
-    font-weight: 700;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: clip;
-    line-height: 1.647;
+    gap: 0.4rem;
   }
 }
 

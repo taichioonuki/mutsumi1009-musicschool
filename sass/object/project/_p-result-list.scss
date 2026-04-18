@@ -47,10 +47,6 @@
 .p-result-list .c-result-card__img {
   aspect-ratio: 387 / 273;
   flex-shrink: 0; 
-
-  @include sp {
-     aspect-ratio: 335 / 200; 
-  }
 }
 
 .p-result-list .c-result-card__link {
@@ -60,9 +56,7 @@
 }
 
 .p-result-list .c-result-card__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.8rem;
+  gap: 0.8rem;
 }
 
 

@@ -65,7 +65,7 @@
 
 .p-top-message__lead {
     text-align: center;
-   
+
     @include sp {
         font-size: 1.8rem;
         line-height: 1.666;
@@ -424,7 +424,7 @@
 
     @include sp {
         flex-direction: column;
-        gap: 0;
+        gap: 3rem;
 
         &+& {
             margin-top: 3.9rem;
@@ -432,20 +432,20 @@
     }
 }
 
-
 .p-top-reason__img {
     flex-shrink: 0;
     aspect-ratio: 350 / 247;
-  
+
     @include pc {
-      width: 35rem;
+        width: 35rem;
     }
-  
+
     @include sp {
-      aspect-ratio: 335 / 200;
-      width: 100%;
+        aspect-ratio: 335 / 200;
+        width: 100%;
     }
-  }
+}
+
 .p-top-reason__img img {
     height: 100%;
     object-fit: cover;
@@ -476,7 +476,6 @@
     @include sp {
         font-size: 2rem;
         line-height: 1.5;
-        margin-top: 3rem;
         position: relative;
         left: -0rem;
         margin-left: 0;
@@ -487,20 +486,23 @@
 
 .p-top-reason__text {
     font-size: 1.8rem;
-    // margin-top: 0.7rem;
 
     @include sp {
         font-size: 1.6rem;
-        // margin-top: 0.3rem;
+
     }
 }
 
+/* ===============================================
+# 生徒さんたちの声
+=============================================== */
+
 .p-top-voice {
     background-color: $main-color;
-    padding-block: 4.6rem 7.9rem;
+    padding-block: 4.6rem 8rem;
 
     @include sp {
-        padding-block: 4.7rem 5.2rem;
+        padding-block: 4.6rem 5rem;
     }
 
     .l-inner {
@@ -548,7 +550,7 @@
 }
 
 .splide__arrow--prev {
-    top: 41% !important;
+    top: 38% !important;
     left: -4rem !important;
 
     @media (max-width: 1000px) {
@@ -556,13 +558,13 @@
     }
 
     @include sp {
-        top: 40% !important;
-        left: 0.9rem !important;
+        top: 35% !important;
+        left: 0.5rem !important;
     }
 }
 
 .splide__arrow--next {
-    top: 41% !important;
+    top: 38% !important;
     right: -4rem !important;
 
     @media (max-width: 1000px) {
@@ -570,8 +572,8 @@
     }
 
     @include sp {
-        top: 40% !important;
-        right: 0.9rem !important;
+        top: 35% !important;
+        right: 0.5rem !important;
     }
 }
 
@@ -583,85 +585,87 @@
 
 .p-top-voice__slider {
     position: relative;
+    margin-top: 3rem;
+
+    @include sp {
+        margin-top: 3.9rem;
+    }
 }
 
 .p-top-voice__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
+    gap: 1.7rem;
 
-   
-    .p-top-voice__meta,
-    .p-top-voice__text {
-        transition: opacity 0.4s;
+    @include sp {
+        gap: 2.6rem;
     }
+}
 
-    @include pc {
-        &:hover {
-            .p-top-voice__img img {
-                transform: scale(1.1);
-                opacity: 0.7;
-            }
-
-            .p-top-voice__meta,
-            .p-top-voice__text {
-                opacity: 0.7;
-            }
-        }
-    }
+.p-top-voice__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 .p-top-voice__img {
     position: relative;
     aspect-ratio: 270 / 190;
     overflow: hidden;
-    margin-top: 2.8rem;
 
     @include sp {
-        margin-inline: auto;
         aspect-ratio: 335 / 200;
-        margin-top: 3.9rem;
     }
 }
-
 
 .p-top-voice__img img {
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s, opacity 0.4s;
-}
+  
+    @include pc {
+      .p-top-voice__link:hover & {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+  }
 
-.p-top-voice__meta {
+  .p-top-voice__meta {
     font-size: 2.2rem;
     font-weight: 700;
     color: $font-color;
-    margin-top: 1.6rem;
     opacity: 1;
     text-align: center;
-
-    @include sp {
-        margin-top: 2.5rem;
-    }
-}
-
-.p-top-voice__text {
-    width: 27rem;
+    width: 100%;
+    transition: opacity 0.4s;
+  }
+  
+  .p-top-voice__text {
+    width: 100%;
     font-size: 1.8rem;
     color: $font-color;
-    line-height: 1.666;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     opacity: 1;
-    line-height: 1.8;
-
-    @include sp {
-        width: 100%;
-        margin-top: 1rem;
-        line-height: 1.66;
+    line-height: 1.66;
+    transition: opacity 0.4s;
+  }
+  
+  @include pc {
+    .p-top-voice__link:hover .p-top-voice__meta {
+      opacity: 0.7;
     }
-}
+  
+    .p-top-voice__link:hover .p-top-voice__text {
+      opacity: 0.7;
+    }
+  }
 
 /* ===============================================
 # よくあるご質問
@@ -841,11 +845,6 @@
 
 .p-top-page .c-blog-card__date {
     text-align: right;
-    // margin-top: 1rem;
-
-    @include sp {
-        // margin-top: 1.5rem;
-    }
 }
 
 .p-top-page .c-blog-card__body {
@@ -855,7 +854,7 @@
     gap: 1rem;
 
     @include sp {
-      gap: 1.5rem;
+        gap: 1.5rem;
     }
 }
 

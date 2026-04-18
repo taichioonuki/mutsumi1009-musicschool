@@ -29,11 +29,25 @@
 }
 
 .p-blog-detail__head-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
   justify-content: space-between;
   width: auto;
 
   @include sp {
     width: 100%;
+    gap: 2.1rem;
+  }
+}
+
+.p-blog-detail__head-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4.6rem;
+
+  @include sp {
+    gap: 3rem;
   }
 }
 
@@ -51,6 +65,27 @@
   object-fit: cover;
 }
 
+
+.p-blog-detail__head-main .c-result-card__body {
+
+  @include sp {
+    gap: 0.6rem;
+  }
+}
+
+.p-blog_details .c-result-card__title {
+  width: 35.9rem;
+  font-weight: 700;
+  margin-top: 0;
+
+  @include sp {
+    width: 100%;
+    display: -webkit-box;
+    overflow: hidden;
+
+  }
+}
+
 .p-blog_details .c-result-card__date {
   text-align: left;
   line-height: 1.764;
@@ -58,15 +93,6 @@
 
   @include sp {
     font-size: 1.7rem;
-    margin-top: 0;
-  }
-}
-
-.p-blog-detail__head-area .c-result-card__body {
-  margin-top: 4.6rem;
-
-  @include sp {
-    margin-top: 3rem;
   }
 }
 
@@ -85,17 +111,16 @@
 .p-blog-detail__sns {
   display: flex;
   gap: 0.3rem;
-  margin-top: 2.4rem;
 
   @include sp {
     gap: 0.2rem;
-    margin-top: 2.1rem;
   }
 }
 
 .p-blog-detail__sns li {
   @include sp {
     flex: 1;
+    max-width: 33.5rem;
   }
 }
 
@@ -110,17 +135,6 @@
   &:hover {
     opacity: 0.7;
   }
-}
-
-.p-blog-detail__sns a img {
-  height: 4rem;
-
-  @include sp {
-    height: auto; 
-    width: 100%; 
-    max-width: 33.5rem; 
-    object-fit: contain;
-}
 }
 
 .p-blog-detail__text--lead {
@@ -444,15 +458,21 @@
   }
 }
 
-.p-sidebar-search__button img {
+.p-sidebar-search__icon {
   width: 3rem;
- transform: translateY(0.6rem);
+  transform: translateY(0.6rem);
   pointer-events: none;
 
   @include sp {
     width: 4rem;
   }
 }
+
+.p-sidebar-search__icon img {
+  pointer-events: none;
+}
+
+
 
 .p-sidebar-list {
   margin-top: 1.5rem;
@@ -672,35 +692,18 @@
   }
 }
 
-.p-blog_details .c-result-card__body {
-
+.p-blog_details .c-article-related .c-result-card__body {
   @include sp {
     flex: 1;
     max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 0.9rem;
   }
 }
 
-.p-blog_details .c-result-card__title {
-  width: 35.9rem;
-  font-weight: 700;
-  margin-top: 0;
 
-  @include sp {
-    width: 100%;
-    font-size: 1.7rem;
-    line-height: 1.674;
-    display: -webkit-box;
-    overflow: hidden;
-    margin-top: 0.9rem;
-  }
-}
-
-.p-blog_details .c-article-related .c-result-card__date {
-  margin-top: 1.2rem;
-  margin-left: 0.5rem;
-}
-
-/* ブログ詳細ページ：関連記事カードの画像サイズ */
 .p-blog_details .c-article-related .c-result-card__img {
   width: 20rem;
   aspect-ratio: 200 / 140;
