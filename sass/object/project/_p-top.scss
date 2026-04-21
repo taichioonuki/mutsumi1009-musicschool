@@ -201,7 +201,7 @@
 
 .p-top-promo {
     background-color: $main-color;
-    padding-block: 6.2rem 5.7rem;
+    padding-block: 6.8rem 6rem;
     text-align: center;
 
     @include sp {
@@ -224,6 +224,7 @@
     font-size: 3rem;
     font-weight: 700;
     color: $font-color;
+    line-height: 1.666;
 
     @include sp {
         line-height: 1.6;
@@ -235,12 +236,11 @@
     font-size: 1.8rem;
     background-color: $main-color;
     color: $font-color;
-    margin-top: 2.3rem;
+    margin-top: 3rem;
+    line-height: 1.666;
 
     @include sp {
         margin-top: 1.4rem;
-        line-height: 1.666;
-
     }
 }
 
