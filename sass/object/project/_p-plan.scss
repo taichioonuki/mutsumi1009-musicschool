@@ -219,7 +219,19 @@ td {
 
 .p-plan-table__badge {
   display: block;
+  position: relative;
+   top: 0.6rem;
   font-size: 1.7rem;
+
+  @include sp {
+    top: 0;
+  }
+}
+
+.p-plan-table__plan-name {
+  display: block;
+  position: relative;
+  // top: 0.5rem;
 }
 
 .p-plan-table__table tbody {
@@ -284,9 +296,12 @@ td {
 .p-plan-table__num {
   font-size: 2.2rem;
   display: inline-block;
+  position: relative;
+  top: 0.4rem;
 
   @include sp {
     padding-top: 0.3rem;
+    top: 0;
   }
 }
 
@@ -312,6 +327,7 @@ td {
   padding-top: 1.1rem;
   font-size: 1.7rem;
   line-height: 1.471;
+  letter-spacing: 0.01em;
 }
 
 .p-plan-table__dash {
@@ -340,7 +356,7 @@ td {
   margin-top: 4rem;
 
   @include sp {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     position: relative;
     overflow-y: hidden;
     padding-bottom: 5rem;

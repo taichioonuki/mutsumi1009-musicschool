@@ -1931,7 +1931,7 @@ TOPへ戻るボタン
 =============================================== */
 .p-top-voice {
   background-color: #CB0000;
-  padding-block: 4.6rem 8rem;
+  padding-block: 4.4rem 8rem;
 }
 @media (max-width: 767px) {
   .p-top-voice {
@@ -2295,7 +2295,7 @@ TOPへ戻るボタン
 # ブログ一覧
 =============================================== */
 .p-top-blog {
-  padding-block: 3.5rem 20.5rem;
+  padding-block: 3.5rem 20rem;
 }
 @media (max-width: 767px) {
   .p-top-blog {
@@ -4779,7 +4779,19 @@ td {
 
 .p-plan-table__badge {
   display: block;
+  position: relative;
+  top: 0.6rem;
   font-size: 1.7rem;
+}
+@media (max-width: 767px) {
+  .p-plan-table__badge {
+    top: 0;
+  }
+}
+
+.p-plan-table__plan-name {
+  display: block;
+  position: relative;
 }
 
 .p-plan-table__table tbody th {
@@ -4832,10 +4844,13 @@ td {
 .p-plan-table__num {
   font-size: 2.2rem;
   display: inline-block;
+  position: relative;
+  top: 0.4rem;
 }
 @media (max-width: 767px) {
   .p-plan-table__num {
     padding-top: 0.3rem;
+    top: 0;
   }
 }
 
@@ -4867,6 +4882,7 @@ td {
   padding-top: 1.1rem;
   font-size: 1.7rem;
   line-height: 1.471;
+  letter-spacing: 0.01em;
 }
 
 .p-plan-table__dash {
@@ -4896,7 +4912,7 @@ td {
 }
 @media (max-width: 767px) {
   .p-plan-table__scroll {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     position: relative;
     overflow-y: hidden;
     padding-bottom: 5rem;
