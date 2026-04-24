@@ -3200,7 +3200,13 @@ TOPへ戻るボタン
 }
 
 @media (max-width: 767px) {
-  .p-result-list .c-hero img {
+  .p-result-list .c-hero__img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-result-list .c-hero__img img {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -4882,7 +4888,6 @@ td {
   padding-top: 1.1rem;
   font-size: 1.7rem;
   line-height: 1.471;
-  letter-spacing: 0.01em;
 }
 
 .p-plan-table__dash {
