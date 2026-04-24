@@ -21,11 +21,10 @@
     align-items: center;
     justify-content: space-between;
     background: #000;
-    width: auto;
     height: 3.7rem;
     color: #fff;
     font-size: 1.6rem;
-    font-weight: 700;
+    
 }
 
 // 前の記事
@@ -67,23 +66,6 @@
     @include sp {
         font-size: 1.5rem;
         margin-right: 0;
-    }
-}
-
-.c-article-nav__img {
-
-    @include sp {
-        margin-top: 0rem;
-    }
-}
-
-.c-article-nav__img img {
-    width: auto;
-
-    @include sp {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
     }
 }
 

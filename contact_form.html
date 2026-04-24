@@ -8,6 +8,7 @@
     <meta name="description" content="沖縄県宜野湾市にある大人のための音楽教室「きたむらミュージックスクール」へのお問い合わせページです。">
     <meta name="keywords" content="お問い合わせ,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,8 +32,13 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,44 +49,31 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
         <main class="l-main p-contact-form">
 
             <div class="c-hero c-hero--with-border">
-                <picture>
+                <div class="c-hero__img">
+                  <picture>
                     <source media="(min-width: 768px)" srcset="images/contact/contact-pc.jpg">
-                    <img class="c-hero__img" src="images/contact/contact-sp.jpg" alt="お問い合わせ" width="375" height="300">
-                </picture>
+                    <img src="images/contact/contact-sp.jpg" alt="お問い合わせ" width="375" height="300">
+                  </picture>
+                </div>
                 <h1 class="c-hero__text">お問い合わせ</h1>
-            </div>
+              </div>
 
             <!-- パンくずリスト -->
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item" aria-current="page">お問い合わせ</li>
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">お問い合わせ</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
@@ -196,7 +189,7 @@
         </main>
 
         <!-- TOPへ戻る-->
-        <div class="p-fixed-buttons js-fixed-buttons">
+        <div class="p-fixed-buttons js-fixed-buttons is-contact-page">
             <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
                 <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
             </a>
@@ -215,7 +208,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>

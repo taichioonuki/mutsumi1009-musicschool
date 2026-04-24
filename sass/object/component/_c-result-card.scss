@@ -19,28 +19,14 @@
     opacity: 0.7;
   }
 
-
   @include sp {
     display: block;
   }
 }
 
-
 .c-result-card__img {
   position: relative;
   overflow: hidden;
-
-  @include sp {
-    display: block;
-
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-
-  }
 }
 
 .c-result-card__body {
@@ -48,12 +34,13 @@
   flex-direction: column;
 }
 
-.c-result-card__text {
+.c-result-card__title {
   font-size: 2rem;
   line-height: 1.25;
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-weight: 700;
 }
 
 .c-result-card__date {

@@ -2,13 +2,8 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as *;
 
 
-/* ===============================================
-# contact-send
-=============================================== */
-// p-contact-send
 .p-contact-send {
   text-align: center;
 }
@@ -29,20 +24,13 @@
 
 .p-contact-send .p-page-btn {
   margin-top: 3.9rem;
-
-  @include sp {
-    margin-top: 3.9rem;
-  }
 }
 
 .p-contact-send__content {
   padding-block: 6.7rem 9rem;
  
   @include sp {
-    display: flex;
-    align-items: center;
     padding-block: 5rem;
-
   }
 }
 

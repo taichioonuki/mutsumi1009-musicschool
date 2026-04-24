@@ -8,6 +8,7 @@
     <meta name="description" content="沖縄県宜野湾市にある大人のための音楽教室404ページです">
     <meta name="keywords" content="404,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,8 +32,13 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,36 +49,20 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
         <main class="l-main p-404">
             <div class="c-hero">
-                <picture>
+                <div class="c-hero__img">
+                  <picture>
                     <source media="(min-width: 768px)" srcset="images/common/404-hero_pc.jpg">
-                    <img class="c-hero__img" src="images/common/404-hero_sp.jpg" alt="404 not found キービジュアル" width="375" height="300">                </picture>
+                    <img src="images/common/404-hero_sp.jpg" alt="404 not found キービジュアル" width="375" height="300">
+                  </picture>
+                </div>
                 <h1 class="c-hero__text">404 not found</h1>
-            </div>
-            
+              </div>
+
             <div class="p-404__content">
                 <div class="l-inner">
                     <p class="c-page-message">
@@ -101,7 +91,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>
@@ -125,8 +115,8 @@
     <!-- コンテンツ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- 共通JS -->
-  <script src="js/script.js"></script>
+    <!-- 共通JS -->
+    <script src="js/script.js"></script>
 
 </body>
 

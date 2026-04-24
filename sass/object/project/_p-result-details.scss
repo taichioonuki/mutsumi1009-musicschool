@@ -2,19 +2,16 @@
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
 @use "../component/c-hero";
-// @use "../../foundation/base" as
 
 .p-result-details__content {
   padding-block: 6.5rem 15.7rem;
 
   @include sp {
-    align-items: center;
     padding-block: 5rem 20rem;
   }
 }
 
-.p-result_details .c-hero--result-detail .c-result-card__img {
-  width: 100%;
+.p-result-details .c-result-card__img {
   aspect-ratio: 880 / 400;
   overflow: hidden;
 
@@ -23,35 +20,40 @@
   }
 }
 
+.p-result-detail__head {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include sp {
+    gap: 3rem;
+  }
+}
+
+.p-result-detail__head .c-result-card__body {
+  gap: 1.5rem;
+
+  @include sp {
+    gap: 0.2rem;
+  }
+}
+
 .p-article-title {
-  margin-top: 5rem;
   font-size: 2.5rem;
   line-height: 1.6;
   font-weight: 700;
 
   @include sp {
-    margin-top: 3rem;
     font-size: 2rem;
-    align-items: center;
   }
 }
 
-.p-result_details .c-result-card__date {
+.p-result-details .c-result-card__date {
   text-align: left;
-  margin-top: 1.5rem;
-
+ 
   @include sp {
-    margin-top: 0;
     font-size: 1.7rem;
-    padding-top: 0.2rem;
   }
-}
-
-
-.p-result-list .c-result-card__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.8rem;
 }
 
 .p-result-details__wrap {
@@ -66,20 +68,11 @@
   }
 }
 
-.p-result_details__table {
-  width: auto;
+.p-result-details__table {
 
   table {
     width: 100%;
     border-collapse: collapse;
-
-    @include tab {
-      width: 100%;
-    }
-
-    @include sp {
-      width: 100%;
-    }
   }
 
   th,
@@ -89,6 +82,7 @@
     padding-left: 2rem;
     font-size: 1.8rem;
     line-height: 1.5;
+    text-align: left;
 
     @include sp {
       padding-left: 1rem;
@@ -100,22 +94,16 @@
     font-weight: 700;
     background: #e5e5e5;
     width: 14rem;
-    padding-top: 1rem;
   }
 
   td {
     width: 26rem;
+    background-color: $font-color;
   }
 }
 
-.p-result_details .c-article-nav {
+.p-result-details .c-article-nav {
   margin-top: 6rem;
-}
-
-.p-article-nav__link .c-article-nav__link {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
 }
 
 .p-article-nav__content,
@@ -125,20 +113,20 @@
   gap: 1.6rem;
 
   @include sp {
-    display: block;
     flex-direction: column;
   }
 }
 
-.p-result_details .c-article-nav__img {
-  max-width: 9.8rem;
+.p-result-details .c-article-nav__img {
+  width: 9.8rem;
+  flex-shrink: 0;
 
   @include sp {
-    display: none !important;
+    display: none;
   }
 }
 
-.p-result_details__text,
+.p-result-details__text,
 .c-article-nav__text {
   flex: 1;
   font-size: 1.6rem;
@@ -174,7 +162,7 @@
 }
 
 // 卒業実績詳細ページ用：記事ナビ
-.p-result_details .c-article-nav {
+.p-result-details .c-article-nav {
   gap: 19.9rem;
 
 
@@ -184,14 +172,20 @@
   }
 }
 
-
-.p-result_details .c-article-related__title {
-  font-size: 1.8rem;
+.p-result-details .c-article-related {
   margin-top: 10rem;
-  padding-left: 2.9rem;
 
   @include sp {
     margin-top: 5.8rem;
+  }
+}
+
+.p-result-details .c-article-related__title {
+  font-size: 1.8rem;
+  margin: 0;
+  padding-left: 2.9rem;
+
+  @include sp {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,8 +193,8 @@
   }
 }
 
-.p-result_details .c-result-card__link {
-  display: flex !important;
+.p-result-details .c-result-card__link {
+  display: flex;
   align-items: flex-start;
   gap: 3rem;
 
@@ -209,71 +203,33 @@
   }
 }
 
-.is-detail-page {
-  .c-hero::before {
-    background-color: transparent;
-    mix-blend-mode: normal;
-  }
-}
-
-.p-result_details .c-article-related .c-result-card__img {
+.p-result-details .c-article-related .c-result-card__img {
   max-width: 26rem;
   aspect-ratio: 260 / 183;
-  object-fit: cover;
-
+  
   @include sp {
     width: 16rem;
     aspect-ratio: 160 / 113;
-    flex-shrink: 0
+    flex-shrink: 0;
   }
 }
 
-.p-result_details .c-result-card__img img {
-  width: 100%;
+.p-result-details .c-result-card__img img {
   height: 100%;
+  object-fit: cover;
 }
 
 
-.p-article-related .c-result-card__body {
-  display: flex;
-  justify-content: space-between;
+.p-result-details .c-article-related .c-result-card__body {
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: 1.3rem;
 
-  @include sp {}
-}
-
-.p-article-related .c-result-card {
-  display: flex;
-  gap: 1.6rem;
-
-  @include sp {}
-}
-
-.p-result_details .c-result-card__text {
   @include sp {
-    font-size: 1.7rem;
-    font-weight: 700;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: clip;
-    line-height: 1.647;
+    gap: 0.4rem;
   }
 }
 
-.p-result_details .c-breadcrumb__list {
-  @include sp {
-    row-gap: 0;
-  }
-}
-
-//  ヒーロー画像の暗い背景（オーバーレイ）を消す
-.is-result-detail .c-hero::before {
-  background-color: transparent !important;
-  mix-blend-mode: normal !important;
-}
-
-.p-result_details .c-article-related .c-tag--lg {
+.p-result-details .c-article-related .c-tag--lg {
   @include sp {
     width: 8rem;
   }
