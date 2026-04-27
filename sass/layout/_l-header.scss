@@ -7,10 +7,10 @@
 	width: 100%;
 	position: fixed;
 	top: 0;
-	z-index: 999;
+	z-index: 10000;
 	background-color: #fff ;
 
 	@include sp {
-		z-index: 1000;
+		z-index: 10000;
 	}
 }

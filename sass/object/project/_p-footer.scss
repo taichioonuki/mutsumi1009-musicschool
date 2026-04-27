@@ -6,7 +6,7 @@
 
 .p-footer {
     background: $main-color;
-    color: $c-accent;
+    color: $font-color;
     padding-block: 4.4rem 4.9rem;
     text-align: center;
     width: 100%;
@@ -14,7 +14,6 @@
 
     @include sp {
         padding-block: 4.4rem 5rem;
-        min-height: auto;
     }
 }
 
@@ -28,19 +27,11 @@
     }
 }
 
-.p-footer__nav {
-    margin-top: 0;
-
-    @include sp {
-        margin-top: 0;
-    }
-}
-
 .p-footer__nav-list {
     font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.941;
-    color: $c-accent;
+    color: $font-color;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -54,18 +45,17 @@
         column-gap: 3.1rem;
         row-gap: 1rem;
         padding: 0;
-        list-style: none;
     }
-}
 
-.p-footer__nav-list a {
-    color: $c-accent;
-    transition: opacity 0.4s ease;
-}
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 0.4s ease;
 
-.p-footer__nav-list a:hover {
-    opacity: 0.7;
-    cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .p-footer__logo {
@@ -81,6 +71,8 @@
 }
 
 .p-footer__logo-link {
+    display: inline-block;
+    width: 3.2rem;
     transition: opacity 0.4s ease;
 
     &:hover {
@@ -99,25 +91,16 @@
         margin-top: 1.6rem;
         gap: 0.983rem;
     }
-}
 
-.p-footer__sns a {
-    transition: opacity 0.4s ease;
-}
+    a {
+        display: inline-block;
+        width: 2.3rem; 
+        transition: opacity 0.4s ease;
 
-.p-footer__sns a:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.p-footer__sns a img {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity: 1;
-    transform: scale(1);
-}
-
-.p-footer__sns a:hover img {
-    opacity: 0.7;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
 }
 
 .p-footer__copyright {
@@ -131,7 +114,6 @@
     @include sp {
         font-size: 1.5rem;
         display: block;
-        // margin-top: 2.4rem;
         white-space: nowrap;
     }
 }
@@ -161,6 +143,3 @@
         margin: 0;
     }
 }
-
-
-  

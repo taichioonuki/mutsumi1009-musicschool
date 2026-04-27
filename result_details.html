@@ -8,6 +8,7 @@
     <meta name="description" content="きたむらミュージックスクールの卒業実績詳細ページです。">
     <meta name="keywords" content="卒業実績,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,8 +32,13 @@
                             </a>
                         </div>
                     </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,48 +49,31 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
-        <main class="l-main p-result_details">
+        <main class="l-main p-result-details">
 
             <!-- パンくずリスト -->
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
                         <li class="c-breadcrumb__item">
-                            <a href="index.html">ホーム</a>
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
                         </li>
 
                         <li class="c-breadcrumb__item">
-                            <a href="result_list.html">卒業実績</a>
+                            <a href="result_list.html" class="c-breadcrumb__link">卒業実績</a>
                         </li>
 
                         <li class="c-breadcrumb__item">
-                            <a href="#">ポップス</a>
+                            <a href="#" class="c-breadcrumb__link">ポップス</a>
                         </li>
 
                         <li class="c-breadcrumb__item" aria-current="page">
-                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                            <span class="c-breadcrumb__current">
+                                タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                            </span>
                         </li>
                     </ol>
                 </div>
@@ -92,7 +81,7 @@
 
             <div class="p-result-details__content">
                 <div class="l-inner">
-                    <div class="c-hero c-hero--with-border c-hero--result-detail">
+                    <div class="p-result-detail__head">
                         <div class="c-result-card__img">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="images/result/result-details-hero-pc.jpg">
@@ -101,15 +90,16 @@
                             </picture>
                             <span class="c-tag c-tag--lg">ポップス</span>
                         </div>
-                    </div>
-                    <div class="c-result-card__body">
-                        <h1 class="p-article-title">
-                            タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                        </h1>
-                        <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+
+                        <div class="c-result-card__body">
+                            <h1 class="p-article-title">
+                                タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                            </h1>
+                            <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
+                        </div>
                     </div>
                     <div class="p-result-details__wrap">
-                        <div class="p-result_details__table">
+                        <div class="p-result-details__table">
                             <table>
                                 <tr>
                                     <th>名前</th>
@@ -134,7 +124,7 @@
                             </table>
                         </div>
 
-                        <div class="p-result_details__text">
+                        <div class="p-result-details__text">
                             <p class="p-result-details__description">
                                 昔やっていた音楽活動で、副収入が得られるように<br>なったので、毎日充実するようになりました。
                             </p>
@@ -148,8 +138,8 @@
 
                                 <div class="c-article-nav__content">
                                     <div class="c-article-nav__img">
-                                        <img src="images/result/result-details-pc.jpg" width="98" height="68">
-                                    </div>
+                                        <img src="images/result/result-details-pc.jpg" width="98" height="68" alt="歌う女性">
+                                      </div>
 
                                     <p class="c-article-nav__text">
                                         タイトルが入ります。タイトルが入ります。タイトルが入 </p>
@@ -164,8 +154,8 @@
 
                                 <div class="c-article-nav__content">
                                     <div class="c-article-nav__img">
-                                        <img src="images/result/result-details-pc.jpg" width="98" height="68">
-                                    </div>
+                                        <img src="images/result/result-details-pc.jpg" width="98" height="68" alt="歌う女性">
+                                      </div>
 
                                     <p class="c-article-nav__text">
                                         タイトルが入ります。タイトルが入ります。タイトルが入 </p>
@@ -188,11 +178,11 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         <span class="pc">タイトルが入ります。タイトルが入ります。タイトルが入ります。</span>
                                         <span class="sp">タイトルが入ります。タイトル</span>
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -208,11 +198,11 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         <span class="pc">タイトルが入ります。タイトルが入ります。タイトルが入ります。</span>
                                         <span class="sp">タイトルが入ります。タイトル</span>
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -228,11 +218,11 @@
                                 </div>
 
                                 <div class="c-result-card__body">
-                                    <p class="c-result-card__text">
+                                    <h3 class="c-result-card__title">
                                         <span class="pc">タイトルが入ります。タイトルが入ります。タイトルが入ります。</span>
                                         <span class="sp">タイトルが入ります。タイトル</span>
-                                    </p>
-                                    <time datetime="0000-00-00" class="c-result-card__date">0000.00.00</time>
+                                    </h3>
+                                    <time datetime="2026-01-01" class="c-result-card__date">0000.00.00</time>
                                 </div>
                             </a>
                         </article>
@@ -266,7 +256,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>

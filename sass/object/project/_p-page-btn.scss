@@ -1,7 +1,6 @@
 @use "../../global/variable" as *;
 @use "../../global/mixin" as *;
 @use "../../global/function" as *;
-// @use "../../foundation/base" as *;
 
 
 /* --- TOPへ戻る・お問合せボタン --- */
@@ -16,9 +15,9 @@
   gap: 3.1rem;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  width: 30rem;
-
+  
   @include sp {
     right: 1.7rem;
     bottom: 31.5rem;
@@ -34,13 +33,10 @@
 
 // コンタクトフォーム topへ戻るボタン
 .p-contact-form~.p-fixed-buttons {
-  position: fixed !important;
-  bottom: 30.4rem !important;
-  right: -1.5rem !important;
+   right: 10rem !important;
 
   @include sp {
-     bottom: 32.1rem !important;
-    right: 2.8rem !important;
+     right: 3rem !important;
   }
 }
 
@@ -48,14 +44,12 @@
 .page-top-btn {
   margin-inline: auto;
   transition: opacity 0.4s, transform 0.4s;
+  border-radius: 100vmax;
+  overflow: hidden;
+
 
   @include sp {
     margin-inline: 0.2rem;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
   }
 
   &:hover {
@@ -64,4 +58,10 @@
       transform: translateY(-3px);
     }
   }
+}
+
+.p-fixed-buttons a,
+.p-fixed-buttons .page-top-btn,
+.p-fixed-buttons img {
+  pointer-events: auto;
 }

@@ -8,6 +8,7 @@
     <meta name="description" content="きたむらミュージックスクールの検索結果ページです。">
     <meta name="keywords" content="検索結果,音楽, Music,music">
     <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,21 +19,24 @@
         <header class="l-header">
             <div class="p-header">
                 <div class="p-header__inner l-inner">
-                    <div class="p-header__logo">
-                        <div class="p-header__site-title">
-                            <a href="index.html" class="logo">
-                                <span class="logo__img">
-                                    <img src="images/common/icon-pc.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
-                                </span>
-                                <span class="p-header__logo-text">
-                                    <span class="logo__main">きたむら</span>
-                                    <span class="logo__sub">ミュージックスクール</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- PCナビ-->
-                    <nav class="p-header__nav" id="global-nav">
+                    <h1 class="p-header__logo p-header__site-title">
+                        <a href="index.html" class="logo">
+                            <span class="logo__img">
+                                <img src="images/common/icon-pc.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
+                            </span>
+                            <span class="p-header__logo-text">
+                                <span class="logo__main">きたむら</span>
+                                <span class="logo__sub">ミュージックスクール</span>
+                            </span>
+                        </a>
+                    </h1>
+                    <button id="js-hamburger" class="c-hamburger" aria-label="メニューを開く">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <nav id="js-navigation" class="p-header__nav">
                         <ul class="p-header__nav-list">
                             <li><a href="plan.html">料金</a></li>
                             <li><a href="blog_list.html">ブログ</a></li>
@@ -43,25 +47,6 @@
                         </ul>
                     </nav>
                 </div>
-
-                <!-- ハンバーガー（SP用） -->
-                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                    <span class="c-hamburger__line">
-                    </span>
-                </button>
-
-                <!-- SPナビ -->
-                <nav class="p-header__nav-sp" id="sp-nav">
-                    <ul class="p-header__nav-sp-list">
-                        <li><a href="plan.html">料金</a></li>
-                        <li><a href="blog_list.html">ブログ</a></li>
-                        <li><a href="result_list.html">卒業実績</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
@@ -71,258 +56,254 @@
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <div class="l-inner">
                     <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item" aria-current="page">検索</li>
-
+                        <li class="c-breadcrumb__item">
+                            <a href="index.html" class="c-breadcrumb__link">ホーム</a>
+                        </li>
+                        <li class="c-breadcrumb__item" aria-current="page">
+                            <span class="c-breadcrumb__current">検索</span>
+                        </li>
                     </ol>
                 </div>
             </nav>
+
             <div class="p-search__content">
                 <div class="p-search">
                     <div class="l-inner">
                         <div class="p-search__header">
-                            <h1 class="p-search__title">
+                            <h2 class="p-search__title">
                                 <span class="p-search__keyword">「キーワード」</span>の検索結果
-                            </h1>
+                            </h2>
                             <p class="p-search__count">28件</p>
                         </div>
 
-
-
+                        <div class="p-search__list">
                         <!-- 1記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
-                                        <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">ギター</span>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
+                                            <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">ギター</span>
+                                    </div>
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text c-blog-card__text--pc">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                    <p class="c-blog-card__text c-blog-card__text--sp">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                            </a>
-                        </article>
+                            <!-- 2記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                        <!-- 2記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
+                                            <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">集客方法</span>
+                                    </div>
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
-                                        <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">集客方法</span>
-                                </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                            <!-- 3記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                            </a>
-                        </article>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
+                                            <img src="images/blog/blog-list03_sp.jpg" alt="歌う女性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">SNS</span>
+                                    </div>
 
-                        <!-- 3記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
-                                        <img src="images/blog/blog-list03_sp.jpg" alt="歌う女生" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">SNS</span>
-                                </div>
+                            <!-- 4記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
+                                            <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">ギター</span>
+                                    </div>
 
-                            </a>
-                        </article>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                        <!-- 4記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                            <!-- 5記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
-                                        <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">ギター</span>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
+                                            <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">集客方法</span>
+                                    </div>
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                            </a>
-                        </article>
+                            <!-- 6記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                        <!-- 5記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
+                                            <img src="images/blog/blog-list03_sp.jpg" alt="歌う女性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">SNS</span>
+                                    </div>
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
-                                        <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">集客方法</span>
-                                </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                            <!-- 7記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
+                                            <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">ギター</span>
+                                    </div>
 
-                            </a>
-                        </article>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                        <!-- 6記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                            <!-- 8記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
-                                        <img src="images/blog/blog-list03_sp.jpg" alt="歌う女生" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">SNS</span>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
+                                            <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">集客方法</span>
+                                    </div>
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                            </a>
-                        </article>
-                        <!-- 7記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
+                            <!-- 9記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
+                                            <img src="images/blog/blog-list03_sp.jpg" alt="歌う女性" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">SNS</span>
+                                    </div>
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
 
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
-                                        <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">ギター</span>
-                                </div>
+                            <!-- 10記事目 -->
+                            <article class="c-blog-card">
+                                <a href="#" class="c-blog-card__link">
 
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
+                                    <div class="c-blog-card__img">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
+                                            <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="335"
+                                                height="250">
+                                        </picture>
+                                        <span class="c-tag">ギター</span>
+                                    </div>
 
-                            </a>
-                        </article>
-
-                        <!-- 8記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
-
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list02_pc.jpg">
-                                        <img src="images/blog/blog-list02_sp.jpg" alt="悩む男性" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">集客方法</span>
-                                </div>
-
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">集客してる間は売れないという法則</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
-
-                            </a>
-                        </article>
-
-                        <!-- 9記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
-
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list03_pc.jpg">
-                                        <img src="images/blog/blog-list03_sp.jpg" alt="歌う女性" width="315" height="250">
-
-
-                                    </picture>
-                                    <span class="c-tag">SNS</span>
-                                </div>
-
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">フォロワーではなくファンを増やせとは？</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
-
-                            </a>
-                        </article>
-
-                        <!-- 10記事目 -->
-                        <article class="c-blog-card">
-                            <a href="#" class="c-blog-card__link">
-
-                                <div class="c-blog-card__img">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="images/blog/blog-list01_pc.jpg">
-                                        <img src="images/blog/blog-list01_sp.jpg" alt="ギター演奏" width="315" height="250">
-                                    </picture>
-                                    <span class="c-tag">ギター</span>
-                                </div>
-
-                                <div class="c-blog-card__body">
-                                    <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
-                                    <time datetime="0000-00-00" class="c-blog-card__date">0000.00.00</time>
-                                    <p class="c-blog-card__text">
-                                        本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                                    </p>
-                                </div>
-
-                            </a>
-                        </article>
-
+                                    <div class="c-blog-card__body">
+                                        <h2 class="c-blog-card__title">アルペジオが劇的に向上する3つの習慣</h2>
+                                        <time datetime="2026-01-01" class="c-blog-card__date">0000.00.00</time>
+                                        <p class="c-blog-card__text">
+                                            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                        </p>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
 
                         <!-- ページネーション -->
                         <div class="c-pagination">
@@ -358,7 +339,7 @@
                 </nav>
                 <div class="p-footer__content">
                     <div class="p-footer__logo">
-                        <a href="index.html" class="p-footer-logo__link">
+                        <a href="index.html" class="p-footer__logo-link">
                             <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
                         </a>
                     </div>

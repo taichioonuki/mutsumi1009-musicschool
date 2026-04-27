@@ -8,11 +8,6 @@
 =============================================== */
 .c-blog-card {
     display: block;
-
-    @include sp {
-        width: 100%;
-        margin-inline: auto;
-    }
 }
 
 .c-blog-card__link {
@@ -39,27 +34,15 @@
 .c-blog-card__img {
     display: flex;
     position: relative;
-   
+
     @include sp {
-        width: 100%;
-        height: auto;
         flex-shrink: 0;
-    }
-}
-
-.c-blog-card__img img {
-    width: 100%;
-
-    @include sp {
-        width: auto;
-        height: auto;
     }
 }
 
 .c-blog-card__body {
     display: flex;
     flex-direction: column;
-    width: 100%;
     flex: 1;
 }
 
@@ -76,25 +59,18 @@
 .c-blog-card__date {
     font-size: 1.7rem;
     line-height: 1.764;
-     padding-top: 0.3rem;
 
     @include sp {
         text-align: right;
-        padding-top: 1.1rem;
     }
 }
 
 .c-blog-card__text {
     font-size: 1.8rem;
-    width: auto;
-    height: 9rem;
     line-height: 1.666;
-     padding-top: 0.9rem;
-
+  
     @include sp {
         font-size: 1.6rem;
-        width: 100%;
-        height: auto;
         overflow: visible;
         text-align: left;
         line-height: 1.875;
